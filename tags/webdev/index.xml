@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Webdev on BOK</title>
+    <link>http://bokh.home.xs4all.nl/blog/tags/webdev/</link>
+    <description>Recent content in Webdev on BOK</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>All rights reserved - 201x</copyright>
+    <lastBuildDate>Tue, 21 Apr 2009 11:03:46 +0200</lastBuildDate>
+    <atom:link href="http://bokh.home.xs4all.nl/blog/tags/webdev/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>IPv6 working. Now what..?</title>
+      <link>http://bokh.home.xs4all.nl/blog/post/2009/04/21/ipv6-working.-now-what../</link>
+      <pubDate>Tue, 21 Apr 2009 11:03:46 +0200</pubDate>
+      
+      <guid>http://bokh.home.xs4all.nl/blog/post/2009/04/21/ipv6-working.-now-what../</guid>
+      <description>&lt;p&gt;Over the last couple of weeks this blog hasn’t had a proper post. Instead it was filled by automagically created Twitter updates. In the meantime lots of things happened: too much to write down here. Instead I’ll focus on my (re-)achievements with IPv6.&lt;/p&gt;
+
+&lt;p&gt;I had IPv6 enabled a couple of years ago, using a 6to4 tunnel, offered as an experimental service by my ISP XS4ALL, but neglected it after installing a new hard drive. This time around, I choose SixXS for the tunnel broker portion and installed their AICCU-tool on my aging FreeBSD-host.&lt;br /&gt;
+FYI: experimenting with OpenWRT on my Linksys WRT54GL wireless access point failed kind of (since Tomato-firmware is not supporting IPv6 yet) and left me with this single-host option.&lt;/p&gt;
+
+&lt;p&gt;It turned out the so called &lt;em&gt;router advertisement daemon&lt;/em&gt; (man 8 rtadvd), needed to propagate IPv6 addresses to our MacBooks and my Linux- / WinXP-host, was able to route between the interfaces /dev/tun0 and /dev/net/fxp0. Not the most cosmetically sweet option, but nevertheless: it’s working like it should - with a local IPv6-subnet in my LAN.&lt;/p&gt;
+
+&lt;p&gt;And now what?! What’s the use in running IPv6 when no one else does? Create demand. &lt;strong&gt;Think pr0n!&lt;/strong&gt; In fact, have a look at this presentation below to illustrate that statement:&lt;/p&gt;
+
+&lt;p&gt;(Video no longer available&amp;hellip;)&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Fck, the fcking Thing is f*cked&lt;/em&gt; - Props go to b10m for pointing me to this one!&lt;/p&gt;
+
+&lt;p&gt;Just as in the days of VHS, Betamax and V2000 it’s &lt;em&gt;pr0n&lt;/em&gt; that matters. And where do you find &lt;em&gt;pr0n&lt;/em&gt; these days? Right: on USENET and Torrent-sites! Regarding USENET, this blogpost will get you started once you have IPv6 up-and-running: Easily Get free newsgroup access over ipv6 in Ubuntu. Of course it’s not about Ubuntu but on the USENET-providers (with high retention!) that will give you &lt;strong&gt;free access&lt;/strong&gt; to their newsgroups containing a huge amount of (semi) illegal content, not only &lt;em&gt;pr0n&lt;/em&gt;, but also warez, ebooks, DivX-movies and the whole lot, as long as you connect over… IPv6! And since “The Pirate Bay” is having an IPv6-tracker but is in stormy waters, more and more people will turn to USENET for their “specific needs”.&lt;/p&gt;
+
+&lt;p&gt;So? It’s only a matter of time until the RIAA will find out about IPv6 and call for appropriate actions… In the meantime do whatever you think is right (or not). :-P&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

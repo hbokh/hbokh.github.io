@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on BOK</title>
+    <link>http://bokh.home.xs4all.nl/blog/post/</link>
+    <description>Recent content in Posts on BOK</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>All rights reserved - 201x</copyright>
+    <lastBuildDate>Sat, 23 May 2015 09:12:15 +0000</lastBuildDate>
+    <atom:link href="http://bokh.home.xs4all.nl/blog/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Hands-on: WordPress en MySQL op Docker</title>
+      <link>http://bokh.home.xs4all.nl/blog/post/2015/05/23/hands-on-wordpress-en-mysql-op-docker/</link>
+      <pubDate>Sat, 23 May 2015 09:12:15 +0000</pubDate>
+      
+      <guid>http://bokh.home.xs4all.nl/blog/post/2015/05/23/hands-on-wordpress-en-mysql-op-docker/</guid>
+      <description>
+
+&lt;p&gt;A manual (in Dutch) written for the local Docker Grunn Meetup, to learn about Docker &amp;amp; Compose by setting up a WordPress-blog.&lt;/p&gt;
+
+&lt;h2 id=&#34;vooraf-installeren:a85a722ad1e08855df387da5b3d91879&#34;&gt;Vooraf installeren!!&lt;/h2&gt;
+
+&lt;p&gt;Zorg dat je op zijn minst de beschikking hebt over&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;een &lt;strong&gt;werkende&lt;/strong&gt; installatie van &lt;em&gt;Docker&lt;/em&gt; (Linux) of &lt;em&gt;boot2docker&lt;/em&gt; (OS X / Windows).&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;De installatie staat &lt;a href=&#34;http://docs.docker.com/compose/install/#install-docker&#34;&gt;hier&lt;/a&gt; beschreven.&lt;br /&gt;
+&lt;em&gt;boot2docker&lt;/em&gt; is op zijn beurt weer afhankelijk van VirtualBox.&lt;/p&gt;
+
+&lt;p&gt;Referentie: &lt;a href=&#34;http://blog.tutum.co/2015/05/19/guide-to-docker-on-os-x/&#34;&gt;Guide to Docker on OS X&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Of Docker juist werkt, kan je vervolgens testen met &lt;code&gt;docker run --rm hello-world&lt;/code&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Docker Compose&lt;/strong&gt; (&lt;a href=&#34;http://docs.docker.com/compose/install/&#34;&gt;link&lt;/a&gt;):&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;De installatie werkt zo:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ curl -L https://github.com/docker/compose/releases/download/1.2.0/docker-compose-`uname -s`-`uname -m` &amp;gt; /usr/local/bin/docker-compose
+$ chmod +x /usr/local/bin/docker-compose
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;wordpress-mysql-dual-container-setup:a85a722ad1e08855df387da5b3d91879&#34;&gt;WordPress &amp;amp; MySQL dual container setup&lt;/h2&gt;
+
+&lt;h3 id=&#34;docker-images-downloaden:a85a722ad1e08855df387da5b3d91879&#34;&gt;Docker images downloaden&lt;/h3&gt;
+
+&lt;p&gt;Twee methodes zijn voorhanden.&lt;br /&gt;
+Om bandbreedte te besparen heeft de eerste methode de voorkeur!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1. Tarball van saved images downloaden en inladen&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Dit zijn images uit de officiele Docker Registry, &lt;em&gt;saved to a tar archive&lt;/em&gt;, gzipped en op een host geplaatst, die relatief dichtbij is.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;$ wget https://example.com/mysql.tar.gz&lt;/code&gt; (size: 142 MB)&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;$ wget https://example.com/wordpress.tar.gz&lt;/code&gt; (size: 163 MB)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Importeer deze images:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;$ docker load &amp;lt; mysql.tar.gz&lt;/code&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;$ docker load &amp;lt; wordpress.tar.gz&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;2. Pull de images direct uit de officiele Docker Registry&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;$ docker pull mysql&lt;/code&gt; (size: 282.9 MB)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;$ docker pull wordpress&lt;/code&gt; (size: 460.3 MB)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Controleer welke images er nu lokaal beschikbaar zijn:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ docker images
+REPOSITORY            TAG                  IMAGE ID            CREATED             VIRTUAL SIZE
+wordpress             latest               5ff368875b77        4 days ago          460.3 MB
+mysql                 latest               56f320bd6adc        3 weeks ago         282.9 MB
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;met-de-hand:a85a722ad1e08855df387da5b3d91879&#34;&gt;&amp;ldquo;Met de hand&amp;rdquo;&lt;/h3&gt;
+
+&lt;p&gt;Als eerste start je een MySQL-container op basis van het &lt;em&gt;mysql:latest&lt;/em&gt;-image.&lt;br /&gt;
+We gebruiken &amp;ldquo;p4ssw0rd&amp;rdquo; als root password en geven dat met &amp;ldquo;-e&amp;rdquo; mee als omgevings-variabele aan de container:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$ docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=p4ssw0rd -d mysql&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Vervolgens start je een WordPress-container.&lt;br /&gt;
+Deze geef je een &lt;strong&gt;link&lt;/strong&gt; naar de MySQL-container en laat je poort 80 in de container forwarden naar poort 8080 op je Docker-host:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$ docker run --name some-wordpress --link some-mysql:mysql -p 8080:80 -d wordpress&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;That was quick!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Ga in een webbrowser naar&lt;br /&gt;
+- &lt;code&gt;http://localhost:8080/&lt;/code&gt; (Linux)&lt;br /&gt;
+- &lt;code&gt;http://192.168.59.103:8080/&lt;/code&gt; (boot2docker)&lt;br /&gt;
+en configureer WordPress verder af.&lt;/p&gt;
+
+&lt;h3 id=&#34;onder-de-motorkap-1:a85a722ad1e08855df387da5b3d91879&#34;&gt;Onder de motorkap [1]&lt;/h3&gt;
+
+&lt;p&gt;Wat draait er nu?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ docker ps
+
+CONTAINER ID        IMAGE               COMMAND                CREATED             STATUS              PORTS                  NAMES
+5c2537c15ba9        wordpress:latest    &amp;quot;/entrypoint.sh apac   About an hour ago   Up About an hour    0.0.0.0:8080-&amp;gt;80/tcp   some-wordpress
+11ddc1271814        mysql:latest        &amp;quot;/entrypoint.sh mysq   About an hour ago   Up About an hour    3306/tcp               some-mysql
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Om bijvoorbeeld IN je MySQL-container te checken wat er in de database staat, kan je met &lt;code&gt;docker exec -ti&lt;/code&gt; een shell opstarten en in die container commandos uitvoeren:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ docker exec -ti some-mysql bash
+
+root@11ddc1271814:/# mysql -u root -p
+Enter password: p4ssw0rd
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 15
+Server version: 5.6.24 MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2015, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type &#39;help;&#39; or &#39;\h&#39; for help. Type &#39;\c&#39; to clear the current input statement.
+
+mysql&amp;gt; show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| wordpress          |
++--------------------+
+4 rows in set (0.00 sec)
+
+mysql&amp;gt; use wordpress;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql&amp;gt; show tables;
++-----------------------+
+| Tables_in_wordpress   |
++-----------------------+
+| wp_commentmeta        |
+| wp_comments           |
+| wp_links              |
+| wp_options            |
+| wp_postmeta           |
+| wp_posts              |
+| wp_term_relationships |
+| wp_term_taxonomy      |
+| wp_terms              |
+| wp_usermeta           |
+| wp_users              |
++-----------------------+
+11 rows in set (0.00 sec)
+
+mysql&amp;gt; exit
+Bye
+root@11ddc1271814:/# exit
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;opruimen:a85a722ad1e08855df387da5b3d91879&#34;&gt;Opruimen&lt;/h3&gt;
+
+&lt;p&gt;Het commando &lt;code&gt;docker kill&lt;/code&gt; is minder netjes dan &lt;code&gt;docker stop&lt;/code&gt;, maar sneller als je toch besloten hebt de containers te verwijderen.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ docker kill 5c2537c15ba9 11ddc1271814
+5c2537c15ba9
+11ddc1271814
+
+$ docker rm 5c2537c15ba9 11ddc1271814
+5c2537c15ba9
+11ddc1271814
+
+$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;met-docker-compose:a85a722ad1e08855df387da5b3d91879&#34;&gt;&amp;ldquo;Met docker-compose&amp;rdquo;&lt;/h2&gt;
+
+&lt;p&gt;Nu doen we hetzelfde, maar met behulp van &lt;em&gt;docker-compose&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;bestand-docker-compose-yml:a85a722ad1e08855df387da5b3d91879&#34;&gt;Bestand docker-compose.yml&lt;/h3&gt;
+
+&lt;p&gt;De waardes die je hierboven op de command-line hebt gegeven, kan je in &lt;code&gt;docker-compose.yml&lt;/code&gt; combineren. Een YAML-bestand, dat er dan als volgt uit komt te zien:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;db:
+  image: mysql:latest
+  environment:
+    - MYSQL_ROOT_PASSWORD=p4ssw0rd
+
+wordpress:
+  image: wordpress:latest
+  links:
+    - db:mysql
+  ports:
+    - &amp;quot;8080:80&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Start de stack in detached mode:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ docker-compose up -d
+Creating wordpressmysql_db_1...
+Creating wordpressmysql_wordpress_1...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;onder-de-motorkap-2:a85a722ad1e08855df387da5b3d91879&#34;&gt;Onder de motorkap [2]&lt;/h3&gt;
+
+&lt;p&gt;Wat draait er nu?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ docker ps
+CONTAINER ID        IMAGE               COMMAND                CREATED          STATUS              PORTS                  NAMES
+fe9eead88a32        wordpress:latest    &amp;quot;/entrypoint.sh apac   3 minutes ago    Up 3 minutes        0.0.0.0:8080-&amp;gt;80/tcp   wordpressmysql_wordpress_1
+6a2392af4d87        mysql:latest        &amp;quot;/entrypoint.sh mysq   3 minutes ago    Up 3 minutes        3306/tcp               wordpressmysql_db_1
+
+$ docker-compose ps
+           Name                         Command               State          Ports
+------------------------------------------------------------------------------------------
+wordpressmysql_db_1          /entrypoint.sh mysqld            Up      3306/tcp
+wordpressmysql_wordpress_1   /entrypoint.sh apache2-for ...   Up      0.0.0.0:8080-&amp;gt;80/tcp
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;WordPress weer opzetten middels de hierboven genoemde link naar &amp;ldquo;localhost&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;En na ge- / misbruik weer alles netjes achterlaten:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ docker-compose kill
+Killing wordpressmysql_wordpress_1...
+Killing wordpressmysql_db_1...
+
+$ docker-compose rm --force
+Going to remove wordpressmysql_wordpress_1, wordpressmysql_db_1
+Removing wordpressmysql_db_1...
+Removing wordpressmysql_wordpress_1...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;data-volume-container:a85a722ad1e08855df387da5b3d91879&#34;&gt;Data volume container&lt;/h2&gt;
+
+&lt;p&gt;De data die door WordPress wordt gegenereerd (accounts, posts, etc.) kan worden opgeslagen buiten de MySQL-container in een zgn. &lt;em&gt;data volume container&lt;/em&gt;. Die kan je op de CLI zo aanmaken:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$ docker run -v /var/lib/mysql --name=dbdata -d mysql /bin/true&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;De container is op basis van het MySQL-image, want die hebben we immers al binnen.&lt;br /&gt;
+Een data volume container hoeft niet &amp;ldquo;up&amp;rdquo; te zijn om gebruikt te kunnen worden. Je ziet &amp;rsquo;m dan ook alleen met het &lt;code&gt;docker ps -a&lt;/code&gt; command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND                CREATED             STATUS                     PORTS               NAMES
+c2aa204baf71        mysql:latest        &amp;quot;/entrypoint.sh /bin   4 minutes ago       Exited (0) 4 minutes ago                       dbdata
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Om dit met docker-compose te doen, voegen we deze container toe aan de YAML-configuratie.&lt;br /&gt;
+Het bestand ziet er dan zo uit:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;dbdata:
+  image: mysql
+  volumes:
+    - /var/lib/mysql
+  command:
+    - /bin/true
+
+db:
+  image: mysql
+  volumes_from:
+    - dbdata
+  environment:
+    - MYSQL_ROOT_PASSWORD=p4ssw0rd
+
+wordpress:
+  image: wordpress
+  links:
+    - db:mysql
+  ports:
+    - &amp;quot;8080:80&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Start weer een nieuwe stack met &lt;code&gt;docker-compose up -d&lt;/code&gt; en controleer wat er draait:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ docker-compose ps
+           Name                         Command               State           Ports
+-------------------------------------------------------------------------------------------
+wordpressmysql_db_1          /entrypoint.sh mysqld            Up       3306/tcp
+wordpressmysql_dbdata_1      /entrypoint.sh /bin/true         Exit 0
+wordpressmysql_wordpress_1   /entrypoint.sh apache2-for ...   Up       0.0.0.0:8080-&amp;gt;80/tcp
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Het bewijs dat beide containers dezelfde &amp;ldquo;layer&amp;rdquo; gebruiken voor /var/lib/mysql kan geleverd worden middels &lt;code&gt;docker inspect&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ docker inspect dbdata | grep &amp;quot;var/lib/mysql&amp;quot; | grep vfs
+        &amp;quot;/mnt/sda1/var/lib/docker/vfs/dir/9acd80fd069e82a89ac04a9141cc518ce8ee176bd7e4cc92c972dd3df50dffcc&amp;quot;
+
+$ docker inspect wordpressmysql_db_1 | grep &amp;quot;var/lib/mysql&amp;quot; | grep vfs
+        &amp;quot;/mnt/sda1/var/lib/docker/vfs/dir/9acd80fd069e82a89ac04a9141cc518ce8ee176bd7e4cc92c972dd3df50dffcc&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In boot2docker zie je dat als volgt - in die directory staat de database-data:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;docker@boot2docker:~$ sudo ls -altrF /mnt/sda1/var/lib/docker/vfs/dir/9acd80fd069e82a89ac04a9141cc518ce8ee176bd7e4cc92c972dd3df50dffcc/
+total 176164
+drwx------    2 999      999           4096 May 14 10:59 performance_schema/
+drwx------    2 999      999           4096 May 14 10:59 mysql/
+-rw-rw----    1 999      999       50331648 May 14 10:59 ib_logfile1
+-rw-rw----    1 999      999             56 May 14 10:59 auto.cnf
+drwx------    2 999      999           4096 May 14 11:02 wordpress/
+drwx------  126 root     root         16384 May 14 11:07 ../
+drwxr-xr-x    5 999      999           4096 May 14 11:07 ./
+-rw-rw----    1 999      999       79691776 May 14 11:07 ibdata1
+-rw-rw----    1 999      999       50331648 May 14 11:07 ib_logfile0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;backup-en-restore:a85a722ad1e08855df387da5b3d91879&#34;&gt;Backup en restore&lt;/h3&gt;
+
+&lt;p&gt;Eén manier van backuppen van de database is de volgende:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ docker exec -ti wordpressmysql_db_1 bash -c \
+ &#39;mysqldump --user=root --password=&amp;quot;$MYSQL_ROOT_PASSWORD&amp;quot; --all-databases&#39; \
+  &amp;gt; MySQL_full_backUp.sql
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Restoren kan middels volume-sharing en een gelinkte container (&amp;ldquo;db&amp;rdquo; in het onderstaande geval):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ docker run -ti --rm -v $(pwd):/tmp --link wordpressmysql_db_1:db mysql bash
+
+root@b2252da7520e:/# cd /tmp/
+root@b2252da7520e:/tmp# ls -al
+
+...
+
+-rw-r--r--  1 1000 staff   1075329 May 18 14:36 MySQL_full_backUp.sql
+
+...
+
+root@b2252da7520e:/tmp# mysql -u root -p -h $DB_PORT_3306_TCP_ADDR
+Enter password:
+
+mysql&amp;gt; source MySQL_full_backUp.sql
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Referentie: YouTube - &lt;a href=&#34;https://www.youtube.com/watch?v=2ZX3F-aFOxQ&#34;&gt;Docker Tutorial: Backing Up and Restoring MySQL and WordPress in Docker&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;lsquo;n Handigere tool? &lt;a href=&#34;https://github.com/docker-infra/docker-backup&#34;&gt;docker-backup&lt;/a&gt;. Wel even compileren vanuit Go en niet om tegen &lt;em&gt;boot2docker&lt;/em&gt; te gebruiken&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;That&amp;rsquo;s all Folks!&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Twitter - Job Description</title>
+      <link>http://bokh.home.xs4all.nl/blog/post/2009/07/23/twitter---job-description/</link>
+      <pubDate>Thu, 23 Jul 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://bokh.home.xs4all.nl/blog/post/2009/07/23/twitter---job-description/</guid>
+      <description>&lt;p&gt;So&amp;hellip; joining Twitter on December 21st 2006 (and leaving shortly thereafter, re-joining 9 months later - check on &lt;a href=&#34;http://www.whendidyoujointwitter.com/&#34;&gt;When Did You Join Twitter&lt;/a&gt;) makes me what? A web developer? An IT journalist? A pro-blogger? Or maybe a futurist or innovator?!i&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://bokh.home.xs4all.nl/images/twitter.jpg&#34; alt=&#34;Job desc&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Guess I should have joined 5 months sooner&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Apple - Gramps Added to the Family</title>
+      <link>http://bokh.home.xs4all.nl/blog/post/2009/06/28/apple---gramps-added-to-the-family/</link>
+      <pubDate>Sun, 28 Jun 2009 13:50:36 +0200</pubDate>
+      
+      <guid>http://bokh.home.xs4all.nl/blog/post/2009/06/28/apple---gramps-added-to-the-family/</guid>
+      <description>&lt;p&gt;&amp;ldquo;Our&amp;rdquo; Apple-family welcomed a rather old guy this weekend, a &lt;a href=&#34;http://tinyurl.com/nobpy2&#34;&gt;Power Macintosh G4&lt;/a&gt;, the one with AGP and gigabit ethernet. Thanks to Apple for pointing me &lt;a href=&#34;http://support.apple.com/kb/HT3082&#34;&gt;how to differentiate between models&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I just love the design of these machines: the graphite color; the big Apple-logo on the sides; the handles on the top and last but not least: the easy way to &lt;a href=&#34;http://ht.wikipedia.org/wiki/Fichye:PowerMac_G4_MDD_open.jpg&#34;&gt;open the hood&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://bokh.home.xs4all.nl/images/Apple_PowerMac_G4.jpg&#34; alt=&#34;PowerMac G4&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;FYI: this particular PowerPC is app. 10 years old, has dual G4-processors at 450MHz, 896MB RAM and two hard disks: 30GB for &lt;a href=&#34;http://en.wikipedia.org/wiki/Mac_OS_X_Server#Mac_OS_X_Server_10.4_.28Tiger_Server.29&#34;&gt;Mac OS X 10.4 Tiger Server&lt;/a&gt; and 80GB for data-storage. Maybe it ‘ll end up replacing the old PC-hardware that is powering this site, giving it a fresh install of FreeBSD during the summer holiday. ;-)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>IPv6 working. Now what..?</title>
+      <link>http://bokh.home.xs4all.nl/blog/post/2009/04/21/ipv6-working.-now-what../</link>
+      <pubDate>Tue, 21 Apr 2009 11:03:46 +0200</pubDate>
+      
+      <guid>http://bokh.home.xs4all.nl/blog/post/2009/04/21/ipv6-working.-now-what../</guid>
+      <description>&lt;p&gt;Over the last couple of weeks this blog hasn’t had a proper post. Instead it was filled by automagically created Twitter updates. In the meantime lots of things happened: too much to write down here. Instead I’ll focus on my (re-)achievements with IPv6.&lt;/p&gt;
+
+&lt;p&gt;I had IPv6 enabled a couple of years ago, using a 6to4 tunnel, offered as an experimental service by my ISP XS4ALL, but neglected it after installing a new hard drive. This time around, I choose SixXS for the tunnel broker portion and installed their AICCU-tool on my aging FreeBSD-host.&lt;br /&gt;
+FYI: experimenting with OpenWRT on my Linksys WRT54GL wireless access point failed kind of (since Tomato-firmware is not supporting IPv6 yet) and left me with this single-host option.&lt;/p&gt;
+
+&lt;p&gt;It turned out the so called &lt;em&gt;router advertisement daemon&lt;/em&gt; (man 8 rtadvd), needed to propagate IPv6 addresses to our MacBooks and my Linux- / WinXP-host, was able to route between the interfaces /dev/tun0 and /dev/net/fxp0. Not the most cosmetically sweet option, but nevertheless: it’s working like it should - with a local IPv6-subnet in my LAN.&lt;/p&gt;
+
+&lt;p&gt;And now what?! What’s the use in running IPv6 when no one else does? Create demand. &lt;strong&gt;Think pr0n!&lt;/strong&gt; In fact, have a look at this presentation below to illustrate that statement:&lt;/p&gt;
+
+&lt;p&gt;(Video no longer available&amp;hellip;)&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Fck, the fcking Thing is f*cked&lt;/em&gt; - Props go to b10m for pointing me to this one!&lt;/p&gt;
+
+&lt;p&gt;Just as in the days of VHS, Betamax and V2000 it’s &lt;em&gt;pr0n&lt;/em&gt; that matters. And where do you find &lt;em&gt;pr0n&lt;/em&gt; these days? Right: on USENET and Torrent-sites! Regarding USENET, this blogpost will get you started once you have IPv6 up-and-running: Easily Get free newsgroup access over ipv6 in Ubuntu. Of course it’s not about Ubuntu but on the USENET-providers (with high retention!) that will give you &lt;strong&gt;free access&lt;/strong&gt; to their newsgroups containing a huge amount of (semi) illegal content, not only &lt;em&gt;pr0n&lt;/em&gt;, but also warez, ebooks, DivX-movies and the whole lot, as long as you connect over… IPv6! And since “The Pirate Bay” is having an IPv6-tracker but is in stormy waters, more and more people will turn to USENET for their “specific needs”.&lt;/p&gt;
+
+&lt;p&gt;So? It’s only a matter of time until the RIAA will find out about IPv6 and call for appropriate actions… In the meantime do whatever you think is right (or not). :-P&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Review - Tomato Firmware for WRT54G</title>
+      <link>http://bokh.home.xs4all.nl/blog/post/2006/09/15/review---tomato-firmware-for-wrt54g/</link>
+      <pubDate>Fri, 15 Sep 2006 13:58:17 +0200</pubDate>
+      
+      <guid>http://bokh.home.xs4all.nl/blog/post/2006/09/15/review---tomato-firmware-for-wrt54g/</guid>
+      <description>&lt;p&gt;I could not resist my curiousity, that&amp;rsquo;s why I decided to install third-party firmware named &lt;a href=&#34;http://www.polarcloud.com/tomato&#34;&gt;Tomato&lt;/a&gt; (version 0.03.0747 to be specific) on my brand new Linksys WRT54GL v1.1 wireless LAN-router.&lt;/p&gt;
+
+&lt;p&gt;This specific router has not been flashed before: no DD-WRT or HyperWRT or whatsoever. The actual flashing was a breeze: after resetting the device and it’s NVRAM by pressing the resetbutton on the back for about 20 seconds I uploaded the file “G\code.bin” from within IE7 under Windows XP. Why IE? In the online forums it is noted that some other browsers are having some problems during the upgrade-process. Indeed, I’ve done this before on a previous Linksys WRT54! :-P&lt;/p&gt;
+
+&lt;p&gt;A powercycle afterward just to be sure and when I connected to IP-address 192.168.1.1 there is was: the first Ajax-enabled Linksys web-GUI!!&lt;/p&gt;
+
+&lt;p&gt;After (re-)configuring all the network-settings and getting my WLAN on the net again I was ready to dive a little deeper into this new kid on the block.&lt;/p&gt;
+
+&lt;p&gt;Tomato is based on the latest Linksys firmware v4.30.7 and it’s main advantages (besides the ones you’ll find in most of the other third party firmwares) in my opinion are the CIFS-client and the web-GUI. With the first one you can mount a Windows- or Samba-share to store bandwidth-logfiles. The second has some SVG under the hood to generate bandwidth-charts and QoS-pies, which look really nice in my default browser Firefox (here IE7 lacks the SVG-support which is now built-in in Firefox).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://bokh.home.xs4all.nl/images/bw-chrt-S.jpg&#34; alt=&#34;Tomato webGUI&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;So far I am very much impressed with this firmware-release! I hope I feel the same in about a week or so, if no updates are released in the meantime.
+And compared to the DD-WRT-firmware, it turned out Tomato will not have to reboot itself for every minor tweak that has been made: just an ordinary sighup of the process like any good Unix does will do.&lt;/p&gt;
+
+&lt;p&gt;The only (minor) issue I had was enabling the &lt;em&gt;Frame Burst&lt;/em&gt; in the Advanced -&amp;gt; Wireless-settings. It stays disabled after saving the settings. This same option worked on previous installed firmwares on my 1st router though maybe I should sent Tomato’s developer Jonathan an email about this.&lt;br /&gt;
+&lt;strong&gt;NOTE&lt;/strong&gt; - this issue was resolved in a later version!&lt;/p&gt;
+
+&lt;p&gt;But even if this release is still in an experimental or beta state I think it’s very stable and well equipped for usage on a daily basis. Go and give it a try if you got a WRT54 yourself!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
