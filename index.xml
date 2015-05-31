@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>BOK</title>
-    <link>http://bokh.home.xs4all.nl/blog/</link>
+    <link>http://hbokh.github.io/</link>
     <description>Recent content on BOK</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 201x</copyright>
     <lastBuildDate>Sat, 23 May 2015 09:12:15 +0000</lastBuildDate>
-    <atom:link href="http://bokh.home.xs4all.nl/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://hbokh.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Hands-on: WordPress en MySQL op Docker</title>
-      <link>http://bokh.home.xs4all.nl/blog/post/2015/05/23/hands-on-wordpress-en-mysql-op-docker/</link>
+      <link>http://hbokh.github.io/post/2015/05/23/hands-on-wordpress-en-mysql-op-docker/</link>
       <pubDate>Sat, 23 May 2015 09:12:15 +0000</pubDate>
       
-      <guid>http://bokh.home.xs4all.nl/blog/post/2015/05/23/hands-on-wordpress-en-mysql-op-docker/</guid>
+      <guid>http://hbokh.github.io/post/2015/05/23/hands-on-wordpress-en-mysql-op-docker/</guid>
       <description>
 
 &lt;p&gt;A manual (in Dutch) written for the local Docker Grunn Meetup, to learn about Docker &amp;amp; Compose by setting up a WordPress-blog.&lt;/p&gt;
@@ -356,10 +356,10 @@ mysql&amp;gt; source MySQL_full_backUp.sql
     
     <item>
       <title>Twitter - Job Description</title>
-      <link>http://bokh.home.xs4all.nl/blog/post/2009/07/23/twitter---job-description/</link>
+      <link>http://hbokh.github.io/post/2009/07/23/twitter---job-description/</link>
       <pubDate>Thu, 23 Jul 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://bokh.home.xs4all.nl/blog/post/2009/07/23/twitter---job-description/</guid>
+      <guid>http://hbokh.github.io/post/2009/07/23/twitter---job-description/</guid>
       <description>&lt;p&gt;So&amp;hellip; joining Twitter on December 21st 2006 (and leaving shortly thereafter, re-joining 9 months later - check on &lt;a href=&#34;http://www.whendidyoujointwitter.com/&#34;&gt;When Did You Join Twitter&lt;/a&gt;) makes me what? A web developer? An IT journalist? A pro-blogger? Or maybe a futurist or innovator?!i&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://bokh.home.xs4all.nl/images/twitter.jpg&#34; alt=&#34;Job desc&#34; /&gt;
@@ -371,10 +371,10 @@ mysql&amp;gt; source MySQL_full_backUp.sql
     
     <item>
       <title>Apple - Gramps Added to the Family</title>
-      <link>http://bokh.home.xs4all.nl/blog/post/2009/06/28/apple---gramps-added-to-the-family/</link>
+      <link>http://hbokh.github.io/post/2009/06/28/apple---gramps-added-to-the-family/</link>
       <pubDate>Sun, 28 Jun 2009 13:50:36 +0200</pubDate>
       
-      <guid>http://bokh.home.xs4all.nl/blog/post/2009/06/28/apple---gramps-added-to-the-family/</guid>
+      <guid>http://hbokh.github.io/post/2009/06/28/apple---gramps-added-to-the-family/</guid>
       <description>&lt;p&gt;&amp;ldquo;Our&amp;rdquo; Apple-family welcomed a rather old guy this weekend, a &lt;a href=&#34;http://tinyurl.com/nobpy2&#34;&gt;Power Macintosh G4&lt;/a&gt;, the one with AGP and gigabit ethernet. Thanks to Apple for pointing me &lt;a href=&#34;http://support.apple.com/kb/HT3082&#34;&gt;how to differentiate between models&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;I just love the design of these machines: the graphite color; the big Apple-logo on the sides; the handles on the top and last but not least: the easy way to &lt;a href=&#34;http://ht.wikipedia.org/wiki/Fichye:PowerMac_G4_MDD_open.jpg&#34;&gt;open the hood&lt;/a&gt;.&lt;/p&gt;
@@ -388,10 +388,10 @@ mysql&amp;gt; source MySQL_full_backUp.sql
     
     <item>
       <title>IPv6 working. Now what..?</title>
-      <link>http://bokh.home.xs4all.nl/blog/post/2009/04/21/ipv6-working.-now-what../</link>
+      <link>http://hbokh.github.io/post/2009/04/21/ipv6-working.-now-what../</link>
       <pubDate>Tue, 21 Apr 2009 11:03:46 +0200</pubDate>
       
-      <guid>http://bokh.home.xs4all.nl/blog/post/2009/04/21/ipv6-working.-now-what../</guid>
+      <guid>http://hbokh.github.io/post/2009/04/21/ipv6-working.-now-what../</guid>
       <description>&lt;p&gt;Over the last couple of weeks this blog hasn’t had a proper post. Instead it was filled by automagically created Twitter updates. In the meantime lots of things happened: too much to write down here. Instead I’ll focus on my (re-)achievements with IPv6.&lt;/p&gt;
 
 &lt;p&gt;I had IPv6 enabled a couple of years ago, using a 6to4 tunnel, offered as an experimental service by my ISP XS4ALL, but neglected it after installing a new hard drive. This time around, I choose SixXS for the tunnel broker portion and installed their AICCU-tool on my aging FreeBSD-host.&lt;br /&gt;
@@ -413,10 +413,10 @@ FYI: experimenting with OpenWRT on my Linksys WRT54GL wireless access point fail
     
     <item>
       <title>Review - Tomato Firmware for WRT54G</title>
-      <link>http://bokh.home.xs4all.nl/blog/post/2006/09/15/review---tomato-firmware-for-wrt54g/</link>
+      <link>http://hbokh.github.io/post/2006/09/15/review---tomato-firmware-for-wrt54g/</link>
       <pubDate>Fri, 15 Sep 2006 13:58:17 +0200</pubDate>
       
-      <guid>http://bokh.home.xs4all.nl/blog/post/2006/09/15/review---tomato-firmware-for-wrt54g/</guid>
+      <guid>http://hbokh.github.io/post/2006/09/15/review---tomato-firmware-for-wrt54g/</guid>
       <description>&lt;p&gt;I could not resist my curiousity, that&amp;rsquo;s why I decided to install third-party firmware named &lt;a href=&#34;http://www.polarcloud.com/tomato&#34;&gt;Tomato&lt;/a&gt; (version 0.03.0747 to be specific) on my brand new Linksys WRT54GL v1.1 wireless LAN-router.&lt;/p&gt;
 
 &lt;p&gt;This specific router has not been flashed before: no DD-WRT or HyperWRT or whatsoever. The actual flashing was a breeze: after resetting the device and it’s NVRAM by pressing the resetbutton on the back for about 20 seconds I uploaded the file “G\code.bin” from within IE7 under Windows XP. Why IE? In the online forums it is noted that some other browsers are having some problems during the upgrade-process. Indeed, I’ve done this before on a previous Linksys WRT54! :-P&lt;/p&gt;
@@ -442,10 +442,10 @@ And compared to the DD-WRT-firmware, it turned out Tomato will not have to reboo
     
     <item>
       <title>About me</title>
-      <link>http://bokh.home.xs4all.nl/blog/about/</link>
+      <link>http://hbokh.github.io/about/</link>
       <pubDate>Sun, 21 Oct 2001 09:12:15 +0000</pubDate>
       
-      <guid>http://bokh.home.xs4all.nl/blog/about/</guid>
+      <guid>http://hbokh.github.io/about/</guid>
       <description>&lt;p&gt;In case you want to know (a little bit) more about me, check &amp;hellip; &lt;a href=&#34;https://about.me/BOK&#34;&gt;about me&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;The picture above was taken during our Darwin - Perth roadtrip in 2013, on the &lt;a href=&#34;https://en.wikipedia.org/wiki/Gibb_River_Road&#34;&gt;Gibb River Road&lt;/a&gt;, Kimberley region, Western Australia.&lt;/p&gt;

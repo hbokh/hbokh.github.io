@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Docker on BOK</title>
-    <link>http://bokh.home.xs4all.nl/blog/tags/docker/</link>
+    <link>http://hbokh.github.io/tags/docker/</link>
     <description>Recent content in Docker on BOK</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 201x</copyright>
     <lastBuildDate>Sat, 23 May 2015 09:12:15 +0000</lastBuildDate>
-    <atom:link href="http://bokh.home.xs4all.nl/blog/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://hbokh.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Hands-on: WordPress en MySQL op Docker</title>
-      <link>http://bokh.home.xs4all.nl/blog/post/2015/05/23/hands-on-wordpress-en-mysql-op-docker/</link>
+      <link>http://hbokh.github.io/post/2015/05/23/hands-on-wordpress-en-mysql-op-docker/</link>
       <pubDate>Sat, 23 May 2015 09:12:15 +0000</pubDate>
       
-      <guid>http://bokh.home.xs4all.nl/blog/post/2015/05/23/hands-on-wordpress-en-mysql-op-docker/</guid>
+      <guid>http://hbokh.github.io/post/2015/05/23/hands-on-wordpress-en-mysql-op-docker/</guid>
       <description>
 
 &lt;p&gt;A manual (in Dutch) written for the local Docker Grunn Meetup, to learn about Docker &amp;amp; Compose by setting up a WordPress-blog.&lt;/p&gt;
