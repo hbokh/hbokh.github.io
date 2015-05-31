@@ -18,9 +18,11 @@
       <guid>http://hbokh.github.io/post/2015/05/23/hands-on-wordpress-en-mysql-op-docker/</guid>
       <description>
 
-&lt;p&gt;A manual (in Dutch) written for the local Docker Grunn Meetup, to learn about Docker &amp;amp; Compose by setting up a WordPress-blog.&lt;/p&gt;
+&lt;p&gt;A manual (in Dutch) written for the local &lt;a href=&#34;http://www.meetup.com/DockerGrunn/&#34;&gt;Docker Grunn Meetup&lt;/a&gt;, to become familiar with Docker &amp;amp; Compose by setting up a WordPress-blog.&lt;/p&gt;
 
-&lt;h2 id=&#34;vooraf-installeren:a85a722ad1e08855df387da5b3d91879&#34;&gt;Vooraf installeren!!&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;vooraf-installeren:a85a722ad1e08855df387da5b3d91879&#34;&gt;Vooraf installeren!&lt;/h2&gt;
 
 &lt;p&gt;Zorg dat je op zijn minst de beschikking hebt over&lt;/p&gt;
 
