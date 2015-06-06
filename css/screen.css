@@ -352,7 +352,8 @@ pre {
     font-family: Inconsolata, monospace, sans-serif;
     font-size: 0.9em;
     white-space: pre;
-    overflow: auto;
+    /*overflow: auto; */
+    overflow: scroll;
     background: #F7FAFB;
     border-radius: 3px;
 }
