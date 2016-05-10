@@ -366,8 +366,7 @@ mysql&amp;gt; source MySQL_full_backUp.sql
       <guid>http://hbokh.github.io/post/2009/07/23/twitter---job-description/</guid>
       <description>&lt;p&gt;So&amp;hellip; joining Twitter on December 21st 2006 (and leaving shortly thereafter, re-joining 9 months later - check on &lt;a href=&#34;http://www.whendidyoujointwitter.com/&#34;&gt;When Did You Join Twitter&lt;/a&gt;) makes me what? A web developer? An IT journalist? A pro-blogger? Or maybe a futurist or innovator?!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://bokh.home.xs4all.nl/images/twitter.jpg&#34; alt=&#34;Job desc&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://bokh.home.xs4all.nl/images/twitter.jpg&#34; alt=&#34;Job desc&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Guess I should have joined 5 months sooner&amp;hellip;&lt;/p&gt;
 </description>
@@ -383,8 +382,7 @@ mysql&amp;gt; source MySQL_full_backUp.sql
 
 &lt;p&gt;I just love the design of these machines: the graphite color; the big Apple-logo on the sides; the handles on the top and last but not least: the easy way to &lt;a href=&#34;http://ht.wikipedia.org/wiki/Fichye:PowerMac_G4_MDD_open.jpg&#34;&gt;open the hood&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://bokh.home.xs4all.nl/images/Apple_PowerMac_G4.jpg&#34; alt=&#34;PowerMac G4&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://bokh.home.xs4all.nl/images/Apple_PowerMac_G4.jpg&#34; alt=&#34;PowerMac G4&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;FYI: this particular PowerPC is app. 10 years old, has dual G4-processors at 450MHz, 896MB RAM and two hard disks: 30GB for &lt;a href=&#34;http://en.wikipedia.org/wiki/Mac_OS_X_Server#Mac_OS_X_Server_10.4_.28Tiger_Server.29&#34;&gt;Mac OS X 10.4 Tiger Server&lt;/a&gt; and 80GB for data-storage. Maybe it ‘ll end up replacing the old PC-hardware that is powering this site, giving it a fresh install of FreeBSD during the summer holiday. ;-)&lt;/p&gt;
 </description>
@@ -407,7 +405,7 @@ FYI: experimenting with OpenWRT on my Linksys WRT54GL wireless access point fail
 
 &lt;p&gt;(Video no longer available&amp;hellip;)&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Fck, the fcking Thing is f*cked&lt;/em&gt; - Props go to b10m for pointing me to this one!&lt;/p&gt;
+&lt;p&gt;*Fck, the fcking Thing is f&lt;em&gt;cked&lt;/em&gt; - Props go to b10m for pointing me to this one!&lt;/p&gt;
 
 &lt;p&gt;Just as in the days of VHS, Betamax and V2000 it’s &lt;em&gt;pr0n&lt;/em&gt; that matters. And where do you find &lt;em&gt;pr0n&lt;/em&gt; these days? Right: on USENET and Torrent-sites! Regarding USENET, this blogpost will get you started once you have IPv6 up-and-running: Easily Get free newsgroup access over ipv6 in Ubuntu. Of course it’s not about Ubuntu but on the USENET-providers (with high retention!) that will give you &lt;strong&gt;free access&lt;/strong&gt; to their newsgroups containing a huge amount of (semi) illegal content, not only &lt;em&gt;pr0n&lt;/em&gt;, but also warez, ebooks, DivX-movies and the whole lot, as long as you connect over… IPv6! And since “The Pirate Bay” is having an IPv6-tracker but is in stormy waters, more and more people will turn to USENET for their “specific needs”.&lt;/p&gt;
 
@@ -431,8 +429,7 @@ FYI: experimenting with OpenWRT on my Linksys WRT54GL wireless access point fail
 
 &lt;p&gt;Tomato is based on the latest Linksys firmware v4.30.7 and it’s main advantages (besides the ones you’ll find in most of the other third party firmwares) in my opinion are the CIFS-client and the web-GUI. With the first one you can mount a Windows- or Samba-share to store bandwidth-logfiles. The second has some SVG under the hood to generate bandwidth-charts and QoS-pies, which look really nice in my default browser Firefox (here IE7 lacks the SVG-support which is now built-in in Firefox).&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://bokh.home.xs4all.nl/images/bw-chrt-S.jpg&#34; alt=&#34;Tomato webGUI&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://bokh.home.xs4all.nl/images/bw-chrt-S.jpg&#34; alt=&#34;Tomato webGUI&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;So far I am very much impressed with this firmware-release! I hope I feel the same in about a week or so, if no updates are released in the meantime.
 And compared to the DD-WRT-firmware, it turned out Tomato will not have to reboot itself for every minor tweak that has been made: just an ordinary sighup of the process like any good Unix does will do.&lt;/p&gt;
