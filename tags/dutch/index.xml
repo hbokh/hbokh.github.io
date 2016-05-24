@@ -24,7 +24,7 @@
 
 &lt;h1 id=&#34;pydash-in-een-container:2d0aa3085eb0559873e64f01dee006e2&#34;&gt;pyDash in een container&lt;/h1&gt;
 
-&lt;h2 id=&#34;docker-grunn-workshop-26-mei-2016:2d0aa3085eb0559873e64f01dee006e2&#34;&gt;Docker Grunn workshop, 26 mei 2016&lt;/h2&gt;
+&lt;h3 id=&#34;docker-grunn-workshop-26-mei-2016:2d0aa3085eb0559873e64f01dee006e2&#34;&gt;Docker Grunn workshop, 26 mei 2016&lt;/h3&gt;
 
 &lt;h3 id=&#34;doel:2d0aa3085eb0559873e64f01dee006e2&#34;&gt;Doel&lt;/h3&gt;
 
@@ -34,10 +34,14 @@
 
 &lt;ul&gt;
 &lt;li&gt;een computer (&lt;em&gt;Doh!&lt;/em&gt;) met Linux / OS X / Windows&lt;/li&gt;
-&lt;li&gt;met daarop een werkende Docker-setup (&amp;gt;= v1.10.3) - Dokcer / boot2docker / Docker for Mac&lt;/li&gt;
+&lt;li&gt;daarop een werkende Docker-setup (&amp;gt;= v1.10.3)
+
+&lt;ul&gt;
+&lt;li&gt;Docker / boot2docker / Docker for Mac&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;docker-compose (&amp;gt;= v1.6)&lt;/li&gt;
 &lt;li&gt;git-client&lt;/li&gt;
-&lt;li&gt;een editor bijv. Vim (of als je onder de 18 bent: nano&amp;hellip;)&lt;/li&gt;
+&lt;li&gt;een editor bijv. Vim (of als je onder de 18 bent: nano)&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;stap-voor-stap:2d0aa3085eb0559873e64f01dee006e2&#34;&gt;Stap voor stap&lt;/h3&gt;
