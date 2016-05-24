@@ -188,8 +188,8 @@ Ga naar <strong><a href="https://docs.docker.com/compose/django/">Quickstart: Do
 Verwijder de regels die ze noemen - het is niet nodig, want de gebruikte DB straks is een sqlite3-bestand.</li>
 </ul>
 
-<pre><code>  $ vi Dockerfile
-  $ vi docker-compose.yml
+<pre><code>$ vi Dockerfile
+$ vi docker-compose.yml
 </code></pre>
 
 <ul>
@@ -229,7 +229,7 @@ Installed 0 object(s) from 0 fixture(s)
 <p>Hiermee wordt de datasbase in bestand <code>db.sqlite3</code> gevuld.</p>
 
 <ul>
-<li>Open een browser naar <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a> (Docker for Mac) of <a href="http://192.168.99.100:8080/">http://192.168.99.100:8080/</a> (boot2docker) en login met de zojuist ingegeven <em>credentials</em>.</li>
+<li>Open een browser naar <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a> (Docker for Mac) of <a href="http://192.168.99.100:8000/">http://192.168.99.100:8000/</a> (boot2docker) en login met de zojuist ingeklopte <em>credentials</em>.</li>
 </ul>
 
 <h3 id="errors:2d0aa3085eb0559873e64f01dee006e2">Errors</h3>
@@ -238,7 +238,7 @@ Installed 0 object(s) from 0 fixture(s)
 
 <p><code>DataTables warning (table id = 'get_ips'): Requested unknown parameter '1' from the data source for row 0</code></p>
 
-<p><strong>ENJOY!</strong></p>
+<p><strong>Et voila!</strong></p>
 
 <p><img src="http://hbokh.github.io/images/pydash_20160524_small.png" alt="PyDash" /></p>
 
@@ -248,7 +248,7 @@ Installed 0 object(s) from 0 fixture(s)
 
 <p>Dit is zijn de werkende <code>Dockerfile</code> en <code>docker-compose.yml</code>:</p>
 
-<p>Dockerfile:</p>
+<p><code>Dockerfile</code>:</p>
 
 <pre><code>FROM python:2.7
 ENV PYTHONUNBUFFERED 1
@@ -259,7 +259,7 @@ RUN pip install -r requirements.txt
 ADD . /code/
 </code></pre>
 
-<p>docker-compose.yml:</p>
+<p><code>docker-compose.yml</code>:</p>
 
 <pre><code>version: '2'
 services:

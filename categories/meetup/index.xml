@@ -51,8 +51,8 @@ Ga naar &lt;strong&gt;&lt;a href=&#34;https://docs.docker.com/compose/django/&#3
 Verwijder de regels die ze noemen - het is niet nodig, want de gebruikte DB straks is een sqlite3-bestand.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;pre&gt;&lt;code&gt;  $ vi Dockerfile
-  $ vi docker-compose.yml
+&lt;pre&gt;&lt;code&gt;$ vi Dockerfile
+$ vi docker-compose.yml
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;ul&gt;
@@ -92,7 +92,7 @@ Installed 0 object(s) from 0 fixture(s)
 &lt;p&gt;Hiermee wordt de datasbase in bestand &lt;code&gt;db.sqlite3&lt;/code&gt; gevuld.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Open een browser naar &lt;a href=&#34;http://127.0.0.1:8000/&#34;&gt;http://127.0.0.1:8000/&lt;/a&gt; (Docker for Mac) of &lt;a href=&#34;http://192.168.99.100:8080/&#34;&gt;http://192.168.99.100:8080/&lt;/a&gt; (boot2docker) en login met de zojuist ingegeven &lt;em&gt;credentials&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Open een browser naar &lt;a href=&#34;http://127.0.0.1:8000/&#34;&gt;http://127.0.0.1:8000/&lt;/a&gt; (Docker for Mac) of &lt;a href=&#34;http://192.168.99.100:8000/&#34;&gt;http://192.168.99.100:8000/&lt;/a&gt; (boot2docker) en login met de zojuist ingeklopte &lt;em&gt;credentials&lt;/em&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;errors:2d0aa3085eb0559873e64f01dee006e2&#34;&gt;Errors&lt;/h3&gt;
@@ -101,7 +101,7 @@ Installed 0 object(s) from 0 fixture(s)
 
 &lt;p&gt;&lt;code&gt;DataTables warning (table id = &#39;get_ips&#39;): Requested unknown parameter &#39;1&#39; from the data source for row 0&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;ENJOY!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Et voila!&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://hbokh.github.io/images/pydash_20160524_small.png&#34; alt=&#34;PyDash&#34; /&gt;&lt;/p&gt;
 
@@ -111,7 +111,7 @@ Installed 0 object(s) from 0 fixture(s)
 
 &lt;p&gt;Dit is zijn de werkende &lt;code&gt;Dockerfile&lt;/code&gt; en &lt;code&gt;docker-compose.yml&lt;/code&gt;:&lt;/p&gt;
 
-&lt;p&gt;Dockerfile:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Dockerfile&lt;/code&gt;:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;FROM python:2.7
 ENV PYTHONUNBUFFERED 1
@@ -122,7 +122,7 @@ RUN pip install -r requirements.txt
 ADD . /code/
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;docker-compose.yml:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker-compose.yml&lt;/code&gt;:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;version: &#39;2&#39;
 services:
