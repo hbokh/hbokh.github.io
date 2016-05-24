@@ -237,8 +237,39 @@ Installed 0 object(s) from 0 fixture(s)
 
 <p><code>DataTables warning (table id = 'get_ips'): Requested unknown parameter '1' from the data source for row 0</code></p>
 
-<p>&ndash;
-<em>That&rsquo;s all Folks!</em></p>
+<p><strong>ENJOY!</strong></p>
+
+<p><a href="hbokh.github.io/images/pydash_20160524_small.png">PyDash</a></p>
+
+<hr />
+
+<h2 id="appendix:2d0aa3085eb0559873e64f01dee006e2">Appendix</h2>
+
+<p>Dit is zijn de werkende <code>Dockerfile</code> en <code>docker-compose.yml</code>:</p>
+
+<p>Dockerfile:</p>
+
+<pre><code>FROM python:2.7
+ENV PYTHONUNBUFFERED 1
+RUN mkdir /code
+WORKDIR /code
+ADD requirements.txt /code/
+RUN pip install -r requirements.txt
+ADD . /code/
+</code></pre>
+
+<p>docker-compose.yml:</p>
+
+<pre><code>version: '2'
+services:
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - &quot;8000:8000&quot;
+</code></pre>
 
     </section>
 

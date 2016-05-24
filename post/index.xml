@@ -100,8 +100,39 @@ Installed 0 object(s) from 0 fixture(s)
 
 &lt;p&gt;&lt;code&gt;DataTables warning (table id = &#39;get_ips&#39;): Requested unknown parameter &#39;1&#39; from the data source for row 0&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&amp;ndash;
-&lt;em&gt;That&amp;rsquo;s all Folks!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ENJOY!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;hbokh.github.io/images/pydash_20160524_small.png&#34;&gt;PyDash&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;appendix:2d0aa3085eb0559873e64f01dee006e2&#34;&gt;Appendix&lt;/h2&gt;
+
+&lt;p&gt;Dit is zijn de werkende &lt;code&gt;Dockerfile&lt;/code&gt; en &lt;code&gt;docker-compose.yml&lt;/code&gt;:&lt;/p&gt;
+
+&lt;p&gt;Dockerfile:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;FROM python:2.7
+ENV PYTHONUNBUFFERED 1
+RUN mkdir /code
+WORKDIR /code
+ADD requirements.txt /code/
+RUN pip install -r requirements.txt
+ADD . /code/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;docker-compose.yml:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;version: &#39;2&#39;
+services:
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - &amp;quot;8000:8000&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
