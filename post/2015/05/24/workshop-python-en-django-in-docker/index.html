@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  	<meta property="og:title" content=" Workshop: Python en Django in Docker &middot;  BOK" />
+  	<meta property="og:site_name" content="BOK" />
+  	<meta property="og:url" content="http://hbokh.github.io/post/2015/05/24/workshop-python-en-django-in-docker/" />
+
+    
+  	<meta property="og:type" content="article" />
+
+    <meta property="og:article:published_time" content="2015-05-24T20:18:15Z" />
+
+    
+    <meta property="og:article:tag" content="docker" />
+    
+    <meta property="og:article:tag" content="dutch" />
+    
+    <meta property="og:article:tag" content="meetup" />
+    
+    
+
+  <title>
+     Workshop: Python en Django in Docker &middot;  BOK
+  </title>
+
+    <meta name="description" content="Because a geek needs a blog" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="http://hbokh.github.io/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="http://hbokh.github.io/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="http://hbokh.github.io/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="http://hbokh.github.io/css/nav.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
+
+
+    
+      
+          <link href="http://hbokh.github.io/index.xml" rel="alternate" type="application/rss+xml" title="BOK" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.15" />
+
+    <link rel="canonical" href="http://hbokh.github.io/post/2015/05/24/workshop-python-en-django-in-docker/" />
+
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-63790932-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="http://hbokh.github.io/">Blog</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="http://hbokh.github.io/about/">About me</a>
+            </li>
+        
+            <h3>Follow me</h3>
+            <li class="nav-opened" role="presentation">
+            	<a href="https://github.com/hbokh">Github repos</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://twitter.com/BOK">Twitter timeline</a>
+            </li>
+        
+    </ul>
+    
+    
+    <a class="subscribe-button icon-feed" href="http://hbokh.github.io/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+
+<header class="main-header post-head" style="background-image: url(http://hbokh.github.io/images/pydash_20160524.png)">
+  <nav class="main-nav overlay clearfix">
+
+
+  
+      <a class="blog-logo" href="http://hbokh.github.io/"><img src="http://hbokh.github.io/images/bok.png" alt="Home" /></a>
+  
+  
+      <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">Workshop: Python en Django in Docker</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2015-05-24T20:18:15Z">
+            May 24, 2015
+          </time>
+        
+         
+          <span class="post-tag small"><a href="http://hbokh.github.io/tags/docker/">#docker</a></span>
+         
+          <span class="post-tag small"><a href="http://hbokh.github.io/tags/dutch/">#dutch</a></span>
+         
+          <span class="post-tag small"><a href="http://hbokh.github.io/tags/meetup/">#meetup</a></span>
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      
+
+<p>A manual (in Dutch) written for the local <a href="http://www.meetup.com/DockerGrunn/">Docker Grunn Meetup</a>, to become familiar with Docker &amp; Compose by setting up a small Python / Django app.</p>
+
+<hr />
+
+<h1 id="pydash-in-een-container:2d0aa3085eb0559873e64f01dee006e2">PyDash in een container</h1>
+
+<h2 id="dockergrunn-workshop-20160527:2d0aa3085eb0559873e64f01dee006e2">DockerGrunn workshop, 20160527</h2>
+
+<h3 id="vereisten:2d0aa3085eb0559873e64f01dee006e2">Vereisten</h3>
+
+<ul>
+<li>een recente, workende Docker environment (&gt;= v1.10.3)</li>
+<li>docker-compose (&gt;= v1.6)</li>
+<li>een editor bijv. vim</li>
+</ul>
+
+<h3 id="stappen:2d0aa3085eb0559873e64f01dee006e2">Stappen</h3>
+
+<ul>
+<li>Maak een clone van de <a href="https://github.com/k3oni/pydash">pydash</a>-repository (ga niet voor de Django App!) en ga de directory in:</li>
+</ul>
+
+<pre><code>$ git clone git@github.com:k3oni/pydash.git
+$ cd pydash
+</code></pre>
+
+<ul>
+<li>Ga naar &ldquo;<a href="https://docs.docker.com/compose/django/">Quickstart: Docker Compose and Django</a>&rdquo; en gebruik de daar gevonden informatie om zowel een Dockerfile als een docker-compose file te maken.<br />
+<strong>[Info]</strong> Skip het gebruik van &ldquo;db&rdquo; / &ldquo;postgres&rdquo;! Verwijder de regels die ze noemen!</li>
+</ul>
+
+<pre><code>  $ vi Dockerfile
+  $ vi docker-compose.yml
+</code></pre>
+
+<ul>
+<li>Start de container:</li>
+</ul>
+
+<p><code>$ docker-compose up -d</code></p>
+
+<ul>
+<li>Voeg <em>login credentials</em> toe aan de database:</li>
+</ul>
+
+<pre><code>$ docker-compose run web python manage.py syncdb
+Creating tables ...
+Creating table auth_permission
+Creating table auth_group_permissions
+Creating table auth_group
+Creating table auth_user_groups
+Creating table auth_user_user_permissions
+Creating table auth_user
+Creating table django_content_type
+Creating table django_session
+
+You just installed Django's auth system, which means you don't have any superusers defined.
+Would you like to create one now? (yes/no): yes
+Username (leave blank to use 'root'):
+Email address: root@localhost
+Password:
+Password (again):
+Superuser created successfully.
+Installing custom SQL ...
+Installing indexes ...
+Installed 0 object(s) from 0 fixture(s)
+</code></pre>
+
+<ul>
+<li>Open een browser naar <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a> en login</li>
+</ul>
+
+<h3 id="errors:2d0aa3085eb0559873e64f01dee006e2">Errors</h3>
+
+<p>Negeer deze fout:</p>
+
+<p><code>DataTables warning (table id = 'get_ips'): Requested unknown parameter '1' from the data source for row 0</code></p>
+
+<p>&ndash;
+<em>That&rsquo;s all Folks!</em></p>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+    <figure class="author-image">
+        <a class="img" href="http://hbokh.github.io/" style="background-image: url(http://hbokh.github.io/images/bok.png)"><span class="hidden">Henk's Picture</span></a>
+    </figure>
+    
+
+    
+
+
+
+
+
+<section class="author">
+  <h4><a href="http://hbokh.github.io/">Henk</a></h4>
+  
+  <p>Recovering sysadmin</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Groningen, the Netherlands</span>
+    
+  </div>
+</section>
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Workshop%3a%20Python%20en%20Django%20in%20Docker&amp;url=http%3a%2f%2fhbokh.github.io%2fpost%2f2015%2f05%2f24%2fworkshop-python-en-django-in-docker%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fhbokh.github.io%2fpost%2f2015%2f05%2f24%2fworkshop-python-en-django-in-docker%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=http%3a%2f%2fhbokh.github.io%2fpost%2f2015%2f05%2f24%2fworkshop-python-en-django-in-docker%2f&amp;description=Workshop%3a%20Python%20en%20Django%20in%20Docker"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=http%3a%2f%2fhbokh.github.io%2fpost%2f2015%2f05%2f24%2fworkshop-python-en-django-in-docker%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  var disqus_shortname = 'hbokh';
+  var disqus_url = 'http:\/\/hbokh.github.io\/post\/2015\/05\/24\/workshop-python-en-django-in-docker\/';
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+  </footer>
+</article>
+
+</main>
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">BOK</a> All rights reserved - 201x</section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="http://hbokh.github.io/js/jquery.js"></script>
+    <script type="text/javascript" src="http://hbokh.github.io/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="http://hbokh.github.io/js/index.js"></script>
+    
+</body>
+</html>
+

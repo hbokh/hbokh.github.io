@@ -7,8 +7,99 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 201x</copyright>
-    <lastBuildDate>Sat, 23 May 2015 09:12:15 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 24 May 2015 20:18:15 +0000</lastBuildDate>
     <atom:link href="http://hbokh.github.io/tags/meetup/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Workshop: Python en Django in Docker</title>
+      <link>http://hbokh.github.io/post/2015/05/24/workshop-python-en-django-in-docker/</link>
+      <pubDate>Sun, 24 May 2015 20:18:15 +0000</pubDate>
+      
+      <guid>http://hbokh.github.io/post/2015/05/24/workshop-python-en-django-in-docker/</guid>
+      <description>
+
+&lt;p&gt;A manual (in Dutch) written for the local &lt;a href=&#34;http://www.meetup.com/DockerGrunn/&#34;&gt;Docker Grunn Meetup&lt;/a&gt;, to become familiar with Docker &amp;amp; Compose by setting up a small Python / Django app.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;pydash-in-een-container:2d0aa3085eb0559873e64f01dee006e2&#34;&gt;PyDash in een container&lt;/h1&gt;
+
+&lt;h2 id=&#34;dockergrunn-workshop-20160527:2d0aa3085eb0559873e64f01dee006e2&#34;&gt;DockerGrunn workshop, 20160527&lt;/h2&gt;
+
+&lt;h3 id=&#34;vereisten:2d0aa3085eb0559873e64f01dee006e2&#34;&gt;Vereisten&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;een recente, workende Docker environment (&amp;gt;= v1.10.3)&lt;/li&gt;
+&lt;li&gt;docker-compose (&amp;gt;= v1.6)&lt;/li&gt;
+&lt;li&gt;een editor bijv. vim&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;stappen:2d0aa3085eb0559873e64f01dee006e2&#34;&gt;Stappen&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Maak een clone van de &lt;a href=&#34;https://github.com/k3oni/pydash&#34;&gt;pydash&lt;/a&gt;-repository (ga niet voor de Django App!) en ga de directory in:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git clone git@github.com:k3oni/pydash.git
+$ cd pydash
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Ga naar &amp;ldquo;&lt;a href=&#34;https://docs.docker.com/compose/django/&#34;&gt;Quickstart: Docker Compose and Django&lt;/a&gt;&amp;rdquo; en gebruik de daar gevonden informatie om zowel een Dockerfile als een docker-compose file te maken.&lt;br /&gt;
+&lt;strong&gt;[Info]&lt;/strong&gt; Skip het gebruik van &amp;ldquo;db&amp;rdquo; / &amp;ldquo;postgres&amp;rdquo;! Verwijder de regels die ze noemen!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;  $ vi Dockerfile
+  $ vi docker-compose.yml
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Start de container:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;$ docker-compose up -d&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Voeg &lt;em&gt;login credentials&lt;/em&gt; toe aan de database:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;$ docker-compose run web python manage.py syncdb
+Creating tables ...
+Creating table auth_permission
+Creating table auth_group_permissions
+Creating table auth_group
+Creating table auth_user_groups
+Creating table auth_user_user_permissions
+Creating table auth_user
+Creating table django_content_type
+Creating table django_session
+
+You just installed Django&#39;s auth system, which means you don&#39;t have any superusers defined.
+Would you like to create one now? (yes/no): yes
+Username (leave blank to use &#39;root&#39;):
+Email address: root@localhost
+Password:
+Password (again):
+Superuser created successfully.
+Installing custom SQL ...
+Installing indexes ...
+Installed 0 object(s) from 0 fixture(s)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Open een browser naar &lt;a href=&#34;http://127.0.0.1:8000/&#34;&gt;http://127.0.0.1:8000/&lt;/a&gt; en login&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;errors:2d0aa3085eb0559873e64f01dee006e2&#34;&gt;Errors&lt;/h3&gt;
+
+&lt;p&gt;Negeer deze fout:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;DataTables warning (table id = &#39;get_ips&#39;): Requested unknown parameter &#39;1&#39; from the data source for row 0&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;ndash;
+&lt;em&gt;That&amp;rsquo;s all Folks!&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Hands-on: WordPress en MySQL op Docker</title>
