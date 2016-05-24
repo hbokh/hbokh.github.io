@@ -163,18 +163,23 @@
 
 <h2 id="dockergrunn-workshop-20160526:2d0aa3085eb0559873e64f01dee006e2">DockerGrunn workshop, 20160526</h2>
 
+<h2 id="doel:2d0aa3085eb0559873e64f01dee006e2">Doel</h2>
+
+<p>Het opzetten van een in Python geschreven Linux-dashboard, <em>served through Django</em>, in een Docker-container.</p>
+
 <h3 id="vereisten:2d0aa3085eb0559873e64f01dee006e2">Vereisten</h3>
 
 <ul>
-<li>een recente, werkende Docker environment (&gt;= v1.10.3)</li>
+<li>een werkende Docker-setup (&gt;= v1.10.3)</li>
 <li>docker-compose (&gt;= v1.6)</li>
-<li>een editor bijv. vim</li>
+<li>git-client</li>
+<li>een editor bijv. Vim (of als je onder de 18 bent: nano&hellip;)</li>
 </ul>
 
 <h3 id="stap-voor-stap:2d0aa3085eb0559873e64f01dee006e2">Stap voor stap</h3>
 
 <ul>
-<li>Maak een clone van de <strong><a href="https://github.com/k3oni/pydash">pydash</a></strong>-repository (ga niet voor de Django App!) en ga de directory in:</li>
+<li>Maak met Git een clone van de <strong><a href="https://github.com/k3oni/pydash">pyDash</a></strong>-repository (ga niet voor de Django App!) en ga de directory in:</li>
 </ul>
 
 <pre><code>$ git clone git@github.com:k3oni/pydash.git
@@ -182,8 +187,8 @@ $ cd pydash
 </code></pre>
 
 <ul>
-<li>Dit mag je zelf een beetje uitzoeken.<br />
-Ga naar <strong><a href="https://docs.docker.com/compose/django/">Quickstart: Docker Compose and Django</a></strong> en gebruik de daar gevonden informatie om zowel een <code>Dockerfile</code> als een <code>docker-compose.yml</code> bestand te maken.<br />
+<li>We kauwen niet alles helemaal voor, dus dit mag je zelf uitzoeken. Maar we houden je bij de hand.<br />
+Ga naar <strong><a href="https://docs.docker.com/compose/django/">Quickstart: Docker Compose and Django</a></strong> en gebruik de daar gevonden informatie om zowel een <code>Dockerfile</code> als een <code>docker-compose.yml</code> bestand aan te maken.<br />
 <strong>[BELANGRIJK!]</strong> Skip het gebruik van genoemde &ldquo;db&rdquo; / &ldquo;postgres&rdquo;!<br />
 Verwijder de regels die ze noemen - het is niet nodig, want de gebruikte DB straks is een sqlite3-bestand.</li>
 </ul>
@@ -226,7 +231,7 @@ Installing indexes ...
 Installed 0 object(s) from 0 fixture(s)
 </code></pre>
 
-<p>Hiermee wordt de datasbase in bestand <code>db.sqlite3</code> gevuld.</p>
+<p>Hiermee wordt de database in bestand <code>db.sqlite3</code> gevuld.</p>
 
 <ul>
 <li>Open een browser naar <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a> (Docker for Mac) of <a href="http://192.168.99.100:8000/">http://192.168.99.100:8000/</a> (boot2docker) en login met de zojuist ingeklopte <em>credentials</em>.</li>
