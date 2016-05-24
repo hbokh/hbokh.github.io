@@ -22,19 +22,19 @@
 
 &lt;hr /&gt;
 
-&lt;h1 id=&#34;pydash-in-een-container:2d0aa3085eb0559873e64f01dee006e2&#34;&gt;PyDash in een container&lt;/h1&gt;
+&lt;h1 id=&#34;pydash-in-een-container:2d0aa3085eb0559873e64f01dee006e2&#34;&gt;pyDash in een container&lt;/h1&gt;
 
-&lt;h2 id=&#34;dockergrunn-workshop-20160527:2d0aa3085eb0559873e64f01dee006e2&#34;&gt;DockerGrunn workshop, 20160527&lt;/h2&gt;
+&lt;h2 id=&#34;dockergrunn-workshop-20160526:2d0aa3085eb0559873e64f01dee006e2&#34;&gt;DockerGrunn workshop, 20160526&lt;/h2&gt;
 
 &lt;h3 id=&#34;vereisten:2d0aa3085eb0559873e64f01dee006e2&#34;&gt;Vereisten&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;een recente, workende Docker environment (&amp;gt;= v1.10.3)&lt;/li&gt;
+&lt;li&gt;een recente, werkende Docker environment (&amp;gt;= v1.10.3)&lt;/li&gt;
 &lt;li&gt;docker-compose (&amp;gt;= v1.6)&lt;/li&gt;
 &lt;li&gt;een editor bijv. vim&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;stappen:2d0aa3085eb0559873e64f01dee006e2&#34;&gt;Stappen&lt;/h3&gt;
+&lt;h3 id=&#34;stap-voor-stap:2d0aa3085eb0559873e64f01dee006e2&#34;&gt;Stap voor stap&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Maak een clone van de &lt;strong&gt;&lt;a href=&#34;https://github.com/k3oni/pydash&#34;&gt;pydash&lt;/a&gt;&lt;/strong&gt;-repository (ga niet voor de Django App!) en ga de directory in:&lt;/li&gt;
@@ -45,9 +45,10 @@ $ cd pydash
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Dit mag je zelf een beetje uitzoeken&amp;hellip;&lt;br /&gt;
+&lt;li&gt;Dit mag je zelf een beetje uitzoeken.&lt;br /&gt;
 Ga naar &lt;strong&gt;&lt;a href=&#34;https://docs.docker.com/compose/django/&#34;&gt;Quickstart: Docker Compose and Django&lt;/a&gt;&lt;/strong&gt; en gebruik de daar gevonden informatie om zowel een &lt;code&gt;Dockerfile&lt;/code&gt; als een &lt;code&gt;docker-compose.yml&lt;/code&gt; bestand te maken.&lt;br /&gt;
-&lt;strong&gt;[BELANGRIJK!]&lt;/strong&gt; Skip het gebruik van genoemde &amp;ldquo;db&amp;rdquo; / &amp;ldquo;postgres&amp;rdquo;! Verwijder de regels die ze noemen - het is niet nodig, want de gebruikte DB straks is een sqlite3-bestand.&lt;/li&gt;
+&lt;strong&gt;[BELANGRIJK!]&lt;/strong&gt; Skip het gebruik van genoemde &amp;ldquo;db&amp;rdquo; / &amp;ldquo;postgres&amp;rdquo;!&lt;br /&gt;
+Verwijder de regels die ze noemen - het is niet nodig, want de gebruikte DB straks is een sqlite3-bestand.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;pre&gt;&lt;code&gt;  $ vi Dockerfile
@@ -91,7 +92,7 @@ Installed 0 object(s) from 0 fixture(s)
 &lt;p&gt;Hiermee wordt de datasbase in bestand &lt;code&gt;db.sqlite3&lt;/code&gt; gevuld.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Open een browser naar &lt;a href=&#34;http://127.0.0.1:8000/&#34;&gt;http://127.0.0.1:8000/&lt;/a&gt; en login&lt;/li&gt;
+&lt;li&gt;Open een browser naar &lt;a href=&#34;http://127.0.0.1:8000/&#34;&gt;http://127.0.0.1:8000/&lt;/a&gt; (Docker for Mac) of &lt;a href=&#34;http://192.168.99.100:8080/&#34;&gt;http://192.168.99.100:8080/&lt;/a&gt; (boot2docker) en login met de zojuist ingegeven &lt;em&gt;credentials&lt;/em&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;errors:2d0aa3085eb0559873e64f01dee006e2&#34;&gt;Errors&lt;/h3&gt;
