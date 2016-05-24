@@ -7,18 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 201x</copyright>
-    <lastBuildDate>Sun, 24 May 2015 20:18:15 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 May 2016 20:18:15 +0000</lastBuildDate>
     <atom:link href="http://hbokh.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Workshop: Python en Django in Docker</title>
-      <link>http://hbokh.github.io/post/2015/05/24/workshop-python-en-django-in-docker/</link>
-      <pubDate>Sun, 24 May 2015 20:18:15 +0000</pubDate>
+      <link>http://hbokh.github.io/post/2016/05/24/workshop-python-en-django-in-docker/</link>
+      <pubDate>Tue, 24 May 2016 20:18:15 +0000</pubDate>
       
-      <guid>http://hbokh.github.io/post/2015/05/24/workshop-python-en-django-in-docker/</guid>
+      <guid>http://hbokh.github.io/post/2016/05/24/workshop-python-en-django-in-docker/</guid>
       <description>
 
-&lt;p&gt;A manual (in Dutch) written for the local &lt;a href=&#34;http://www.meetup.com/DockerGrunn/&#34;&gt;Docker Grunn Meetup&lt;/a&gt;, to become familiar with Docker &amp;amp; Compose by setting up a small Python / Django app.&lt;/p&gt;
+&lt;p&gt;A manual (in Dutch) written for the local &lt;a href=&#34;http://www.meetup.com/DockerGrunn/&#34;&gt;Docker Grunn Meetup&lt;/a&gt;, to become familiar with Docker &amp;amp; docker-compose, by setting up a small Python / Django app.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -37,7 +37,7 @@
 &lt;h3 id=&#34;stappen:2d0aa3085eb0559873e64f01dee006e2&#34;&gt;Stappen&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Maak een clone van de &lt;a href=&#34;https://github.com/k3oni/pydash&#34;&gt;pydash&lt;/a&gt;-repository (ga niet voor de Django App!) en ga de directory in:&lt;/li&gt;
+&lt;li&gt;Maak een clone van de &lt;strong&gt;&lt;a href=&#34;https://github.com/k3oni/pydash&#34;&gt;pydash&lt;/a&gt;&lt;/strong&gt;-repository (ga niet voor de Django App!) en ga de directory in:&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;pre&gt;&lt;code&gt;$ git clone git@github.com:k3oni/pydash.git
@@ -45,8 +45,9 @@ $ cd pydash
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Ga naar &amp;ldquo;&lt;a href=&#34;https://docs.docker.com/compose/django/&#34;&gt;Quickstart: Docker Compose and Django&lt;/a&gt;&amp;rdquo; en gebruik de daar gevonden informatie om zowel een Dockerfile als een docker-compose file te maken.&lt;br /&gt;
-&lt;strong&gt;[Info]&lt;/strong&gt; Skip het gebruik van &amp;ldquo;db&amp;rdquo; / &amp;ldquo;postgres&amp;rdquo;! Verwijder de regels die ze noemen!&lt;/li&gt;
+&lt;li&gt;Dit mag je zelf een beetje uitzoeken&amp;hellip;&lt;br /&gt;
+Ga naar &lt;strong&gt;&lt;a href=&#34;https://docs.docker.com/compose/django/&#34;&gt;Quickstart: Docker Compose and Django&lt;/a&gt;&lt;/strong&gt; en gebruik de daar gevonden informatie om zowel een &lt;code&gt;Dockerfile&lt;/code&gt; als een &lt;code&gt;docker-compose.yml&lt;/code&gt; bestand te maken.&lt;br /&gt;
+&lt;strong&gt;[BELANGRIJK!]&lt;/strong&gt; Skip het gebruik van genoemde &amp;ldquo;db&amp;rdquo; / &amp;ldquo;postgres&amp;rdquo;! Verwijder de regels die ze noemen - het is niet nodig, want de gebruikte DB straks is een sqlite3-bestand.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;pre&gt;&lt;code&gt;  $ vi Dockerfile
@@ -63,8 +64,9 @@ $ cd pydash
 &lt;li&gt;Voeg &lt;em&gt;login credentials&lt;/em&gt; toe aan de database:&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;pre&gt;&lt;code&gt;$ docker-compose run web python manage.py syncdb
-Creating tables ...
+&lt;p&gt;&lt;code&gt;$ docker-compose run web python manage.py syncdb&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Creating tables ...
 Creating table auth_permission
 Creating table auth_group_permissions
 Creating table auth_group
@@ -85,6 +87,8 @@ Installing custom SQL ...
 Installing indexes ...
 Installed 0 object(s) from 0 fixture(s)
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hiermee wordt de datasbase in bestand &lt;code&gt;db.sqlite3&lt;/code&gt; gevuld.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Open een browser naar &lt;a href=&#34;http://127.0.0.1:8000/&#34;&gt;http://127.0.0.1:8000/&lt;/a&gt; en login&lt;/li&gt;
