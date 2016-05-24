@@ -7,13 +7,13 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 201x</copyright>
-    <lastBuildDate>Tue, 24 May 2016 20:18:15 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 May 2016 23:44:15 +0000</lastBuildDate>
     <atom:link href="http://hbokh.github.io/categories/docker/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Workshop: Python en Django in Docker</title>
       <link>http://hbokh.github.io/post/2016/05/24/workshop-python-en-django-in-docker/</link>
-      <pubDate>Tue, 24 May 2016 20:18:15 +0000</pubDate>
+      <pubDate>Tue, 24 May 2016 23:44:15 +0000</pubDate>
       
       <guid>http://hbokh.github.io/post/2016/05/24/workshop-python-en-django-in-docker/</guid>
       <description>
@@ -24,16 +24,17 @@
 
 &lt;h1 id=&#34;pydash-in-een-container:2d0aa3085eb0559873e64f01dee006e2&#34;&gt;pyDash in een container&lt;/h1&gt;
 
-&lt;h2 id=&#34;dockergrunn-workshop-20160526:2d0aa3085eb0559873e64f01dee006e2&#34;&gt;DockerGrunn workshop, 20160526&lt;/h2&gt;
+&lt;h2 id=&#34;docker-grunn-workshop-26-mei-2016:2d0aa3085eb0559873e64f01dee006e2&#34;&gt;Docker Grunn workshop, 26 mei 2016&lt;/h2&gt;
 
-&lt;h2 id=&#34;doel:2d0aa3085eb0559873e64f01dee006e2&#34;&gt;Doel&lt;/h2&gt;
+&lt;h3 id=&#34;doel:2d0aa3085eb0559873e64f01dee006e2&#34;&gt;Doel&lt;/h3&gt;
 
-&lt;p&gt;Het opzetten van een in Python geschreven Linux-dashboard, &lt;em&gt;served through Django&lt;/em&gt;, in een Docker-container.&lt;/p&gt;
+&lt;p&gt;Het opzetten van een in Python geschreven Linux-dashboard, &lt;em&gt;served through Django&lt;/em&gt;, in een Docker-container draaien.&lt;/p&gt;
 
 &lt;h3 id=&#34;vereisten:2d0aa3085eb0559873e64f01dee006e2&#34;&gt;Vereisten&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;een werkende Docker-setup (&amp;gt;= v1.10.3)&lt;/li&gt;
+&lt;li&gt;een computer (&lt;em&gt;Doh!&lt;/em&gt;) met Linux / OS X / Windows&lt;/li&gt;
+&lt;li&gt;met daarop een werkende Docker-setup (&amp;gt;= v1.10.3) - Dokcer / boot2docker / Docker for Mac&lt;/li&gt;
 &lt;li&gt;docker-compose (&amp;gt;= v1.6)&lt;/li&gt;
 &lt;li&gt;git-client&lt;/li&gt;
 &lt;li&gt;een editor bijv. Vim (of als je onder de 18 bent: nano&amp;hellip;)&lt;/li&gt;
