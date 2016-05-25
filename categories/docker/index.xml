@@ -41,7 +41,7 @@
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;docker-compose (&amp;gt;= v1.6)&lt;/li&gt;
 &lt;li&gt;git-client&lt;/li&gt;
-&lt;li&gt;een editor bijv. Vim (of als je onder de 18 bent: nano)&lt;/li&gt;
+&lt;li&gt;een editor bijv. Vim (of als je onder de 18 bent: nano de )&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;stap-voor-stap:2d0aa3085eb0559873e64f01dee006e2&#34;&gt;Stap voor stap&lt;/h3&gt;
@@ -66,10 +66,56 @@ $ vi docker-compose.yml
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Start de container:&lt;/li&gt;
+&lt;li&gt;Start de container.
+Als het goed is wordt deze door de build-instructie automatisch aangemaakt op basis van een python:2.7-image:&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;code&gt;$ docker-compose up -d&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Building web
+Step 1 : FROM python:2.7
+2.7: Pulling from library/python
+8b87079b7a06: Pull complete
+a3ed95caeb02: Pull complete
+1bb8eaf3d643: Pull complete
+3e04171ce2e5: Pull complete
+0b73d3fea769: Pull complete
+167a085f33b1: Pull complete
+a498799bc49b: Pull complete
+c2e64a7ec940: Pull complete
+Digest: sha256:a1cf98a212d2001617f7c6019fb2dce0ec429955db175ead2a8523d4d0b1ee99
+Status: Downloaded newer image for python:2.7
+ ---&amp;gt; 11a8b7c7f0ca
+Step 2 : ENV PYTHONUNBUFFERED 1
+ ---&amp;gt; Running in 6c157123d096
+ ---&amp;gt; e5a947ed7ca8
+Removing intermediate container 6c157123d096
+Step 3 : RUN mkdir /code
+ ---&amp;gt; Running in 20cfc6e452fd
+ ---&amp;gt; a5e1288a5ec7
+Removing intermediate container 20cfc6e452fd
+Step 4 : WORKDIR /code
+ ---&amp;gt; Running in dee0f4ff6dd1
+ ---&amp;gt; 88750e61774a
+Removing intermediate container dee0f4ff6dd1
+Step 5 : ADD requirements.txt /code/
+ ---&amp;gt; 278135f0e060
+Removing intermediate container daac7f16f7b6
+Step 6 : RUN pip install -r requirements.txt
+ ---&amp;gt; Running in 8372bedb569d
+Collecting django==1.6.8 (from -r requirements.txt (line 1))
+  Downloading Django-1.6.8-py2.py3-none-any.whl (6.7MB)
+Installing collected packages: django
+Successfully installed django-1.6.8
+ ---&amp;gt; 47a0e176db2f
+Removing intermediate container 8372bedb569d
+Step 7 : ADD . /code/
+ ---&amp;gt; 8f2dad0477e0
+Removing intermediate container ee29ded2a231
+Successfully built 8f2dad0477e0
+WARNING: Image for service web was built because it did not already exist. To rebuild this image you must use `docker-compose build` or `docker-compose up --build`.
+Creating pydash_web_1
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Voeg &lt;em&gt;login credentials&lt;/em&gt; toe aan de database:&lt;/li&gt;
@@ -107,13 +153,59 @@ Installed 0 object(s) from 0 fixture(s)
 
 &lt;h3 id=&#34;errors:2d0aa3085eb0559873e64f01dee006e2&#34;&gt;Errors&lt;/h3&gt;
 
-&lt;p&gt;Negeer deze fout:&lt;/p&gt;
+&lt;p&gt;Deze fout&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;DataTables warning (table id = &#39;get_ips&#39;): Requested unknown parameter &#39;1&#39; from the data source for row 0&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;wordt veroorzaakt door òf Docker òf Debian Jessie.
+Er is iets met interface namen de laatste tijd&amp;hellip;  laten we een kijkje nemen!&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$ docker exec -ti pydash_web_1 bash&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;In de container zien we:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# ip a
+1: lo: &amp;lt;LOOPBACK,UP,LOWER_UP&amp;gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+11: eth0@if12: &amp;lt;BROADCAST,MULTICAST,UP,LOWER_UP&amp;gt; mtu 1500 qdisc noqueue state UP group default
+    link/ether 02:42:ac:12:00:02 brd ff:ff:ff:ff:ff:ff
+    inet 172.18.0.2/16 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::42:acff:fe12:2/64 scope link
+       valid_lft forever preferred_lft forever
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Oplossing: in bestand &lt;code&gt;main/views.py&lt;/code&gt; regel 77 vervangen door deze:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;eth = os.popen(&amp;quot;ip addr | grep LOWER_UP | awk -F&#39;@&#39; &#39;{print $1}&#39; | awk &#39;{print $2}&#39;&amp;quot;)&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Et voila!&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://hbokh.github.io/images/pydash_20160524_small.png&#34; alt=&#34;PyDash&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;stoppen-en-verwijderen:2d0aa3085eb0559873e64f01dee006e2&#34;&gt;Stoppen en verwijderen&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;$ docker-compose stop
+Stopping pydash_web_1 ... done
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;$ docker-compose rm -f
+WARNING: Not including one-off containers created by `docker-compose run`.
+To include them, use `docker-compose rm --all`.
+This will be the default behavior in the next version of Compose.
+
+Going to remove pydash_web_1
+Removing pydash_web_1 ... done
+
+$ docker-compose rm --all
+Going to remove pydash_web_run_1
+Are you sure? [yN] y
+Removing pydash_web_run_1 ... done
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;hr /&gt;
 

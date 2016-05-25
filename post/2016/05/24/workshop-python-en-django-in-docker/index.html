@@ -180,7 +180,7 @@
 </ul></li>
 <li>docker-compose (&gt;= v1.6)</li>
 <li>git-client</li>
-<li>een editor bijv. Vim (of als je onder de 18 bent: nano)</li>
+<li>een editor bijv. Vim (of als je onder de 18 bent: nano de )</li>
 </ul>
 
 <h3 id="stap-voor-stap:2d0aa3085eb0559873e64f01dee006e2">Stap voor stap</h3>
@@ -205,10 +205,56 @@ $ vi docker-compose.yml
 </code></pre>
 
 <ul>
-<li>Start de container:</li>
+<li>Start de container.
+Als het goed is wordt deze door de build-instructie automatisch aangemaakt op basis van een python:2.7-image:</li>
 </ul>
 
 <p><code>$ docker-compose up -d</code></p>
+
+<pre><code>Building web
+Step 1 : FROM python:2.7
+2.7: Pulling from library/python
+8b87079b7a06: Pull complete
+a3ed95caeb02: Pull complete
+1bb8eaf3d643: Pull complete
+3e04171ce2e5: Pull complete
+0b73d3fea769: Pull complete
+167a085f33b1: Pull complete
+a498799bc49b: Pull complete
+c2e64a7ec940: Pull complete
+Digest: sha256:a1cf98a212d2001617f7c6019fb2dce0ec429955db175ead2a8523d4d0b1ee99
+Status: Downloaded newer image for python:2.7
+ ---&gt; 11a8b7c7f0ca
+Step 2 : ENV PYTHONUNBUFFERED 1
+ ---&gt; Running in 6c157123d096
+ ---&gt; e5a947ed7ca8
+Removing intermediate container 6c157123d096
+Step 3 : RUN mkdir /code
+ ---&gt; Running in 20cfc6e452fd
+ ---&gt; a5e1288a5ec7
+Removing intermediate container 20cfc6e452fd
+Step 4 : WORKDIR /code
+ ---&gt; Running in dee0f4ff6dd1
+ ---&gt; 88750e61774a
+Removing intermediate container dee0f4ff6dd1
+Step 5 : ADD requirements.txt /code/
+ ---&gt; 278135f0e060
+Removing intermediate container daac7f16f7b6
+Step 6 : RUN pip install -r requirements.txt
+ ---&gt; Running in 8372bedb569d
+Collecting django==1.6.8 (from -r requirements.txt (line 1))
+  Downloading Django-1.6.8-py2.py3-none-any.whl (6.7MB)
+Installing collected packages: django
+Successfully installed django-1.6.8
+ ---&gt; 47a0e176db2f
+Removing intermediate container 8372bedb569d
+Step 7 : ADD . /code/
+ ---&gt; 8f2dad0477e0
+Removing intermediate container ee29ded2a231
+Successfully built 8f2dad0477e0
+WARNING: Image for service web was built because it did not already exist. To rebuild this image you must use `docker-compose build` or `docker-compose up --build`.
+Creating pydash_web_1
+</code></pre>
 
 <ul>
 <li>Voeg <em>login credentials</em> toe aan de database:</li>
@@ -246,13 +292,59 @@ Installed 0 object(s) from 0 fixture(s)
 
 <h3 id="errors:2d0aa3085eb0559873e64f01dee006e2">Errors</h3>
 
-<p>Negeer deze fout:</p>
+<p>Deze fout</p>
 
 <p><code>DataTables warning (table id = 'get_ips'): Requested unknown parameter '1' from the data source for row 0</code></p>
+
+<p>wordt veroorzaakt door òf Docker òf Debian Jessie.
+Er is iets met interface namen de laatste tijd&hellip;  laten we een kijkje nemen!</p>
+
+<p><code>$ docker exec -ti pydash_web_1 bash</code></p>
+
+<p>In de container zien we:</p>
+
+<pre><code># ip a
+1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+11: eth0@if12: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP group default
+    link/ether 02:42:ac:12:00:02 brd ff:ff:ff:ff:ff:ff
+    inet 172.18.0.2/16 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::42:acff:fe12:2/64 scope link
+       valid_lft forever preferred_lft forever
+</code></pre>
+
+<p>Oplossing: in bestand <code>main/views.py</code> regel 77 vervangen door deze:</p>
+
+<p><code>eth = os.popen(&quot;ip addr | grep LOWER_UP | awk -F'@' '{print $1}' | awk '{print $2}'&quot;)</code></p>
 
 <p><strong>Et voila!</strong></p>
 
 <p><img src="http://hbokh.github.io/images/pydash_20160524_small.png" alt="PyDash" /></p>
+
+<h3 id="stoppen-en-verwijderen:2d0aa3085eb0559873e64f01dee006e2">Stoppen en verwijderen</h3>
+
+<pre><code>$ docker-compose stop
+Stopping pydash_web_1 ... done
+</code></pre>
+
+<pre><code>$ docker-compose rm -f
+WARNING: Not including one-off containers created by `docker-compose run`.
+To include them, use `docker-compose rm --all`.
+This will be the default behavior in the next version of Compose.
+
+Going to remove pydash_web_1
+Removing pydash_web_1 ... done
+
+$ docker-compose rm --all
+Going to remove pydash_web_run_1
+Are you sure? [yN] y
+Removing pydash_web_run_1 ... done
+</code></pre>
 
 <hr />
 
