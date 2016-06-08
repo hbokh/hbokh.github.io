@@ -581,8 +581,6 @@ mysql&amp;gt; source MySQL_full_backUp.sql
 
 &lt;p&gt;Referentie: YouTube - &lt;a href=&#34;https://www.youtube.com/watch?v=2ZX3F-aFOxQ&#34;&gt;Docker Tutorial: Backing Up and Restoring MySQL and WordPress in Docker&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&amp;lsquo;n Handigere tool? &lt;a href=&#34;https://github.com/docker-infra/docker-backup&#34;&gt;docker-backup&lt;/a&gt;. Wel even compileren vanuit Go en niet om tegen &lt;em&gt;boot2docker&lt;/em&gt; te gebruiken&amp;hellip;&lt;/p&gt;
-
 &lt;p&gt;&lt;em&gt;That&amp;rsquo;s all Folks!&lt;/em&gt;&lt;/p&gt;
 </description>
     </item>
