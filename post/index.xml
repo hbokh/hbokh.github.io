@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on BOK</title>
-    <link>http://hbokh.github.io/post/</link>
+    <link>https://hbokh.github.io/post/</link>
     <description>Recent content in Posts on BOK</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 201x</copyright>
     <lastBuildDate>Tue, 24 May 2016 23:44:15 +0000</lastBuildDate>
-    <atom:link href="http://hbokh.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://hbokh.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Workshop: Python en Django in Docker</title>
-      <link>http://hbokh.github.io/post/2016/05/24/workshop-python-en-django-in-docker/</link>
+      <link>https://hbokh.github.io/post/2016/05/24/workshop-python-en-django-in-docker/</link>
       <pubDate>Tue, 24 May 2016 23:44:15 +0000</pubDate>
       
-      <guid>http://hbokh.github.io/post/2016/05/24/workshop-python-en-django-in-docker/</guid>
+      <guid>https://hbokh.github.io/post/2016/05/24/workshop-python-en-django-in-docker/</guid>
       <description>
 
 &lt;p&gt;A manual (in Dutch) written for the local &lt;a href=&#34;http://www.meetup.com/DockerGrunn/&#34;&gt;Docker Grunn Meetup&lt;/a&gt;, to become familiar with Docker &amp;amp; docker-compose, by setting up a small Python / Django app.&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;h1 id=&#34;pydash-in-een-container:2d0aa3085eb0559873e64f01dee006e2&#34;&gt;pyDash in een container&lt;/h1&gt;
+&lt;h1 id=&#34;pydash-in-een-container&#34;&gt;pyDash in een container&lt;/h1&gt;
 
-&lt;h3 id=&#34;docker-grunn-workshop-26-mei-2016:2d0aa3085eb0559873e64f01dee006e2&#34;&gt;Docker Grunn workshop, 26 mei 2016&lt;/h3&gt;
+&lt;h3 id=&#34;docker-grunn-workshop-26-mei-2016&#34;&gt;Docker Grunn workshop, 26 mei 2016&lt;/h3&gt;
 
-&lt;h3 id=&#34;doel:2d0aa3085eb0559873e64f01dee006e2&#34;&gt;Doel&lt;/h3&gt;
+&lt;h3 id=&#34;doel&#34;&gt;Doel&lt;/h3&gt;
 
 &lt;p&gt;Het opzetten van een in Python geschreven Linux-dashboard, &lt;em&gt;served through Django&lt;/em&gt;, in een Docker-container draaien.&lt;/p&gt;
 
-&lt;h3 id=&#34;vereisten:2d0aa3085eb0559873e64f01dee006e2&#34;&gt;Vereisten&lt;/h3&gt;
+&lt;h3 id=&#34;vereisten&#34;&gt;Vereisten&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;een computer (&lt;em&gt;Doh!&lt;/em&gt;) met Linux / OS X / Windows&lt;/li&gt;
@@ -44,7 +44,7 @@
 &lt;li&gt;een editor bijv. Vim (of als je onder de 18 bent: nano de )&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;stap-voor-stap:2d0aa3085eb0559873e64f01dee006e2&#34;&gt;Stap voor stap&lt;/h3&gt;
+&lt;h3 id=&#34;stap-voor-stap&#34;&gt;Stap voor stap&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Maak met Git een clone van de &lt;strong&gt;&lt;a href=&#34;https://github.com/k3oni/pydash&#34;&gt;pyDash&lt;/a&gt;&lt;/strong&gt;-repository (ga niet voor de Django App!) en ga de directory in:&lt;/li&gt;
@@ -151,7 +151,7 @@ Installed 0 object(s) from 0 fixture(s)
 &lt;li&gt;Open een browser naar &lt;a href=&#34;http://127.0.0.1:8000/&#34;&gt;http://127.0.0.1:8000/&lt;/a&gt; (Docker for Mac) of &lt;a href=&#34;http://192.168.99.100:8000/&#34;&gt;http://192.168.99.100:8000/&lt;/a&gt; (boot2docker) en login met de zojuist ingeklopte &lt;em&gt;credentials&lt;/em&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;errors:2d0aa3085eb0559873e64f01dee006e2&#34;&gt;Errors&lt;/h3&gt;
+&lt;h3 id=&#34;errors&#34;&gt;Errors&lt;/h3&gt;
 
 &lt;p&gt;Deze fout&lt;/p&gt;
 
@@ -187,7 +187,7 @@ Er is iets met interface namen de laatste tijd&amp;hellip;  laten we een kijkje 
 
 &lt;p&gt;&lt;img src=&#34;http://hbokh.github.io/images/pydash_20160524_small.png&#34; alt=&#34;PyDash&#34; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;stoppen-en-verwijderen:2d0aa3085eb0559873e64f01dee006e2&#34;&gt;Stoppen en verwijderen&lt;/h3&gt;
+&lt;h3 id=&#34;stoppen-en-verwijderen&#34;&gt;Stoppen en verwijderen&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;$ docker-compose stop
 Stopping pydash_web_1 ... done
@@ -209,7 +209,7 @@ Removing pydash_web_run_1 ... done
 
 &lt;hr /&gt;
 
-&lt;h2 id=&#34;appendix:2d0aa3085eb0559873e64f01dee006e2&#34;&gt;Appendix&lt;/h2&gt;
+&lt;h2 id=&#34;appendix&#34;&gt;Appendix&lt;/h2&gt;
 
 &lt;p&gt;Dit is zijn de werkende &lt;code&gt;Dockerfile&lt;/code&gt; en &lt;code&gt;docker-compose.yml&lt;/code&gt;:&lt;/p&gt;
 
@@ -241,10 +241,10 @@ services:
     
     <item>
       <title>Hands-on: WordPress en MySQL op Docker</title>
-      <link>http://hbokh.github.io/post/2015/05/23/hands-on-wordpress-en-mysql-op-docker/</link>
+      <link>https://hbokh.github.io/post/2015/05/23/hands-on-wordpress-en-mysql-op-docker/</link>
       <pubDate>Sat, 23 May 2015 09:12:15 +0000</pubDate>
       
-      <guid>http://hbokh.github.io/post/2015/05/23/hands-on-wordpress-en-mysql-op-docker/</guid>
+      <guid>https://hbokh.github.io/post/2015/05/23/hands-on-wordpress-en-mysql-op-docker/</guid>
       <description>
 
 &lt;p&gt;A manual (in Dutch) written for the local &lt;a href=&#34;http://www.meetup.com/DockerGrunn/&#34;&gt;Docker Grunn Meetup&lt;/a&gt;, to become familiar with Docker &amp;amp; Compose by setting up a WordPress-blog.&lt;/p&gt;
@@ -253,7 +253,7 @@ services:
 
 &lt;p&gt;Image credits: Blake Thornberry - &lt;a href=&#34;https://www.flickr.com/photos/91657289@N02/10218392744/&#34;&gt;Flickr&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;vooraf-installeren:a85a722ad1e08855df387da5b3d91879&#34;&gt;Vooraf installeren!&lt;/h2&gt;
+&lt;h2 id=&#34;vooraf-installeren&#34;&gt;Vooraf installeren!&lt;/h2&gt;
 
 &lt;p&gt;Zorg dat je op zijn minst de beschikking hebt over&lt;/p&gt;
 
@@ -278,9 +278,9 @@ services:
 $ chmod +x /usr/local/bin/docker-compose
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;wordpress-mysql-dual-container-setup:a85a722ad1e08855df387da5b3d91879&#34;&gt;WordPress &amp;amp; MySQL dual container setup&lt;/h2&gt;
+&lt;h2 id=&#34;wordpress-mysql-dual-container-setup&#34;&gt;WordPress &amp;amp; MySQL dual container setup&lt;/h2&gt;
 
-&lt;h3 id=&#34;docker-images-downloaden:a85a722ad1e08855df387da5b3d91879&#34;&gt;Docker images downloaden&lt;/h3&gt;
+&lt;h3 id=&#34;docker-images-downloaden&#34;&gt;Docker images downloaden&lt;/h3&gt;
 
 &lt;p&gt;Twee methodes zijn voorhanden.&lt;br /&gt;
 Om bandbreedte te besparen heeft de eerste methode de voorkeur!&lt;/p&gt;
@@ -316,7 +316,7 @@ wordpress             latest               5ff368875b77        4 days ago       
 mysql                 latest               56f320bd6adc        3 weeks ago         282.9 MB
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;met-de-hand:a85a722ad1e08855df387da5b3d91879&#34;&gt;&amp;ldquo;Met de hand&amp;rdquo;&lt;/h3&gt;
+&lt;h3 id=&#34;met-de-hand&#34;&gt;&amp;ldquo;Met de hand&amp;rdquo;&lt;/h3&gt;
 
 &lt;p&gt;Als eerste start je een MySQL-container op basis van het &lt;em&gt;mysql:latest&lt;/em&gt;-image.&lt;br /&gt;
 We gebruiken &amp;ldquo;p4ssw0rd&amp;rdquo; als root password en geven dat met &amp;ldquo;-e&amp;rdquo; mee als omgevings-variabele aan de container:&lt;/p&gt;
@@ -335,7 +335,7 @@ Deze geef je een &lt;strong&gt;link&lt;/strong&gt; naar de MySQL-container en la
 - &lt;code&gt;http://192.168.59.103:8080/&lt;/code&gt; (boot2docker)&lt;br /&gt;
 en configureer WordPress verder af.&lt;/p&gt;
 
-&lt;h3 id=&#34;onder-de-motorkap-1:a85a722ad1e08855df387da5b3d91879&#34;&gt;Onder de motorkap [1]&lt;/h3&gt;
+&lt;h3 id=&#34;onder-de-motorkap-1&#34;&gt;Onder de motorkap [1]&lt;/h3&gt;
 
 &lt;p&gt;Wat draait er nu?&lt;/p&gt;
 
@@ -403,7 +403,7 @@ Bye
 root@11ddc1271814:/# exit
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;opruimen:a85a722ad1e08855df387da5b3d91879&#34;&gt;Opruimen&lt;/h3&gt;
+&lt;h3 id=&#34;opruimen&#34;&gt;Opruimen&lt;/h3&gt;
 
 &lt;p&gt;Het commando &lt;code&gt;docker kill&lt;/code&gt; is minder netjes dan &lt;code&gt;docker stop&lt;/code&gt;, maar sneller als je toch besloten hebt de containers te verwijderen.&lt;/p&gt;
 
@@ -419,11 +419,11 @@ $ docker ps
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;met-docker-compose:a85a722ad1e08855df387da5b3d91879&#34;&gt;&amp;ldquo;Met docker-compose&amp;rdquo;&lt;/h2&gt;
+&lt;h2 id=&#34;met-docker-compose&#34;&gt;&amp;ldquo;Met docker-compose&amp;rdquo;&lt;/h2&gt;
 
 &lt;p&gt;Nu doen we hetzelfde, maar met behulp van &lt;em&gt;docker-compose&lt;/em&gt;.&lt;/p&gt;
 
-&lt;h3 id=&#34;bestand-docker-compose-yml:a85a722ad1e08855df387da5b3d91879&#34;&gt;Bestand docker-compose.yml&lt;/h3&gt;
+&lt;h3 id=&#34;bestand-docker-compose-yml&#34;&gt;Bestand docker-compose.yml&lt;/h3&gt;
 
 &lt;p&gt;De waardes die je hierboven op de command-line hebt gegeven, kan je in &lt;code&gt;docker-compose.yml&lt;/code&gt; combineren. Een YAML-bestand, dat er dan als volgt uit komt te zien:&lt;/p&gt;
 
@@ -447,7 +447,7 @@ Creating wordpressmysql_db_1...
 Creating wordpressmysql_wordpress_1...
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;onder-de-motorkap-2:a85a722ad1e08855df387da5b3d91879&#34;&gt;Onder de motorkap [2]&lt;/h3&gt;
+&lt;h3 id=&#34;onder-de-motorkap-2&#34;&gt;Onder de motorkap [2]&lt;/h3&gt;
 
 &lt;p&gt;Wat draait er nu?&lt;/p&gt;
 
@@ -477,7 +477,7 @@ Removing wordpressmysql_db_1...
 Removing wordpressmysql_wordpress_1...
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;data-volume-container:a85a722ad1e08855df387da5b3d91879&#34;&gt;Data volume container&lt;/h2&gt;
+&lt;h2 id=&#34;data-volume-container&#34;&gt;Data volume container&lt;/h2&gt;
 
 &lt;p&gt;De data die door WordPress wordt gegenereerd (accounts, posts, etc.) kan worden opgeslagen buiten de MySQL-container in een zgn. &lt;em&gt;data volume container&lt;/em&gt;. Die kan je op de CLI zo aanmaken:&lt;/p&gt;
 
@@ -550,7 +550,7 @@ drwxr-xr-x    5 999      999           4096 May 14 11:07 ./
 -rw-rw----    1 999      999       50331648 May 14 11:07 ib_logfile0
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;backup-en-restore:a85a722ad1e08855df387da5b3d91879&#34;&gt;Backup en restore&lt;/h3&gt;
+&lt;h3 id=&#34;backup-en-restore&#34;&gt;Backup en restore&lt;/h3&gt;
 
 &lt;p&gt;Eén manier van backuppen van de database is de volgende:&lt;/p&gt;
 
@@ -589,10 +589,10 @@ mysql&amp;gt; source MySQL_full_backUp.sql
     
     <item>
       <title>Twitter - Job Description</title>
-      <link>http://hbokh.github.io/post/2009/07/23/twitter---job-description/</link>
+      <link>https://hbokh.github.io/post/2009/07/23/twitter---job-description/</link>
       <pubDate>Thu, 23 Jul 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://hbokh.github.io/post/2009/07/23/twitter---job-description/</guid>
+      <guid>https://hbokh.github.io/post/2009/07/23/twitter---job-description/</guid>
       <description>&lt;p&gt;So&amp;hellip; joining Twitter on December 21st 2006 (and leaving shortly thereafter, re-joining 9 months later - check on &lt;a href=&#34;http://www.whendidyoujointwitter.com/&#34;&gt;When Did You Join Twitter&lt;/a&gt;) makes me what? A web developer? An IT journalist? A pro-blogger? Or maybe a futurist or innovator?!&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://bokh.home.xs4all.nl/images/twitter.jpg&#34; alt=&#34;Job desc&#34; /&gt;&lt;/p&gt;
@@ -603,10 +603,10 @@ mysql&amp;gt; source MySQL_full_backUp.sql
     
     <item>
       <title>Apple - Gramps Added to the Family</title>
-      <link>http://hbokh.github.io/post/2009/06/28/apple---gramps-added-to-the-family/</link>
+      <link>https://hbokh.github.io/post/2009/06/28/apple---gramps-added-to-the-family/</link>
       <pubDate>Sun, 28 Jun 2009 13:50:36 +0200</pubDate>
       
-      <guid>http://hbokh.github.io/post/2009/06/28/apple---gramps-added-to-the-family/</guid>
+      <guid>https://hbokh.github.io/post/2009/06/28/apple---gramps-added-to-the-family/</guid>
       <description>&lt;p&gt;&amp;ldquo;Our&amp;rdquo; Apple-family welcomed a rather old guy this weekend, a &lt;a href=&#34;http://tinyurl.com/nobpy2&#34;&gt;Power Macintosh G4&lt;/a&gt;, the one with AGP and gigabit ethernet. Thanks to Apple for pointing me &lt;a href=&#34;http://support.apple.com/kb/HT3082&#34;&gt;how to differentiate between models&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;I just love the design of these machines: the graphite color; the big Apple-logo on the sides; the handles on the top and last but not least: the easy way to &lt;a href=&#34;http://ht.wikipedia.org/wiki/Fichye:PowerMac_G4_MDD_open.jpg&#34;&gt;open the hood&lt;/a&gt;.&lt;/p&gt;
@@ -619,10 +619,10 @@ mysql&amp;gt; source MySQL_full_backUp.sql
     
     <item>
       <title>IPv6 working. Now what..?</title>
-      <link>http://hbokh.github.io/post/2009/04/21/ipv6-working.-now-what../</link>
+      <link>https://hbokh.github.io/post/2009/04/21/ipv6-working.-now-what../</link>
       <pubDate>Tue, 21 Apr 2009 11:03:46 +0200</pubDate>
       
-      <guid>http://hbokh.github.io/post/2009/04/21/ipv6-working.-now-what../</guid>
+      <guid>https://hbokh.github.io/post/2009/04/21/ipv6-working.-now-what../</guid>
       <description>&lt;p&gt;Over the last couple of weeks this blog hasn’t had a proper post. Instead it was filled by automagically created Twitter updates. In the meantime lots of things happened: too much to write down here. Instead I’ll focus on my (re-)achievements with IPv6.&lt;/p&gt;
 
 &lt;p&gt;I had IPv6 enabled a couple of years ago, using a 6to4 tunnel, offered as an experimental service by my ISP XS4ALL, but neglected it after installing a new hard drive. This time around, I choose SixXS for the tunnel broker portion and installed their AICCU-tool on my aging FreeBSD-host.&lt;br /&gt;
@@ -644,10 +644,10 @@ FYI: experimenting with OpenWRT on my Linksys WRT54GL wireless access point fail
     
     <item>
       <title>Review - Tomato Firmware for WRT54G</title>
-      <link>http://hbokh.github.io/post/2006/09/15/review---tomato-firmware-for-wrt54g/</link>
+      <link>https://hbokh.github.io/post/2006/09/15/review---tomato-firmware-for-wrt54g/</link>
       <pubDate>Fri, 15 Sep 2006 13:58:17 +0200</pubDate>
       
-      <guid>http://hbokh.github.io/post/2006/09/15/review---tomato-firmware-for-wrt54g/</guid>
+      <guid>https://hbokh.github.io/post/2006/09/15/review---tomato-firmware-for-wrt54g/</guid>
       <description>&lt;p&gt;I could not resist my curiousity, that&amp;rsquo;s why I decided to install third-party firmware named &lt;a href=&#34;http://www.polarcloud.com/tomato&#34;&gt;Tomato&lt;/a&gt; (version 0.03.0747 to be specific) on my brand new Linksys WRT54GL v1.1 wireless LAN-router.&lt;/p&gt;
 
 &lt;p&gt;This specific router has not been flashed before: no DD-WRT or HyperWRT or whatsoever. The actual flashing was a breeze: after resetting the device and it’s NVRAM by pressing the resetbutton on the back for about 20 seconds I uploaded the file “G\code.bin” from within IE7 under Windows XP. Why IE? In the online forums it is noted that some other browsers are having some problems during the upgrade-process. Indeed, I’ve done this before on a previous Linksys WRT54! :)&lt;/p&gt;

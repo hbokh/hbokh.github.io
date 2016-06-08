@@ -7,7 +7,7 @@
 
   	<meta property="og:title" content=" Workshop: Python en Django in Docker &middot;  BOK" />
   	<meta property="og:site_name" content="BOK" />
-  	<meta property="og:url" content="http://hbokh.github.io/post/2016/05/24/workshop-python-en-django-in-docker/" />
+  	<meta property="og:url" content="https://hbokh.github.io/post/2016/05/24/workshop-python-en-django-in-docker/" />
 
     
   	<meta property="og:type" content="article" />
@@ -32,23 +32,23 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="shortcut icon" href="http://hbokh.github.io/images/favicon.ico">
-	  <link rel="apple-touch-icon" href="http://hbokh.github.io/images/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="https://hbokh.github.io/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="https://hbokh.github.io/images/apple-touch-icon.png" />
 
-    <link rel="stylesheet" type="text/css" href="http://hbokh.github.io/css/screen.css" />
-    <link rel="stylesheet" type="text/css" href="http://hbokh.github.io/css/nav.css" />
+    <link rel="stylesheet" type="text/css" href="https://hbokh.github.io/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="https://hbokh.github.io/css/nav.css" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
 
 
     
       
-          <link href="http://hbokh.github.io/index.xml" rel="alternate" type="application/rss+xml" title="BOK" />
+          <link href="https://hbokh.github.io/index.xml" rel="alternate" type="application/rss+xml" title="BOK" />
       
       
     
-    <meta name="generator" content="Hugo 0.15" />
+    <meta name="generator" content="Hugo 0.16" />
 
-    <link rel="canonical" href="http://hbokh.github.io/post/2016/05/24/workshop-python-en-django-in-docker/" />
+    <link rel="canonical" href="https://hbokh.github.io/post/2016/05/24/workshop-python-en-django-in-docker/" />
 
     
     <script>
@@ -78,12 +78,12 @@
         
             
             <li class="nav-opened" role="presentation">
-            	<a href="http://hbokh.github.io/">Blog</a>
+            	<a href="https://hbokh.github.io/">Blog</a>
             </li>
         
             
             <li class="nav-opened" role="presentation">
-            	<a href="http://hbokh.github.io/about/">About me</a>
+            	<a href="https://hbokh.github.io/about">About me</a>
             </li>
         
             <h3>Follow me</h3>
@@ -99,7 +99,7 @@
     </ul>
     
     
-    <a class="subscribe-button icon-feed" href="http://hbokh.github.io/index.xml">Subscribe</a>
+    <a class="subscribe-button icon-feed" href="https://hbokh.github.io/index.xml">Subscribe</a>
     
 </div>
 <span class="nav-cover"></span>
@@ -111,13 +111,13 @@
 
 
   
-  <header class="main-header post-head" style="background-image: url(http://hbokh.github.io/images/dashboard.jpg)">
+  <header class="main-header post-head" style="background-image: url(https://hbokh.github.io/images/dashboard.jpg)">
   
   <nav class="main-nav overlay clearfix">
 
 
   
-      <a class="blog-logo" href="http://hbokh.github.io/"><img src="http://hbokh.github.io/images/bok.png" alt="Home" /></a>
+      <a class="blog-logo" href="https://hbokh.github.io/"><img src="https://hbokh.github.io/images/bok.png" alt="Home" /></a>
   
   
       <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
@@ -145,11 +145,11 @@
           </time>
         
          
-          <span class="post-tag small"><a href="http://hbokh.github.io/tags/docker/">#docker</a></span>
+          <span class="post-tag small"><a href="https://hbokh.github.io/tags/docker/">#docker</a></span>
          
-          <span class="post-tag small"><a href="http://hbokh.github.io/tags/dutch/">#dutch</a></span>
+          <span class="post-tag small"><a href="https://hbokh.github.io/tags/dutch/">#dutch</a></span>
          
-          <span class="post-tag small"><a href="http://hbokh.github.io/tags/meetup/">#meetup</a></span>
+          <span class="post-tag small"><a href="https://hbokh.github.io/tags/meetup/">#meetup</a></span>
          
         </section>
     </header>
@@ -161,15 +161,15 @@
 
 <hr />
 
-<h1 id="pydash-in-een-container:2d0aa3085eb0559873e64f01dee006e2">pyDash in een container</h1>
+<h1 id="pydash-in-een-container">pyDash in een container</h1>
 
-<h3 id="docker-grunn-workshop-26-mei-2016:2d0aa3085eb0559873e64f01dee006e2">Docker Grunn workshop, 26 mei 2016</h3>
+<h3 id="docker-grunn-workshop-26-mei-2016">Docker Grunn workshop, 26 mei 2016</h3>
 
-<h3 id="doel:2d0aa3085eb0559873e64f01dee006e2">Doel</h3>
+<h3 id="doel">Doel</h3>
 
 <p>Het opzetten van een in Python geschreven Linux-dashboard, <em>served through Django</em>, in een Docker-container draaien.</p>
 
-<h3 id="vereisten:2d0aa3085eb0559873e64f01dee006e2">Vereisten</h3>
+<h3 id="vereisten">Vereisten</h3>
 
 <ul>
 <li>een computer (<em>Doh!</em>) met Linux / OS X / Windows</li>
@@ -183,7 +183,7 @@
 <li>een editor bijv. Vim (of als je onder de 18 bent: nano de )</li>
 </ul>
 
-<h3 id="stap-voor-stap:2d0aa3085eb0559873e64f01dee006e2">Stap voor stap</h3>
+<h3 id="stap-voor-stap">Stap voor stap</h3>
 
 <ul>
 <li>Maak met Git een clone van de <strong><a href="https://github.com/k3oni/pydash">pyDash</a></strong>-repository (ga niet voor de Django App!) en ga de directory in:</li>
@@ -290,7 +290,7 @@ Installed 0 object(s) from 0 fixture(s)
 <li>Open een browser naar <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a> (Docker for Mac) of <a href="http://192.168.99.100:8000/">http://192.168.99.100:8000/</a> (boot2docker) en login met de zojuist ingeklopte <em>credentials</em>.</li>
 </ul>
 
-<h3 id="errors:2d0aa3085eb0559873e64f01dee006e2">Errors</h3>
+<h3 id="errors">Errors</h3>
 
 <p>Deze fout</p>
 
@@ -326,7 +326,7 @@ Er is iets met interface namen de laatste tijd&hellip;  laten we een kijkje neme
 
 <p><img src="http://hbokh.github.io/images/pydash_20160524_small.png" alt="PyDash" /></p>
 
-<h3 id="stoppen-en-verwijderen:2d0aa3085eb0559873e64f01dee006e2">Stoppen en verwijderen</h3>
+<h3 id="stoppen-en-verwijderen">Stoppen en verwijderen</h3>
 
 <pre><code>$ docker-compose stop
 Stopping pydash_web_1 ... done
@@ -348,7 +348,7 @@ Removing pydash_web_run_1 ... done
 
 <hr />
 
-<h2 id="appendix:2d0aa3085eb0559873e64f01dee006e2">Appendix</h2>
+<h2 id="appendix">Appendix</h2>
 
 <p>Dit is zijn de werkende <code>Dockerfile</code> en <code>docker-compose.yml</code>:</p>
 
@@ -384,7 +384,7 @@ services:
 
     
     <figure class="author-image">
-        <a class="img" href="http://hbokh.github.io/" style="background-image: url(http://hbokh.github.io/images/bok.png)"><span class="hidden">Henk's Picture</span></a>
+        <a class="img" href="https://hbokh.github.io/" style="background-image: url(https://hbokh.github.io/images/bok.png)"><span class="hidden">Henk's Picture</span></a>
     </figure>
     
 
@@ -395,7 +395,7 @@ services:
 
 
 <section class="author">
-  <h4><a href="http://hbokh.github.io/">Henk</a></h4>
+  <h4><a href="https://hbokh.github.io/">Henk</a></h4>
   
   <p>Recovering sysadmin</p>
   
@@ -410,19 +410,19 @@ services:
     
 <section class="share">
   <h4>Share this post</h4>
-  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Workshop%3a%20Python%20en%20Django%20in%20Docker&amp;url=http%3a%2f%2fhbokh.github.io%2fpost%2f2016%2f05%2f24%2fworkshop-python-en-django-in-docker%2f"
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Workshop%3a%20Python%20en%20Django%20in%20Docker&amp;url=https%3a%2f%2fhbokh.github.io%2fpost%2f2016%2f05%2f24%2fworkshop-python-en-django-in-docker%2f"
       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <span class="hidden">Twitter</span>
   </a>
-  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fhbokh.github.io%2fpost%2f2016%2f05%2f24%2fworkshop-python-en-django-in-docker%2f"
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fhbokh.github.io%2fpost%2f2016%2f05%2f24%2fworkshop-python-en-django-in-docker%2f"
       onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
       <span class="hidden">Facebook</span>
   </a>
-  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=http%3a%2f%2fhbokh.github.io%2fpost%2f2016%2f05%2f24%2fworkshop-python-en-django-in-docker%2f&amp;description=Workshop%3a%20Python%20en%20Django%20in%20Docker"
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fhbokh.github.io%2fpost%2f2016%2f05%2f24%2fworkshop-python-en-django-in-docker%2f&amp;description=Workshop%3a%20Python%20en%20Django%20in%20Docker"
       onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
       <span class="hidden">Pinterest</span>
   </a>
-  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=http%3a%2f%2fhbokh.github.io%2fpost%2f2016%2f05%2f24%2fworkshop-python-en-django-in-docker%2f"
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2fhbokh.github.io%2fpost%2f2016%2f05%2f24%2fworkshop-python-en-django-in-docker%2f"
      onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
       <span class="hidden">Google+</span>
   </a>
@@ -435,7 +435,7 @@ services:
 <div id="disqus_thread"></div>
 <script type="text/javascript">
   var disqus_shortname = 'hbokh';
-  var disqus_url = 'http:\/\/hbokh.github.io\/post\/2016\/05\/24\/workshop-python-en-django-in-docker\/';
+  var disqus_url = 'https:\/\/hbokh.github.io\/post\/2016\/05\/24\/workshop-python-en-django-in-docker\/';
   (function() {
     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
     dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
@@ -458,9 +458,9 @@ services:
         
     </footer>
     </div>
-    <script type="text/javascript" src="http://hbokh.github.io/js/jquery.js"></script>
-    <script type="text/javascript" src="http://hbokh.github.io/js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="http://hbokh.github.io/js/index.js"></script>
+    <script type="text/javascript" src="https://hbokh.github.io/js/jquery.js"></script>
+    <script type="text/javascript" src="https://hbokh.github.io/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://hbokh.github.io/js/index.js"></script>
     
 </body>
 </html>
