@@ -17,9 +17,7 @@
       <guid>https://hbokh.github.io/post/2016/05/24/workshop-python-en-django-in-docker/</guid>
       <description>&lt;p&gt;A manual (in Dutch) written for the local &lt;a href=&#34;http://www.meetup.com/DockerGrunn/&#34;&gt;Docker Grunn Meetup&lt;/a&gt;, to become familiar with Docker &amp;amp; docker-compose, by setting up a small Python / Django app.&lt;/p&gt;
 
-&lt;h2 id=&#34;hugomore42&#34;&gt;&lt;/h2&gt;
-
-&lt;h1 id=&#34;pydash-in-een-container&#34;&gt;pyDash in een container&lt;/h1&gt;
+&lt;p&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;docker-grunn-workshop-26-mei-2016&#34;&gt;Docker Grunn workshop, 26 mei 2016&lt;/h3&gt;
 
@@ -243,7 +241,7 @@ services:
       <guid>https://hbokh.github.io/post/2015/05/23/hands-on-wordpress-en-mysql-op-docker/</guid>
       <description>&lt;p&gt;A manual (in Dutch) written for the local &lt;a href=&#34;http://www.meetup.com/DockerGrunn/&#34;&gt;Docker Grunn Meetup&lt;/a&gt;, to become familiar with Docker &amp;amp; Compose by setting up a WordPress-blog.&lt;/p&gt;
 
-&lt;h2 id=&#34;hugomore42&#34;&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;/p&gt;
 
 &lt;p&gt;Image credits: Blake Thornberry - &lt;a href=&#34;https://www.flickr.com/photos/91657289@N02/10218392744/&#34;&gt;Flickr&lt;/a&gt;&lt;/p&gt;
 
