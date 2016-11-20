@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on BOK</title>
-    <link>https://hbokh.github.io/post/</link>
-    <description>Recent content in Posts on BOK</description>
+    <title>Post-rsses on BOK</title>
+    <link>https://hbokh.github.io/post/index.xml</link>
+    <description>Recent content in Post-rsses on BOK</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 201x</copyright>
@@ -16,11 +16,9 @@
       <pubDate>Tue, 24 May 2016 23:44:15 +0000</pubDate>
       
       <guid>https://hbokh.github.io/post/2016/05/24/workshop-python-en-django-in-docker/</guid>
-      <description>
+      <description>&lt;p&gt;A manual (in Dutch) written for the local &lt;a href=&#34;http://www.meetup.com/DockerGrunn/&#34;&gt;Docker Grunn Meetup&lt;/a&gt;, to become familiar with Docker &amp;amp; docker-compose, by setting up a small Python / Django app.&lt;/p&gt;
 
-&lt;p&gt;A manual (in Dutch) written for the local &lt;a href=&#34;http://www.meetup.com/DockerGrunn/&#34;&gt;Docker Grunn Meetup&lt;/a&gt;, to become familiar with Docker &amp;amp; docker-compose, by setting up a small Python / Django app.&lt;/p&gt;
-
-&lt;hr /&gt;
+&lt;h2 id=&#34;hugomore42&#34;&gt;&lt;/h2&gt;
 
 &lt;h1 id=&#34;pydash-in-een-container&#34;&gt;pyDash in een container&lt;/h1&gt;
 
@@ -235,8 +233,7 @@ services:
       - .:/code
     ports:
       - &amp;quot;8000:8000&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
     <item>
@@ -245,11 +242,9 @@ services:
       <pubDate>Sat, 23 May 2015 09:12:15 +0000</pubDate>
       
       <guid>https://hbokh.github.io/post/2015/05/23/hands-on-wordpress-en-mysql-op-docker/</guid>
-      <description>
+      <description>&lt;p&gt;A manual (in Dutch) written for the local &lt;a href=&#34;http://www.meetup.com/DockerGrunn/&#34;&gt;Docker Grunn Meetup&lt;/a&gt;, to become familiar with Docker &amp;amp; Compose by setting up a WordPress-blog.&lt;/p&gt;
 
-&lt;p&gt;A manual (in Dutch) written for the local &lt;a href=&#34;http://www.meetup.com/DockerGrunn/&#34;&gt;Docker Grunn Meetup&lt;/a&gt;, to become familiar with Docker &amp;amp; Compose by setting up a WordPress-blog.&lt;/p&gt;
-
-&lt;hr /&gt;
+&lt;h2 id=&#34;hugomore42&#34;&gt;&lt;/h2&gt;
 
 &lt;p&gt;Image credits: Blake Thornberry - &lt;a href=&#34;https://www.flickr.com/photos/91657289@N02/10218392744/&#34;&gt;Flickr&lt;/a&gt;&lt;/p&gt;
 
@@ -581,8 +576,7 @@ mysql&amp;gt; source MySQL_full_backUp.sql
 
 &lt;p&gt;Referentie: YouTube - &lt;a href=&#34;https://www.youtube.com/watch?v=2ZX3F-aFOxQ&#34;&gt;Docker Tutorial: Backing Up and Restoring MySQL and WordPress in Docker&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;That&amp;rsquo;s all Folks!&lt;/em&gt;&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;em&gt;That&amp;rsquo;s all Folks!&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -605,14 +599,14 @@ mysql&amp;gt; source MySQL_full_backUp.sql
       <pubDate>Sun, 28 Jun 2009 13:50:36 +0200</pubDate>
       
       <guid>https://hbokh.github.io/post/2009/06/28/apple---gramps-added-to-the-family/</guid>
-      <description>&lt;p&gt;&amp;ldquo;Our&amp;rdquo; Apple-family welcomed a rather old guy this weekend, a &lt;a href=&#34;http://tinyurl.com/nobpy2&#34;&gt;Power Macintosh G4&lt;/a&gt;, the one with AGP and gigabit ethernet. Thanks to Apple for pointing me &lt;a href=&#34;http://support.apple.com/kb/HT3082&#34;&gt;how to differentiate between models&lt;/a&gt;.&lt;/p&gt;
+      <description>&lt;p&gt;&amp;ldquo;Our&amp;rdquo; Apple-family welcomed a rather old guy this weekend, a &lt;a href=&#34;http://tinyurl.com/nobpy2&#34;&gt;Power Macintosh G4&lt;/a&gt;, the one with AGP and gigabit ethernet. Thanks to Apple for pointing me &lt;a href=&#34;http://support.apple.com/kb/HT3082&#34;&gt;how to differentiate between models&lt;/a&gt;.
+&lt;/p&gt;
 
 &lt;p&gt;I just love the design of these machines: the graphite color; the big Apple-logo on the sides; the handles on the top and last but not least: the easy way to &lt;a href=&#34;http://ht.wikipedia.org/wiki/Fichye:PowerMac_G4_MDD_open.jpg&#34;&gt;open the hood&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://bokh.home.xs4all.nl/images/Apple_PowerMac_G4.jpg&#34; alt=&#34;PowerMac G4&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;FYI: this particular PowerPC is app. 10 years old, has dual G4-processors at 450MHz, 896MB RAM and two hard disks: 30GB for &lt;a href=&#34;http://en.wikipedia.org/wiki/Mac_OS_X_Server#Mac_OS_X_Server_10.4_.28Tiger_Server.29&#34;&gt;Mac OS X 10.4 Tiger Server&lt;/a&gt; and 80GB for data-storage. Maybe it ‘ll end up replacing the old PC-hardware that is powering this site, giving it a fresh install of FreeBSD during the summer holiday. ;-)&lt;/p&gt;
-</description>
+&lt;p&gt;FYI: this particular PowerPC is app. 10 years old, has dual G4-processors at 450MHz, 896MB RAM and two hard disks: 30GB for &lt;a href=&#34;http://en.wikipedia.org/wiki/Mac_OS_X_Server#Mac_OS_X_Server_10.4_.28Tiger_Server.29&#34;&gt;Mac OS X 10.4 Tiger Server&lt;/a&gt; and 80GB for data-storage. Maybe it ‘ll end up replacing the old PC-hardware that is powering this site, giving it a fresh install of FreeBSD during the summer holiday. ;-)&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -622,6 +616,8 @@ mysql&amp;gt; source MySQL_full_backUp.sql
       
       <guid>https://hbokh.github.io/post/2009/04/21/ipv6-working.-now-what../</guid>
       <description>&lt;p&gt;Over the last couple of weeks this blog hasn’t had a proper post. Instead it was filled by automagically created Twitter updates. In the meantime lots of things happened: too much to write down here. Instead I’ll focus on my (re-)achievements with IPv6.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
 
 &lt;p&gt;I had IPv6 enabled a couple of years ago, using a 6to4 tunnel, offered as an experimental service by my ISP XS4ALL, but neglected it after installing a new hard drive. This time around, I choose SixXS for the tunnel broker portion and installed their AICCU-tool on my aging FreeBSD-host.&lt;br /&gt;
 FYI: experimenting with OpenWRT on my Linksys WRT54GL wireless access point failed kind of (since Tomato-firmware is not supporting IPv6 yet) and left me with this single-host option.&lt;/p&gt;
@@ -636,8 +632,7 @@ FYI: experimenting with OpenWRT on my Linksys WRT54GL wireless access point fail
 
 &lt;p&gt;Just as in the days of VHS, Betamax and V2000 it’s &lt;em&gt;pr0n&lt;/em&gt; that matters. And where do you find &lt;em&gt;pr0n&lt;/em&gt; these days? Right: on USENET and Torrent-sites! Regarding USENET, this blogpost will get you started once you have IPv6 up-and-running: Easily Get free newsgroup access over ipv6 in Ubuntu. Of course it’s not about Ubuntu but on the USENET-providers (with high retention!) that will give you &lt;strong&gt;free access&lt;/strong&gt; to their newsgroups containing a huge amount of (semi) illegal content, not only &lt;em&gt;pr0n&lt;/em&gt;, but also warez, ebooks, DivX-movies and the whole lot, as long as you connect over… IPv6! And since “The Pirate Bay” is having an IPv6-tracker but is in stormy waters, more and more people will turn to USENET for their “specific needs”.&lt;/p&gt;
 
-&lt;p&gt;So? It’s only a matter of time until the RIAA will find out about IPv6 and call for appropriate actions… In the meantime do whatever you think is right (or not). :-P&lt;/p&gt;
-</description>
+&lt;p&gt;So? It’s only a matter of time until the RIAA will find out about IPv6 and call for appropriate actions… In the meantime do whatever you think is right (or not). :-P&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -646,9 +641,9 @@ FYI: experimenting with OpenWRT on my Linksys WRT54GL wireless access point fail
       <pubDate>Fri, 15 Sep 2006 13:58:17 +0200</pubDate>
       
       <guid>https://hbokh.github.io/post/2006/09/15/review---tomato-firmware-for-wrt54g/</guid>
-      <description>&lt;p&gt;I could not resist my curiousity, so that is why I decided to install third-party firmware named &lt;a href=&#34;http://www.polarcloud.com/tomato&#34;&gt;Tomato&lt;/a&gt; (version 0.03.0747 to be specific) on my brand new Linksys WRT54GL v1.1 wireless LAN-router.&lt;/p&gt;
+      <description>&lt;p&gt;I could not resist my curiousity, so that is why I decided to install third-party firmware named &lt;a href=&#34;http://www.polarcloud.com/tomato&#34;&gt;Tomato&lt;/a&gt; (version 0.03.0747 to be specific) on my brand new Linksys WRT54GL v1.1 wireless LAN-router.&lt;br /&gt;
 
-&lt;p&gt;This specific router has not been flashed before: no DD-WRT or HyperWRT or whatsoever. The actual flashing was a breeze: after resetting the device and it’s NVRAM by pressing the resetbutton on the back for about 20 seconds I uploaded the file “G\code.bin” from within IE7 under Windows XP. Why IE? In the online forums it is noted that some other browsers are having some problems during the upgrade-process. Indeed, I’ve done this before on a previous Linksys WRT54! :)&lt;/p&gt;
+This specific router has not been flashed before: no DD-WRT or HyperWRT or whatsoever. The actual flashing was a breeze: after resetting the device and it’s NVRAM by pressing the resetbutton on the back for about 20 seconds I uploaded the file “G\code.bin” from within IE7 under Windows XP. Why IE? In the online forums it is noted that some other browsers are having some problems during the upgrade-process. Indeed, I’ve done this before on a previous Linksys WRT54! :)&lt;/p&gt;
 
 &lt;p&gt;A powercycle afterward just to be sure and when I connected to IP-address 192.168.1.1 there is was: the first Ajax-enabled Linksys web-GUI!!&lt;/p&gt;
 
@@ -664,8 +659,7 @@ And compared to the DD-WRT-firmware, it turned out Tomato will not have to reboo
 &lt;p&gt;The only (minor) issue I had was enabling the &lt;em&gt;Frame Burst&lt;/em&gt; in the Advanced -&amp;gt; Wireless-settings. It stays disabled after saving the settings. This same option worked on previous installed firmwares on my 1st router though maybe I should sent Tomato’s developer Jonathan an email about this.&lt;br /&gt;
 &lt;strong&gt;NOTE&lt;/strong&gt; - this issue was resolved in a later version!&lt;/p&gt;
 
-&lt;p&gt;But even if this release is still in an experimental or beta state I think it’s very stable and well equipped for usage on a daily basis. Go and give it a try if you got a WRT54 yourself!&lt;/p&gt;
-</description>
+&lt;p&gt;But even if this release is still in an experimental or beta state I think it’s very stable and well equipped for usage on a daily basis. Go and give it a try if you got a WRT54 yourself!&lt;/p&gt;</description>
     </item>
     
   </channel>
