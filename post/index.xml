@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on BOK</title>
+    <title>Post-rsses on BOK</title>
     <link>https://hbokh.github.io/post/index.xml</link>
-    <description>Recent content in Posts on BOK</description>
+    <description>Recent content in Post-rsses on BOK</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 201x</copyright>
@@ -583,11 +583,11 @@ mysql&amp;gt; source MySQL_full_backUp.sql
       <pubDate>Thu, 23 Jul 2009 00:00:00 +0000</pubDate>
       
       <guid>https://hbokh.github.io/post/2009/07/23/twitter---job-description/</guid>
-      <description>&lt;p&gt;So&amp;hellip; joining Twitter on December 21st 2006 (and leaving shortly thereafter, re-joining 9 months later - check on &lt;a href=&#34;http://www.whendidyoujointwitter.com/&#34;&gt;When Did You Join Twitter&lt;/a&gt;) makes me what? A web developer? An IT journalist? A pro-blogger? Or maybe a futurist or innovator?!&lt;/p&gt;
+      <description>&lt;p&gt;So, joining Twitter on December 21st 2006 (leaving shortly thereafter, re-joining 9 months later - check on &lt;a href=&#34;http://www.whendidyoujointwitter.com/&#34;&gt;When Did You Join Twitter&lt;/a&gt;) makes me what? A web developer? An IT journalist? A pro-blogger? Or maybe a futurist or innovator?&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://bokh.home.xs4all.nl/images/twitter.jpg&#34; alt=&#34;Job desc&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Guess I should have joined 5 months sooner&amp;hellip;&lt;/p&gt;
+&lt;p&gt;Guess I should have joined 5 months sooner&amp;hellip; :)&lt;/p&gt;
 </description>
     </item>
     
@@ -597,8 +597,9 @@ mysql&amp;gt; source MySQL_full_backUp.sql
       <pubDate>Sun, 28 Jun 2009 13:50:36 +0200</pubDate>
       
       <guid>https://hbokh.github.io/post/2009/06/28/apple---gramps-added-to-the-family/</guid>
-      <description>&lt;p&gt;&amp;ldquo;Our&amp;rdquo; Apple-family welcomed a rather old guy this weekend, a &lt;a href=&#34;http://tinyurl.com/nobpy2&#34;&gt;Power Macintosh G4&lt;/a&gt;, the one with AGP and gigabit ethernet. Thanks to Apple for pointing me &lt;a href=&#34;http://support.apple.com/kb/HT3082&#34;&gt;how to differentiate between models&lt;/a&gt;.
-&lt;/p&gt;
+      <description>&lt;p&gt;&amp;ldquo;Our&amp;rdquo; Apple-family welcomed a rather old guy this weekend, a &lt;a href=&#34;http://tinyurl.com/nobpy2&#34;&gt;Power Macintosh G4&lt;/a&gt;, the one with AGP and gigabit ethernet. Thanks to Apple for pointing me &lt;a href=&#34;http://support.apple.com/kb/HT3082&#34;&gt;how to differentiate between models&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
 
 &lt;p&gt;I just love the design of these machines: the graphite color; the big Apple-logo on the sides; the handles on the top and last but not least: the easy way to &lt;a href=&#34;http://ht.wikipedia.org/wiki/Fichye:PowerMac_G4_MDD_open.jpg&#34;&gt;open the hood&lt;/a&gt;.&lt;/p&gt;
 
@@ -639,9 +640,11 @@ FYI: experimenting with OpenWRT on my Linksys WRT54GL wireless access point fail
       <pubDate>Fri, 15 Sep 2006 13:58:17 +0200</pubDate>
       
       <guid>https://hbokh.github.io/post/2006/09/15/review---tomato-firmware-for-wrt54g/</guid>
-      <description>&lt;p&gt;I could not resist my curiousity, so that is why I decided to install third-party firmware named &lt;a href=&#34;http://www.polarcloud.com/tomato&#34;&gt;Tomato&lt;/a&gt; (version 0.03.0747 to be specific) on my brand new Linksys WRT54GL v1.1 wireless LAN-router.&lt;br /&gt;
+      <description>&lt;p&gt;I could not resist my curiousity, so that is why I decided to install third-party firmware named &lt;a href=&#34;http://www.polarcloud.com/tomato&#34;&gt;Tomato&lt;/a&gt; (version 0.03.0747 to be specific) on my brand new Linksys WRT54GL v1.1 wireless LAN-router.&lt;/p&gt;
 
-This specific router has not been flashed before: no DD-WRT or HyperWRT or whatsoever. The actual flashing was a breeze: after resetting the device and it’s NVRAM by pressing the resetbutton on the back for about 20 seconds I uploaded the file “G\code.bin” from within IE7 under Windows XP. Why IE? In the online forums it is noted that some other browsers are having some problems during the upgrade-process. Indeed, I’ve done this before on a previous Linksys WRT54! :)&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;This specific router has not been flashed before: no DD-WRT or HyperWRT or whatsoever. The actual flashing was a breeze: after resetting the device and it’s NVRAM by pressing the resetbutton on the back for about 20 seconds I uploaded the file “G\code.bin” from within IE7 under Windows XP. Why IE? In the online forums it is noted that some other browsers are having some problems during the upgrade-process. Indeed, I’ve done this before on a previous Linksys WRT54! :)&lt;/p&gt;
 
 &lt;p&gt;A powercycle afterward just to be sure and when I connected to IP-address 192.168.1.1 there is was: the first Ajax-enabled Linksys web-GUI!!&lt;/p&gt;
 
