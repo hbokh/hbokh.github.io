@@ -55,13 +55,13 @@
   </url>
   
   <url>
-    <loc>https://hbokh.github.io/tags/docker/</loc>
+    <loc>https://hbokh.github.io/categories/docker/</loc>
     <lastmod>2016-05-24T23:44:15+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://hbokh.github.io/categories/docker/</loc>
+    <loc>https://hbokh.github.io/tags/docker/</loc>
     <lastmod>2016-05-24T23:44:15+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -73,25 +73,25 @@
   </url>
   
   <url>
-    <loc>https://hbokh.github.io/tags/meetup/</loc>
-    <lastmod>2016-05-24T23:44:15+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://hbokh.github.io/categories/meetup/</loc>
     <lastmod>2016-05-24T23:44:15+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://hbokh.github.io/tags/nonsense/</loc>
-    <lastmod>2009-07-23T00:00:00+00:00</lastmod>
+    <loc>https://hbokh.github.io/tags/meetup/</loc>
+    <lastmod>2016-05-24T23:44:15+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://hbokh.github.io/categories/nonsense/</loc>
+    <lastmod>2009-07-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hbokh.github.io/tags/nonsense/</loc>
     <lastmod>2009-07-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -115,13 +115,13 @@
   </url>
   
   <url>
-    <loc>https://hbokh.github.io/tags/webdev/</loc>
+    <loc>https://hbokh.github.io/categories/webdev/</loc>
     <lastmod>2009-04-21T11:03:46+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://hbokh.github.io/categories/webdev/</loc>
+    <loc>https://hbokh.github.io/tags/webdev/</loc>
     <lastmod>2009-04-21T11:03:46+02:00</lastmod>
     <priority>0</priority>
   </url>
