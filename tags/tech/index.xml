@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>BOK</title>
-    <link>https://hbokh.github.io/tags/tech/index.xml</link>
-    <description>Recent content on BOK</description>
+    <title>Tech on BOK</title>
+    <link>https://hbokh.github.io/tags/tech/</link>
+    <description>Recent content in Tech on BOK</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 201x</copyright>
-    <atom:link href="https://hbokh.github.io/tags/tech/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 15 Sep 2006 13:58:17 +0200</lastBuildDate>
+    
+	<atom:link href="https://hbokh.github.io/tags/tech/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Review - Tomato Firmware for WRT54G</title>
@@ -17,25 +20,7 @@
       <guid>https://hbokh.github.io/post/2006/09/15/review---tomato-firmware-for-wrt54g/</guid>
       <description>&lt;p&gt;I could not resist my curiousity, so that is why I decided to install third-party firmware named &lt;a href=&#34;http://www.polarcloud.com/tomato&#34;&gt;Tomato&lt;/a&gt; (version 0.03.0747 to be specific) on my brand new Linksys WRT54GL v1.1 wireless LAN-router.&lt;/p&gt;
 
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;This specific router has not been flashed before: no DD-WRT or HyperWRT or whatsoever. The actual flashing was a breeze: after resetting the device and it’s NVRAM by pressing the resetbutton on the back for about 20 seconds I uploaded the file “G\code.bin” from within IE7 under Windows XP. Why IE? In the online forums it is noted that some other browsers are having some problems during the upgrade-process. Indeed, I’ve done this before on a previous Linksys WRT54! :)&lt;/p&gt;
-
-&lt;p&gt;A powercycle afterward just to be sure and when I connected to IP-address 192.168.1.1 there is was: the first Ajax-enabled Linksys web-GUI!!&lt;/p&gt;
-
-&lt;p&gt;After (re-)configuring all the network-settings and getting my WLAN on the net again I was ready to dive a little deeper into this new kid on the block.&lt;/p&gt;
-
-&lt;p&gt;Tomato is based on the latest Linksys firmware v4.30.7 and it’s main advantages (besides the ones you’ll find in most of the other third party firmwares) in my opinion are the CIFS-client and the web-GUI. With the first one you can mount a Windows- or Samba-share to store bandwidth-logfiles. The second has some SVG under the hood to generate bandwidth-charts and QoS-pies, which look really nice in my default browser Firefox (here IE7 lacks the SVG-support which is now built-in in Firefox).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://bokh.home.xs4all.nl/images/bw-chrt-S.jpg&#34; alt=&#34;Tomato webGUI&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;So far I am very much impressed with this firmware-release! I hope I feel the same in about a week or so, if no updates are released in the meantime.
-And compared to the DD-WRT-firmware, it turned out Tomato will not have to reboot itself for every minor tweak that has been made: just an ordinary sighup of the process like any good Unix does will do.&lt;/p&gt;
-
-&lt;p&gt;The only (minor) issue I had was enabling the &lt;em&gt;Frame Burst&lt;/em&gt; in the Advanced -&amp;gt; Wireless-settings. It stays disabled after saving the settings. This same option worked on previous installed firmwares on my 1st router though maybe I should sent Tomato’s developer Jonathan an email about this.&lt;br /&gt;
-&lt;strong&gt;NOTE&lt;/strong&gt; - this issue was resolved in a later version!&lt;/p&gt;
-
-&lt;p&gt;But even if this release is still in an experimental or beta state I think it’s very stable and well equipped for usage on a daily basis. Go and give it a try if you got a WRT54 yourself!&lt;/p&gt;</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

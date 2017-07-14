@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>BOK</title>
-    <link>https://hbokh.github.io/tags/nonsense/index.xml</link>
-    <description>Recent content on BOK</description>
+    <title>Nonsense on BOK</title>
+    <link>https://hbokh.github.io/tags/nonsense/</link>
+    <description>Recent content in Nonsense on BOK</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 201x</copyright>
-    <atom:link href="https://hbokh.github.io/tags/nonsense/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 23 Jul 2009 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://hbokh.github.io/tags/nonsense/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Twitter - Job Description</title>
@@ -15,12 +18,8 @@
       <pubDate>Thu, 23 Jul 2009 00:00:00 +0000</pubDate>
       
       <guid>https://hbokh.github.io/post/2009/07/23/twitter---job-description/</guid>
-      <description>&lt;p&gt;So, joining Twitter on December 21st 2006 (leaving shortly thereafter, re-joining 9 months later - check on &lt;a href=&#34;http://www.whendidyoujointwitter.com/&#34;&gt;When Did You Join Twitter&lt;/a&gt;) makes me what? A web developer? An IT journalist? A pro-blogger? Or maybe a futurist or innovator?&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://bokh.home.xs4all.nl/images/twitter.jpg&#34; alt=&#34;Job desc&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Guess I should have joined 5 months sooner&amp;hellip; :)&lt;/p&gt;
-</description>
+      <description>So, joining Twitter on December 21st 2006 (leaving shortly thereafter, re-joining 9 months later - check on When Did You Join Twitter) makes me what? A web developer? An IT journalist? A pro-blogger? Or maybe a futurist or innovator?
+Guess I should have joined 5 months sooner&amp;hellip; :)</description>
     </item>
     
   </channel>
