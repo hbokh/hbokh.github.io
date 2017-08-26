@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tech on BOK</title>
-    <link>https://hbokh.github.io/tags/tech/</link>
+    <link>https://hbokh.github.io/categories/tech/</link>
     <description>Recent content in Tech on BOK</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved</copyright>
     <lastBuildDate>Sat, 26 Aug 2017 10:45:00 +0000</lastBuildDate>
     
-	<atom:link href="https://hbokh.github.io/tags/tech/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://hbokh.github.io/categories/tech/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,17 +19,6 @@
       
       <guid>https://hbokh.github.io/post/2017/08/26/server-provisioning-at-spindle/</guid>
       <description>&lt;p&gt;Previously published on the &lt;a href=&#34;https://wearespindle.com/&#34;&gt;devhouse Spindle&lt;/a&gt; weblog, June 1st 2017.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Review - Tomato Firmware for WRT54G</title>
-      <link>https://hbokh.github.io/post/2006/09/15/review---tomato-firmware-for-wrt54g/</link>
-      <pubDate>Fri, 15 Sep 2006 13:58:17 +0200</pubDate>
-      
-      <guid>https://hbokh.github.io/post/2006/09/15/review---tomato-firmware-for-wrt54g/</guid>
-      <description>&lt;p&gt;I could not resist my curiousity, so that is why I decided to install third-party firmware named &lt;a href=&#34;http://www.polarcloud.com/tomato&#34;&gt;Tomato&lt;/a&gt; (version 0.03.0747 to be specific) on my brand new Linksys WRT54GL v1.1 wireless LAN-router.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>

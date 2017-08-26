@@ -6,7 +6,7 @@
     <description>Recent content in Categories on BOK</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>All rights reserved - 201x</copyright>
+    <copyright>All rights reserved</copyright>
     
 	<atom:link href="https://hbokh.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -35,6 +35,15 @@
       <pubDate>Thu, 23 Jul 2009 00:00:00 +0000</pubDate>
       
       <guid>https://hbokh.github.io/categories/nonsense/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tech</title>
+      <link>https://hbokh.github.io/categories/tech/</link>
+      <pubDate>Sat, 26 Aug 2017 10:45:00 +0000</pubDate>
+      
+      <guid>https://hbokh.github.io/categories/tech/</guid>
       <description></description>
     </item>
     

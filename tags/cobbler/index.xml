@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cobbler on BOK</title>
+    <link>https://hbokh.github.io/tags/cobbler/</link>
+    <description>Recent content in Cobbler on BOK</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>All rights reserved</copyright>
+    <lastBuildDate>Sat, 26 Aug 2017 10:45:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://hbokh.github.io/tags/cobbler/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Server provisioning at Spindle</title>
+      <link>https://hbokh.github.io/post/2017/08/26/server-provisioning-at-spindle/</link>
+      <pubDate>Sat, 26 Aug 2017 10:45:00 +0000</pubDate>
+      
+      <guid>https://hbokh.github.io/post/2017/08/26/server-provisioning-at-spindle/</guid>
+      <description>&lt;p&gt;Previously published on the &lt;a href=&#34;https://wearespindle.com/&#34;&gt;devhouse Spindle&lt;/a&gt; weblog, June 1st 2017.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
