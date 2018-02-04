@@ -285,7 +285,7 @@
 <li>Maak met Git een clone van de <strong><a href="https://github.com/k3oni/pydash">pyDash</a></strong>-repository (ga niet voor de Django App!) en ga de directory in:</li>
 </ul>
 
-<pre><code>$ git clone git@github.com:k3oni/pydash.git
+<pre><code class="language-txt">$ git clone git@github.com:k3oni/pydash.git
 $ cd pydash
 </code></pre>
 
@@ -296,7 +296,7 @@ Ga naar <strong><a href="https://docs.docker.com/compose/django/">Quickstart: Do
 Verwijder de regels die ze noemen - het is niet nodig, want de gebruikte DB straks is een sqlite3-bestand.</li>
 </ul>
 
-<pre><code>$ vi Dockerfile
+<pre><code class="language-txt">$ vi Dockerfile
 $ vi docker-compose.yml
 </code></pre>
 
@@ -307,7 +307,7 @@ Als het goed is wordt deze door de build-instructie automatisch aangemaakt op ba
 
 <p><code>$ docker-compose up -d</code></p>
 
-<pre><code>Building web
+<pre><code class="language-txt">Building web
 Step 1 : FROM python:2.7
 2.7: Pulling from library/python
 8b87079b7a06: Pull complete
@@ -450,7 +450,7 @@ Removing pydash_web_run_1 ... done
 
 <p><code>Dockerfile</code>:</p>
 
-<pre><code>FROM python:2.7
+<pre><code class="language-Dockerfile">FROM python:2.7
 ENV PYTHONUNBUFFERED 1
 RUN mkdir /code
 WORKDIR /code
@@ -461,7 +461,7 @@ ADD . /code/
 
 <p><code>docker-compose.yml</code>:</p>
 
-<pre><code>version: '2'
+<pre><code class="language-yml">version: '2'
 services:
   web:
     build: .
