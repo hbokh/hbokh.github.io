@@ -12,15 +12,15 @@
 
 
 
-<meta name="twitter:title" content="IPv6 working. Now what..?"/>
+<meta name="twitter:title" content="Review - Tomato Firmware for WRT54G"/>
 <meta name="twitter:description" content=""/>
 <meta name="twitter:site" content="@BOK"/>
 
 
 
-  	<meta property="og:title" content="IPv6 working. Now what..? &middot; BOK" />
+  	<meta property="og:title" content="Review - Tomato Firmware for WRT54G &middot; BOK" />
   	<meta property="og:site_name" content="BOK" />
-  	<meta property="og:url" content="https://hbokh.github.io/post/2009/04/21/ipv6-working.-now-what../" />
+  	<meta property="og:url" content="https://hbokh.github.io/post/2006/09/15/review-tomato-firmware-for-wrt54g/" />
 
     
         
@@ -31,17 +31,17 @@
     
     <meta property="og:description" content="" />
   	<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2009-04-21T11:03:46&#43;02:00" />
+    <meta property="article:published_time" content="2006-09-15T13:58:17&#43;02:00" />
 
     
-    <meta property="article:tag" content="webdev" />
+    <meta property="article:tag" content="tech" />
     
     
 
-    <title>IPv6 working. Now what..? &middot; BOK</title>
+    <title>Review - Tomato Firmware for WRT54G &middot; BOK</title>
 
     
-    <meta name="description" content="&lt;p&gt;Over the last couple of weeks this blog hasn’t had a proper post. Instead it was filled by automagically created Twitter updates. In the meantime lots of thi" />
+    <meta name="description" content="&lt;p&gt;I could not resist my curiousity, so that is why I decided to install third-party firmware named &lt;a href=&#34;http://www.polarcloud.com/tomato&#34;&gt;Tomato&lt;/a&gt; (versi" />
     
 
     <meta name="HandheldFriendly" content="True" />
@@ -70,7 +70,7 @@
     
     <meta name="generator" content="Hugo 0.52" />
 
-    <link rel="canonical" href="https://hbokh.github.io/post/2009/04/21/ipv6-working.-now-what../" />
+    <link rel="canonical" href="https://hbokh.github.io/post/2006/09/15/review-tomato-firmware-for-wrt54g/" />
 
     
       
@@ -109,23 +109,23 @@
         "description": Recovering sysadmin
         
     },
-    "headline": IPv6 working. Now what..?,
-    "name": IPv6 working. Now what..?,
-    "wordCount": 385,
+    "headline": Review - Tomato Firmware for WRT54G,
+    "name": Review - Tomato Firmware for WRT54G,
+    "wordCount": 407,
     "timeRequired": "PT2M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": en
     },
-    "url": https://hbokh.github.io/post/2009/04/21/ipv6-working.-now-what../,
-    "datePublished": 2009-04-21T11:03Z,
-    "dateModified": 2009-04-21T11:03Z,
+    "url": https://hbokh.github.io/post/2006/09/15/review-tomato-firmware-for-wrt54g/,
+    "datePublished": 2006-09-15T13:58Z,
+    "dateModified": 2006-09-15T13:58Z,
     
-    "keywords": webdev,
+    "keywords": tech,
     "description": ,
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": https://hbokh.github.io/post/2009/04/21/ipv6-working.-now-what../
+        "@id": https://hbokh.github.io/post/2006/09/15/review-tomato-firmware-for-wrt54g/
     }
 }
     </script>
@@ -211,38 +211,41 @@
   <article class="post post">
 
     <header class="post-header">
-        <h1 class="post-title">IPv6 working. Now what..?</h1>
+        <h1 class="post-title">Review - Tomato Firmware for WRT54G</h1>
         <small></small>
 
         <section class="post-meta">
         
-          <time class="post-date" datetime="2009-04-21T11:03:46&#43;02:00">
-            Apr 21, 2009
+          <time class="post-date" datetime="2006-09-15T13:58:17&#43;02:00">
+            Sep 15, 2006
           </time>
         
          
-          <span class="post-tag small"><a href="https://hbokh.github.io//tags/webdev/">#webdev</a></span>
+          <span class="post-tag small"><a href="https://hbokh.github.io//tags/tech/">#tech</a></span>
          
         </section>
     </header>
 
     <section class="post-content">
-      <p>Over the last couple of weeks this blog hasn’t had a proper post. Instead it was filled by automagically created Twitter updates. In the meantime lots of things happened: too much to write down here. Instead I’ll focus on my (re-)achievements with IPv6.</p>
+      <p>I could not resist my curiousity, so that is why I decided to install third-party firmware named <a href="http://www.polarcloud.com/tomato">Tomato</a> (version 0.03.0747 to be specific) on my brand new Linksys WRT54GL v1.1 wireless LAN-router.</p>
 
-<p>I had IPv6 enabled a couple of years ago, using a 6to4 tunnel, offered as an experimental service by my ISP XS4ALL, but neglected it after installing a new hard drive. This time around, I choose SixXS for the tunnel broker portion and installed their AICCU-tool on my aging FreeBSD-host.<br />
-FYI: experimenting with OpenWRT on my Linksys WRT54GL wireless access point failed kind of (since Tomato-firmware is not supporting IPv6 yet) and left me with this single-host option.</p>
+<p>This specific router has not been flashed before: no DD-WRT or HyperWRT or whatsoever. The actual flashing was a breeze: after resetting the device and it’s NVRAM by pressing the resetbutton on the back for about 20 seconds I uploaded the file “G\code.bin” from within IE7 under Windows XP. Why IE? In the online forums it is noted that some other browsers are having some problems during the upgrade-process. Indeed, I’ve done this before on a previous Linksys WRT54! :)</p>
 
-<p>It turned out the so called <em>router advertisement daemon</em> (man 8 rtadvd), needed to propagate IPv6 addresses to our MacBooks and my Linux- / WinXP-host, was able to route between the interfaces /dev/tun0 and /dev/net/fxp0. Not the most cosmetically sweet option, but nevertheless: it’s working like it should - with a local IPv6-subnet in my LAN.</p>
+<p>A powercycle afterward just to be sure and when I connected to IP-address 192.168.1.1 there is was: the first Ajax-enabled Linksys web-GUI!!</p>
 
-<p>And now what?! What’s the use in running IPv6 when no one else does? Create demand. <strong>Think pr0n!</strong> In fact, have a look at this presentation below to illustrate that statement:</p>
+<p>After (re-)configuring all the network-settings and getting my WLAN on the net again I was ready to dive a little deeper into this new kid on the block.</p>
 
-<p>(Video no longer available&hellip;)</p>
+<p>Tomato is based on the latest Linksys firmware v4.30.7 and it’s main advantages (besides the ones you’ll find in most of the other third party firmwares) in my opinion are the CIFS-client and the web-GUI. With the first one you can mount a Windows- or Samba-share to store bandwidth-logfiles. The second has some SVG under the hood to generate bandwidth-charts and QoS-pies, which look really nice in my default browser Firefox (here IE7 lacks the SVG-support which is now built-in in Firefox).</p>
 
-<p>*Fck, the fcking Thing is f<em>cked</em> - Props go to b10m for pointing me to this one!</p>
+<p><img src="https://bokh.home.xs4all.nl/images/bw-chrt-S.jpg" alt="Tomato webGUI" /></p>
 
-<p>Just as in the days of VHS, Betamax and V2000 it’s <em>pr0n</em> that matters. And where do you find <em>pr0n</em> these days? Right: on USENET and Torrent-sites! Regarding USENET, this blogpost will get you started once you have IPv6 up-and-running: Easily Get free newsgroup access over ipv6 in Ubuntu. Of course it’s not about Ubuntu but on the USENET-providers (with high retention!) that will give you <strong>free access</strong> to their newsgroups containing a huge amount of (semi) illegal content, not only <em>pr0n</em>, but also warez, ebooks, DivX-movies and the whole lot, as long as you connect over… IPv6! And since “The Pirate Bay” is having an IPv6-tracker but is in stormy waters, more and more people will turn to USENET for their “specific needs”.</p>
+<p>So far I am very much impressed with this firmware-release! I hope I feel the same in about a week or so, if no updates are released in the meantime.
+And compared to the DD-WRT-firmware, it turned out Tomato will not have to reboot itself for every minor tweak that has been made: just an ordinary sighup of the process like any good Unix does will do.</p>
 
-<p>So? It’s only a matter of time until the RIAA will find out about IPv6 and call for appropriate actions… In the meantime do whatever you think is right (or not). :-P</p>
+<p>The only (minor) issue I had was enabling the <em>Frame Burst</em> in the Advanced -&gt; Wireless-settings. It stays disabled after saving the settings. This same option worked on previous installed firmwares on my 1st router though maybe I should sent Tomato’s developer Jonathan an email about this.<br />
+<strong>NOTE</strong> - this issue was resolved in a later version!</p>
+
+<p>But even if this release is still in an experimental or beta state I think it’s very stable and well equipped for usage on a daily basis. Go and give it a try if you got a WRT54 yourself!</p>
     </section>
 
 
@@ -280,19 +283,19 @@ FYI: experimenting with OpenWRT on my Linksys WRT54GL wireless access point fail
     
 <section class="share">
   <h4>Share this post</h4>
-  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=IPv6%20working.%20Now%20what..%3f&nbsp;-&nbsp;BOK&amp;url=https%3a%2f%2fhbokh.github.io%2fpost%2f2009%2f04%2f21%2fipv6-working.-now-what..%2f"
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Review%20-%20Tomato%20Firmware%20for%20WRT54G&nbsp;-&nbsp;BOK&amp;url=https%3a%2f%2fhbokh.github.io%2fpost%2f2006%2f09%2f15%2freview-tomato-firmware-for-wrt54g%2f"
       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <span class="hidden">Twitter</span>
   </a>
-  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fhbokh.github.io%2fpost%2f2009%2f04%2f21%2fipv6-working.-now-what..%2f"
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fhbokh.github.io%2fpost%2f2006%2f09%2f15%2freview-tomato-firmware-for-wrt54g%2f"
       onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
       <span class="hidden">Facebook</span>
   </a>
-  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fhbokh.github.io%2fpost%2f2009%2f04%2f21%2fipv6-working.-now-what..%2f&amp;description=IPv6%20working.%20Now%20what..%3f"
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fhbokh.github.io%2fpost%2f2006%2f09%2f15%2freview-tomato-firmware-for-wrt54g%2f&amp;description=Review%20-%20Tomato%20Firmware%20for%20WRT54G"
       onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
       <span class="hidden">Pinterest</span>
   </a>
-  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2fhbokh.github.io%2fpost%2f2009%2f04%2f21%2fipv6-working.-now-what..%2f"
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2fhbokh.github.io%2fpost%2f2006%2f09%2f15%2freview-tomato-firmware-for-wrt54g%2f"
      onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
       <span class="hidden">Google+</span>
   </a>
@@ -309,8 +312,8 @@ FYI: experimenting with OpenWRT on my Linksys WRT54GL wireless access point fail
 
 
 var disqus_config = function () {
-this.page.url = "https:\/\/hbokh.github.io\/post\/2009\/04\/21\/ipv6-working.-now-what..\/";  
-this.page.identifier = "https:\/\/hbokh.github.io\/post\/2009\/04\/21\/ipv6-working.-now-what..\/"; 
+this.page.url = "https:\/\/hbokh.github.io\/post\/2006\/09\/15\/review-tomato-firmware-for-wrt54g\/";  
+this.page.identifier = "https:\/\/hbokh.github.io\/post\/2006\/09\/15\/review-tomato-firmware-for-wrt54g\/"; 
 };
 
 (function() { 
@@ -337,19 +340,13 @@ s.setAttribute('data-timestamp', +new Date());
 
   <aside class="read-next">
   
-      <a class="read-next-story" style="no-cover" href="https://hbokh.github.io/post/2009/06/28/apple-gramps-added-to-the-family/">
+      <a class="read-next-story" style="no-cover" href="https://hbokh.github.io/post/2009/04/21/ipv6-working.-now-what../">
           <section class="post">
-              <h2>Apple - Gramps Added to the Family</h2>
+              <h2>IPv6 working. Now what..?</h2>
               
           </section>
       </a>
   
-  
-      <a class="read-next-story prev" style="no-cover" href="https://hbokh.github.io/post/2006/09/15/review-tomato-firmware-for-wrt54g/">
-          <section class="post">
-              <h2>Review - Tomato Firmware for WRT54G</h2>
-          </section>
-      </a>
   
 </aside>
 
