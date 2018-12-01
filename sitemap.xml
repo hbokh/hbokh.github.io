@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://hbokh.github.io/post/2018/12/01/pixiecore-waitron/</loc>
+    <lastmod>2018-12-01T20:45:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://hbokh.github.io/post/2017/08/26/server-provisioning-at-spindle/</loc>
     <lastmod>2017-08-26T10:45:00+00:00</lastmod>
   </url>
@@ -50,7 +55,7 @@
   
   <url>
     <loc>https://hbokh.github.io/</loc>
-    <lastmod>2017-08-26T10:45:00+00:00</lastmod>
+    <lastmod>2018-12-01T20:45:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -109,7 +114,13 @@
   
   <url>
     <loc>https://hbokh.github.io/post/</loc>
-    <lastmod>2017-08-26T10:45:00+00:00</lastmod>
+    <lastmod>2018-12-01T20:45:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hbokh.github.io/tags/pxe/</loc>
+    <lastmod>2018-12-01T20:45:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -121,13 +132,13 @@
   
   <url>
     <loc>https://hbokh.github.io/categories/tech/</loc>
-    <lastmod>2017-08-26T10:45:00+00:00</lastmod>
+    <lastmod>2018-12-01T20:45:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://hbokh.github.io/tags/tech/</loc>
-    <lastmod>2017-08-26T10:45:00+00:00</lastmod>
+    <lastmod>2018-12-01T20:45:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

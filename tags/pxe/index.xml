@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pxe on BOK</title>
+    <link>https://hbokh.github.io/tags/pxe/</link>
+    <description>Recent content in Pxe on BOK</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>All rights reserved</copyright>
+    <lastBuildDate>Sat, 01 Dec 2018 20:45:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://hbokh.github.io/tags/pxe/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Pixiecore &amp; waitron</title>
+      <link>https://hbokh.github.io/post/2018/12/01/pixiecore-waitron/</link>
+      <pubDate>Sat, 01 Dec 2018 20:45:00 +0000</pubDate>
+      
+      <guid>https://hbokh.github.io/post/2018/12/01/pixiecore-waitron/</guid>
+      <description>&lt;p&gt;Blahblah&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
