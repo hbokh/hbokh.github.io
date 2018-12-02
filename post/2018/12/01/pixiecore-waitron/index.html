@@ -43,7 +43,7 @@
     <title>Pixiecore &amp; waitron &middot; BOK</title>
 
     
-    <meta name="description" content="&lt;p&gt;A &amp;ldquo;journey&amp;rdquo; to get Google&amp;rsquo;s &lt;em&gt;pixiecore&lt;/em&gt; working with an API-server named &lt;em&gt;waitron&lt;/em&gt;.&lt;/p&gt;" />
+    <meta name="description" content="&lt;p&gt;A &amp;ldquo;small journey&amp;rdquo; into getting Google&amp;rsquo;s &lt;em&gt;pixiecore&lt;/em&gt; to work with an API-server named &lt;em&gt;waitron&lt;/em&gt;.&lt;/p&gt;" />
     
 
     <meta name="HandheldFriendly" content="True" />
@@ -113,8 +113,8 @@
     },
     "headline": Pixiecore &amp; waitron,
     "name": Pixiecore &amp; waitron,
-    "wordCount": 1261,
-    "timeRequired": "PT6M",
+    "wordCount": 1307,
+    "timeRequired": "PT7M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": en
@@ -240,7 +240,7 @@
     </header>
 
     <section class="post-content">
-      <p>A &ldquo;journey&rdquo; to get Google&rsquo;s <em>pixiecore</em> working with an API-server named <em>waitron</em>.</p>
+      <p>A &ldquo;small journey&rdquo; into getting Google&rsquo;s <em>pixiecore</em> to work with an API-server named <em>waitron</em>.</p>
 
 <h2 id="intro">Intro</h2>
 
@@ -443,8 +443,10 @@ OK
 }
 </code></pre>
 
-<p>And you&rsquo;re done!<br />
-So far this does not works as quick and easy as the <a href="https://www.terraform.io/docs/providers/cobbler/index.html">Cobbler provider</a> for Terraform yet&hellip;</p>
+<p>And you&rsquo;re done!</p>
+
+<p>So far this does not works as quick and easy as the <a href="https://www.terraform.io/docs/providers/cobbler/index.html">Cobbler provider</a> for Terraform yet&hellip;<br />
+Next stop will probably be trying out something like <a href="https://github.com/thousandeyes/shoelaces">Shoelaces</a>. :-)</p>
 
 <h3 id="output">Output</h3>
 
@@ -483,6 +485,13 @@ So far this does not works as quick and easy as the <a href="https://www.terrafo
 192.168.178.52 - - [01/Dec/2018:17:27:44 +0100] &quot;GET /template/preseed/linux001.internal/73f267c2-1ea3-40c2-8c5e-2f134a5e8ee7 HTTP/1.1&quot; 200 2879
 192.168.178.21 - - [01/Dec/2018:17:31:28 +0100] &quot;GET /status HTTP/1.1&quot; 200 34
 </code></pre>
+
+<h2 id="other-resources">Other resources</h2>
+
+<ul>
+<li><a href="https://jhaals.se/2015/11/14/replacing-foreman-with-waitron.html">Replacing Foreman with Waitron and pixiecore</a> - a basic introduction to <em>waitron</em> by its original author.</li>
+<li><a href="https://blog.thousandeyes.com/open-sourcing-shoelaces-tool-for-unmanned-server-bootstrapping/_">Open-Sourcing Shoelaces: A Tool for Unmanned Server Bootstrapping</a> - A tool for painless server bootstraping.</li>
+</ul>
 
 <hr />
     </section>
