@@ -43,7 +43,7 @@
     <title>Pixiecore &amp; waitron &middot; BOK</title>
 
     
-    <meta name="description" content="&lt;p&gt;Lacking propper documentation or howto&amp;rsquo;s I setout on a journey to get Google&amp;rsquo;s &amp;ldquo;Pixiecore&amp;rdquo; working with an API-server named &amp;ldquo;wa" />
+    <meta name="description" content="&lt;p&gt;A &amp;ldquo;journey&amp;rdquo; to get Google&amp;rsquo;s &lt;em&gt;pixiecore&lt;/em&gt; working with an API-server named &lt;em&gt;waitron&lt;/em&gt;.&lt;/p&gt;" />
     
 
     <meta name="HandheldFriendly" content="True" />
@@ -113,8 +113,8 @@
     },
     "headline": Pixiecore &amp; waitron,
     "name": Pixiecore &amp; waitron,
-    "wordCount": 876,
-    "timeRequired": "PT5M",
+    "wordCount": 1257,
+    "timeRequired": "PT6M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": en
@@ -240,37 +240,45 @@
     </header>
 
     <section class="post-content">
-      <p>Lacking propper documentation or howto&rsquo;s I setout on a journey to get Google&rsquo;s &ldquo;Pixiecore&rdquo; working with an API-server named &ldquo;waitron&rdquo;. Here you can find most of my results.</p>
+      <p>A &ldquo;journey&rdquo; to get Google&rsquo;s <em>pixiecore</em> working with an API-server named <em>waitron</em>.</p>
 
-<p>This is a <strong>WORK IN PROGRESS!!</strong></p>
+<h2 id="intro">Intro</h2>
+
+<p>Ever since I started working in IT, I have an interest in setting up systems as quickly as possible. This must have find its origin way back in the late nineties where I had to do research at KPN (Dutch Telecom) on a HP-product named &ldquo;Ignite&rdquo; for HP-UX.<br />
+So when such a new tool shows up, I want to fiddle about with it, just as I did with tools like <em>Cobbler</em>, <em>CoreOS Matchbox</em>, etc.<br />
+It turned out <em>waitron</em> shines in the lack of documentation and is also not maintained since 2015, but I accepted the challenge to se if I could get this working. Here are some of the results.</p>
 
 <h2 id="repositories">Repositories</h2>
 
+<p>These GitHub-repositories are being used for the setup:</p>
+
 <ul>
-<li><a href="https://github.com/google/netboot/tree/master/pixiecore">netboot/pixiecron</a></li>
-<li><a href="https://github.com/gdoucet/waitron">waitron</a></li>
+<li><a href="https://github.com/google/netboot/tree/master/pixiecore">netboot/pixiecore</a></li>
+<li><a href="https://github.com/jhaals/waitron">waitron</a></li>
 </ul>
 
-<h2 id="used-hardware">Used hardware</h2>
+<h2 id="hardware-in-use">Hardware in use</h2>
 
-<p>I installed both &ldquo;Pixiecron&rdquo; &amp; &ldquo;waitron&rdquo; on a small box running Ubuntu 16.04 Xenial, named <code>dc2.internal</code>.<br />
+<p>I installed both <em>pixiecore</em> &amp; <em>waitron</em> on a small box running Ubuntu 16.04 Xenial, named <code>dc2.internal</code>.<br />
 DC2? Yes, see <a href="https://www.kickstarter.com/projects/dickhardt/dc2-desktop-container-computer-for-docker-containe">DC2 - Desktop Container Computer for Docker Containers</a>.</p>
 
 <p>Testing was done on VMs running on a <a href="https://www.proxmox.com/en/proxmox-ve">Proxmox Virtual Environment</a> (version 5.2-12).</p>
 
-<p>Go-binary build on a MacBook Pro (Intel Core i7, 16GB RAM).</p>
+<p>I have a DHCP0srver (<code>dnsmasq</code>) running on a QNAP-NAS and a FreeBSD-server acting as a TFTP/HTTP-server for a small amont of kernels, ramdisks, etc.</p>
 
-<h2 id="install-pixiecore">Install Pixiecore</h2>
+<p>The Go-binary build on a MacBook Pro (Intel Core i7, 16GB RAM).</p>
+
+<h2 id="install-pixiecore">Install pixiecore</h2>
 
 <p>Check instructions at <a href="https://github.com/google/netboot/tree/master/pixiecore">https://github.com/google/netboot/tree/master/pixiecore</a> on how it&rsquo;s done.</p>
 
-<p>This box will both run &ldquo;Pixiecron&rdquo; and &ldquo;waitron&rdquo; from the manually created directory <code>/opt/waitron/</code>.<br />
-&ldquo;Pixiecron&rdquo; will run as an API-<strong>client</strong> and &ldquo;waitron&rdquo; an an API-<strong>server</strong>.</p>
+<p>This box will both run <em>pixiecore</em> and <em>waitron</em> from the manually created directory <code>/opt/waitron/</code>.<br />
+<em>pixiecore</em> will run as an API-<strong>client</strong> and <em>waitron</em> an an API-<strong>server</strong>.</p>
 
 <h2 id="build-waitron">Build waitron</h2>
 
 <p>Make sure you have Go installed.<br />
-Because I only want a Linux x86-64 executable file, but my most powerful computer is a MacBook Pro, I go through these somewhat different steps in building &ldquo;waitron&rdquo;. On my Mac:</p>
+Because I only want a Linux x86-64 executable file, but my most powerful computer is a MacBook Pro, I go through these somewhat different steps in building <em>waitron</em>. On my Mac:</p>
 
 <pre><code class="language-txt">cd $GOPATH/src/github.com
 mkdir jhaals
@@ -281,7 +289,7 @@ cd waitron
 
 <blockquote>
 <p><strong>IMPORTANT</strong><br />
-I made changes in 2 Go-files. Only the first one is needed!</p>
+I made changes in 2 Go-files. Only the first one is really needed!</p>
 </blockquote>
 
 <p>In <code>machine.go</code> line 84 and in <code>main.go</code> line 254:</p>
@@ -326,16 +334,16 @@ github.com/julienschmidt/httprouter (download)
 github.com/satori/go.uuid (download)
 </code></pre>
 
-<p>As stated I want a Linux- binary, so I ran the build like this:</p>
+<p>As stated I want a Linux-binary, so I ran the build like this:</p>
 
 <p><code>env GOOS=linux GOARCH=amd64 go build .</code></p>
 
-<p>This left me with a 9.8M sized binary named &ldquo;waitron&rdquo;.<br />
+<p>This left me with a 9.8M sized binary named <em>waitron</em>.<br />
 Next I scp-ed this binary to the Ubuntu-box: <code>scp waitron dc2:/opt/waitron/</code></p>
 
 <h3 id="configurations">Configurations</h3>
 
-<p>File <code>config.yaml</code>. Adapted, because the <code>default_cmdline</code> would offer a wrongly URL:</p>
+<p>File <code>config.yaml</code>. Altered, because the <code>default_cmdline</code> would offer a wrongly formatted URL:</p>
 
 <pre><code class="language-yaml">templatepath: templates
 machinepath: machines
@@ -351,7 +359,12 @@ default_image_url: http://archive.ubuntu.com/ubuntu/dists/trusty-updates/main/in
 default_initrd: initrd.gz
 </code></pre>
 
-<p>File <code>machines/linux001.internal.yaml</code>. Here the defaults from the config above are overruled:</p>
+<p>As you might see, I have added some undocumented variables here under &ldquo;params&rdquo;, like <code>apt_hostname</code> and <code>apt_path</code>.<br />
+In the file <code>templates/preseed.j2</code> we can see (Jinja2) entries like <code>{{config.Params.apt_hostname}}</code> and <code>{{config.Params.apt_path}}</code>, but if these are not set anywhere, you&rsquo;ll end up with a useless preseed-file!</p>
+
+<p>OK. So the above defaults are Ubuntu-focused, where I want a Debian Stretch system.<br />
+Have a look at file <code>machines/linux001.internal.yaml</code>. <strong>NOTE:</strong> you need a unique per-system YAML-file!<br />
+Here the defaults from the above (global) configuration are overruled:</p>
 
 <pre><code class="language-yaml">hostname: linux001.internal
 operatingsystem: &quot;Stretch&quot;
@@ -376,33 +389,38 @@ params:
     static: True
 </code></pre>
 
-<p>I also added a Debian-specific <a href="https://wiki.debian.org/DebianInstaller/Preseed">preseed</a>-file to <code>templates/debian9.j2</code> and left it with the Jinja2-extension.</p>
+<p>In this file I have added the parameter <code>static: True</code>, in case you need a static defined network on the system, as used in the preseed with <code>{% if machine.Params.static == &quot;True&quot; %}</code>.</p>
 
-<h2 id="start-me-up">Start me up</h2>
+<p>In the end I decided to not bother with Jinja2-templating yet, so I added a Debian-specific <a href="https://wiki.debian.org/DebianInstaller/Preseed">preseed</a>-file to <code>templates/debian9.j2</code> and left it with the Jinja2-extension intact.</p>
 
-<p>In seperate terminals:</p>
+<h2 id="start-up">Start up</h2>
+
+<p>In seperate terminals on the Ubuntu-box:</p>
 
 <ol>
-<li><p>Start Pixiecore: <code>pixiecore api http://dc2.internal:8090/ -d --dhcp-no-bind</code></p></li>
+<li><p>Start <em>pixiecore</em>: <code>pixiecore api http://dc2.internal:8090/ -d --dhcp-no-bind</code><br />
+In API-mode; pointing to the URL where <em>waitron</em> will be found; in debug-mode and to handle DHCP traffic without binding to the DHCP server port.</p></li>
 
-<li><p>Start waitron: <code>env CONFIG_FILE=config.yaml ./waitron -d</code></p></li>
+<li><p>Start <em>waitron</em>: <code>env CONFIG_FILE=config.yaml ./waitron -d</code></p></li>
 </ol>
 
 <h2 id="set-build-mode">Set build mode</h2>
 
-<p>First, a new system needs to be set in &ldquo;build mode&rdquo; before it is offered anything from Pixiecore. Lets use <code>curl</code> for that:</p>
+<p>First, a new system needs to be set in &ldquo;build mode&rdquo; before it is offered anything from pixiecore.<br />
+You&rsquo;ll have to send <em>waitron</em> some specific <a href="https://github.com/jhaals/waitron/blob/master/API.md">API-calls</a>.
+I prefer to use <a href="https://httpie.org/">HTTPie</a> for that (but <code>curl</code> might do as well):</p>
 
-<pre><code class="language-txt">$ curl -X PUT http://dc2.internal:8090/build/linux001.internal
+<pre><code class="language-txt">$ http PUT http://dc2.internal:8090/build/linux001.internal
 OK
 </code></pre>
 
 <p>Make sure you&rsquo;re using the same name as used for the machine-definition, otherwise you&rsquo;ll get an error like this:</p>
 
-<pre><code class="language-txt">$ curl -X PUT http://dc2.internal:8090/build/linux001
+<pre><code class="language-txt">$ http PUT http://dc2.internal:8090/build/linux001
 Unable to find host definition for linux001
 </code></pre>
 
-<p>To check the status I use <a href="https://httpie.org/">HTTPie</a>:</p>
+<p>To check the status of that specific system I use :</p>
 
 <pre><code class="language-txt">$ http http://dc2.internal:8090/status
 {
@@ -410,33 +428,55 @@ Unable to find host definition for linux001
 }
 </code></pre>
 
-<h3 id="output">Output</h3>
+<p>Now it is time to start a system to be provisioned. Like a VM or bare-metal.
+When it&rsquo;s finished you&rsquo;ll have to remove the server from build mode:</p>
 
-<p>Some output that &ldquo;Pixiecore&rdquo; could show:</p>
-
-<pre><code class="language-txt">[Init] Starting Pixiecore goroutines
-[DHCP] Got valid request to boot 00:de:ad:90:74:60 (IA32)
-[DHCP] Offering to boot 00:de:ad:90:74:60
-[DHCP] Ignoring packet from 00:de:ad:90:74:60: packet is DHCPREQUEST, not DHCPDISCOVER
-[TFTP] Sent &quot;00:de:ad:90:74:60/4&quot; to 192.168.178.52:27591
-[DHCP] Got valid request to boot 00:de:ad:90:74:60 (IA32)
-[DHCP] Offering to boot 00:de:ad:90:74:60
-[DHCP] Ignoring packet from 00:de:ad:90:74:60: packet is DHCPREQUEST, not DHCPDISCOVER
-[HTTP] Get bootspec for 00:de:ad:90:74:60 took 4.678411ms
-[HTTP] Construct ipxe script for 00:de:ad:90:74:60 took 350.408µs
-[HTTP] Sending ipxe boot script to 192.168.178.52:1659
-[HTTP] Writing ipxe script to 00:de:ad:90:74:60 took 42.322µs
-[HTTP] handleIpxe for 00:de:ad:90:74:60 took 5.400122ms
-[HTTP] Sent file &quot;tW7vpWPYGEL2lfVpyjq-FglAVRynuLOVoxRLmnzfpPmObFHeAlZbGxXqcyC-h-fZSO5eXPPKtQZyaQyxpEDyfYVS4tVIr6xd5j6RgcJAnBcDvZv7CuF5&quot; to 192.168.178.52:1659
-[HTTP] Sent file &quot;ebLmUhO9mx1xGPx2nFcjoIXDR0LZ9xaUSOV1Cr2RmiI2h1i_2KvmHob6pG5mCOGR5cziycJaA7HvB3-nSn_j8oXlmIfUFFvhGJlx1uaG-OB57MOp-S-W&quot; to 192.168.178.52:1659
+<pre><code class="language-txt">$ http http://dc2.internal:8090/done/linux001.internal/73f267c2-1ea3-40c2-8c5e-2f134a5e8ee7
+OK
 </code></pre>
 
-<p>And the same for &ldquo;waitron&rdquo;:</p>
+<p>And check its status:</p>
+
+<pre><code class="language-txt">$ http http://dc2.internal:8090/status
+{
+    &quot;linux001.internal&quot;: &quot;Installed&quot;
+}
+</code></pre>
+
+<p>And you&rsquo;re done!<br />
+So far this does not works as quick and easy as the <a href="https://www.terraform.io/docs/providers/cobbler/index.html">Cobbler provider</a> for Terraform yet&hellip;</p>
+
+<h3 id="output">Output</h3>
+
+<p>Some output that <em>pixiecore</em> could show:</p>
+
+<pre><code class="language-txt">[Init] Starting Pixiecore goroutines
+[DHCP] Ignoring packet from 1c:ab:a7:90:7f:c4: packet is DHCPREQUEST, not DHCPDISCOVER
+[DHCP] Got valid request to boot 00:de:ad:90:74:60 (IA32)
+[DHCP] Offering to boot 00:de:ad:90:74:60
+[DHCP] Ignoring packet from 00:de:ad:90:74:60: packet is DHCPREQUEST, not DHCPDISCOVER
+[TFTP] Sent &quot;00:de:ad:90:74:60/4&quot; to 192.168.178.52:59898
+[DHCP] Got valid request to boot 00:de:ad:90:74:60 (IA32)
+[DHCP] Offering to boot 00:de:ad:90:74:60
+[DHCP] Got valid request to boot 00:de:ad:90:74:60 (IA32)
+[DHCP] Offering to boot 00:de:ad:90:74:60
+[DHCP] Ignoring packet from 00:de:ad:90:74:60: packet is DHCPREQUEST, not DHCPDISCOVER
+[HTTP] Get bootspec for 00:de:ad:90:74:60 took 8.875419ms
+[HTTP] Construct ipxe script for 00:de:ad:90:74:60 took 6.901628ms
+[HTTP] Sending ipxe boot script to 192.168.178.52:26697
+[HTTP] Writing ipxe script to 00:de:ad:90:74:60 took 52.11µs
+[HTTP] handleIpxe for 00:de:ad:90:74:60 took 17.060643ms
+[HTTP] Sent file &quot;VRVYX8ribqXFhB4MxlMmE5kJMl8CpmNVg6O2z906baIMuGtqVml9z96G2HbRlMpxpFlsxN9YJ-z9RCTSpGYuJnMz4ufv-lhFtWLmx0ul6mVvVU2QriQY2gq9hRA=&quot; to 192.168.178.52:26697
+[HTTP] Sent file &quot;4IT2hGZrET7LULh5a0FbAsrAf8JsGM9ilR3IQyeVxwP-7szfoxuqNnJOWVNNhYh3Bx9G_FsePTgvOqJP4NgoGXJtPMYeMrcxU1fZUc7wHpVSiWw6vrOgDfZfpzfuAwii&quot; to 192.168.178.52:26697
+[DHCP] Ignoring packet from 00:de:ad:90:74:60: not a PXE boot request (missing option 93)
+[DHCP] Ignoring packet from 00:de:ad:90:74:60: packet is DHCPREQUEST, not DHCPDISCOVER
+</code></pre>
+
+<p>And the same for <em>waitron</em>:</p>
 
 <pre><code class="language-txt">2018/12/01 17:26:00 Starting Server
 2018/12/01 17:26:04 linux001.internal installation token: 73f267c2-1ea3-40c2-8c5e-2f134a5e8ee7
 192.168.178.21 - - [01/Dec/2018:17:26:04 +0100] &quot;PUT /build/linux001.internal HTTP/1.1&quot; 200 2
-192.168.178.21 - - [01/Dec/2018:17:26:13 +0100] &quot;GET /template/preseed/linux001.internal/73f267c2-1ea3-40c2-8c5e-2f134a5e8ee7 HTTP/1.1&quot; 200 2879
 192.168.178.199 - - [01/Dec/2018:17:27:02 +0100] &quot;GET /v1/boot/00:de:ad:90:74:60 HTTP/1.1&quot; 200 697
 192.168.178.199 - - [01/Dec/2018:17:27:03 +0100] &quot;GET /v1/boot/00:de:ad:90:74:60 HTTP/1.1&quot; 200 697
 192.168.178.199 - - [01/Dec/2018:17:27:03 +0100] &quot;GET /v1/boot/00:de:ad:90:74:60 HTTP/1.1&quot; 200 697
@@ -445,8 +485,6 @@ Unable to find host definition for linux001
 </code></pre>
 
 <hr />
-
-<p>HB, 20181201</p>
     </section>
 
 
@@ -485,6 +523,29 @@ Unable to find host definition for linux001
 
 
     
+
+<div id="disqus_thread"></div>
+<script>
+
+
+
+
+var disqus_config = function () {
+this.page.url = "https:\/\/hbokh.github.io\/post\/2018\/12\/01\/pixiecore-waitron\/";  
+this.page.identifier = "https:\/\/hbokh.github.io\/post\/2018\/12\/01\/pixiecore-waitron\/"; 
+};
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://hbokh.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
 
 
 
