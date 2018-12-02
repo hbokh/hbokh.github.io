@@ -113,7 +113,7 @@
     },
     "headline": Pixiecore &amp; waitron,
     "name": Pixiecore &amp; waitron,
-    "wordCount": 1257,
+    "wordCount": 1261,
     "timeRequired": "PT6M",
     "inLanguage": {
       "@type": "Language",
@@ -246,7 +246,7 @@
 
 <p>Ever since I started working in IT, I have an interest in setting up systems as quickly as possible. This must have find its origin way back in the late nineties where I had to do research at KPN (Dutch Telecom) on a HP-product named &ldquo;Ignite&rdquo; for HP-UX.<br />
 So when such a new tool shows up, I want to fiddle about with it, just as I did with tools like <em>Cobbler</em>, <em>CoreOS Matchbox</em>, etc.<br />
-It turned out <em>waitron</em> shines in the lack of documentation and is also not maintained since 2015, but I accepted the challenge to se if I could get this working. Here are some of the results.</p>
+It turned out <em>waitron</em> shines in the lack of documentation and is also not maintained since 2015, but I accepted the challenge to see if I could get this working. Here are some of the results.</p>
 
 <h2 id="repositories">Repositories</h2>
 
@@ -264,7 +264,7 @@ DC2? Yes, see <a href="https://www.kickstarter.com/projects/dickhardt/dc2-deskto
 
 <p>Testing was done on VMs running on a <a href="https://www.proxmox.com/en/proxmox-ve">Proxmox Virtual Environment</a> (version 5.2-12).</p>
 
-<p>I have a DHCP0srver (<code>dnsmasq</code>) running on a QNAP-NAS and a FreeBSD-server acting as a TFTP/HTTP-server for a small amont of kernels, ramdisks, etc.</p>
+<p>I allreday have a DHCP-server (<code>dnsmasq</code>) running on a QNAP-NAS and a FreeBSD-server acting as a TFTP/HTTP-server for a small set of distro&rsquo;s, their kernels and ramdisks, etc.</p>
 
 <p>The Go-binary build on a MacBook Pro (Intel Core i7, 16GB RAM).</p>
 
@@ -278,7 +278,7 @@ DC2? Yes, see <a href="https://www.kickstarter.com/projects/dickhardt/dc2-deskto
 <h2 id="build-waitron">Build waitron</h2>
 
 <p>Make sure you have Go installed.<br />
-Because I only want a Linux x86-64 executable file, but my most powerful computer is a MacBook Pro, I go through these somewhat different steps in building <em>waitron</em>. On my Mac:</p>
+Because I only want a Linux x86-64 executable file, and my most powerful computer is a MacBook Pro, I go through these somewhat different steps in building <em>waitron</em>. On my Mac:</p>
 
 <pre><code class="language-txt">cd $GOPATH/src/github.com
 mkdir jhaals
@@ -360,7 +360,7 @@ default_initrd: initrd.gz
 </code></pre>
 
 <p>As you might see, I have added some undocumented variables here under &ldquo;params&rdquo;, like <code>apt_hostname</code> and <code>apt_path</code>.<br />
-In the file <code>templates/preseed.j2</code> we can see (Jinja2) entries like <code>{{config.Params.apt_hostname}}</code> and <code>{{config.Params.apt_path}}</code>, but if these are not set anywhere, you&rsquo;ll end up with a useless preseed-file!</p>
+In the file <code>templates/preseed.j2</code> we can see (Jinja2) entries like <code>{{config.Params.apt_hostname}}</code> and <code>{{config.Params.apt_path}}</code>, but if these are not defined anywhere, you&rsquo;ll end up with a useless preseed-file!</p>
 
 <p>OK. So the above defaults are Ubuntu-focused, where I want a Debian Stretch system.<br />
 Have a look at file <code>machines/linux001.internal.yaml</code>. <strong>NOTE:</strong> you need a unique per-system YAML-file!<br />
