@@ -113,7 +113,7 @@
     },
     "headline": Pixiecore &amp; waitron,
     "name": Pixiecore &amp; waitron,
-    "wordCount": 1324,
+    "wordCount": 1310,
     "timeRequired": "PT7M",
     "inLanguage": {
       "@type": "Language",
@@ -328,14 +328,6 @@ index 35a23df..8a53094 100644
 <li>The line reading &ldquo;uuid&rdquo; needs to be made compatible with the latest release of <code>github.com/satori/go.uuid</code>. If not you&rsquo;ll get the error <code>./machine.go:84:40: multiple-value uuid.NewV4() in single-value context</code>.</li>
 <li>The Ubuntu box also runs Prometheus, listening on port 9090, so I had to alter this (the port can not be overruled in the config&hellip;).</li>
 </ul>
-
-<pre><code class="language-txt">$ go get -v
-github.com/flosch/pongo2 (download)
-github.com/juju/errors (download)
-github.com/gorilla/handlers (download)
-github.com/julienschmidt/httprouter (download)
-github.com/satori/go.uuid (download)
-</code></pre>
 
 <p>As stated I want a Linux-binary, so I ran the build like this:</p>
 
