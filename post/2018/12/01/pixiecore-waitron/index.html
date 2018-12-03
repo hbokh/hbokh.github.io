@@ -113,7 +113,7 @@
     },
     "headline": Pixiecore &amp; waitron,
     "name": Pixiecore &amp; waitron,
-    "wordCount": 1310,
+    "wordCount": 1324,
     "timeRequired": "PT7M",
     "inLanguage": {
       "@type": "Language",
@@ -277,20 +277,23 @@ DC2? Yes, see <a href="https://www.kickstarter.com/projects/dickhardt/dc2-deskto
 
 <h2 id="build-waitron">Build waitron</h2>
 
-<p>Make sure you have Go installed.<br />
-Because I only want a Linux x86-64 executable file, and my most powerful computer is a MacBook Pro, I go through these somewhat different steps in building <em>waitron</em>. On my Mac:</p>
+<p>Make sure you have Go installed. I used to run <code>brew install go</code> on my Mac. You might check <a href="https://golang.org/doc/install">Getting Started</a>.</p>
 
-<pre><code class="language-txt">cd $GOPATH/src/github.com
-mkdir jhaals
-cd jhaals
-git clone https://github.com/jhaals/waitron.git
-cd waitron
+<p>Because I only want a Linux x86-64 executable file, and my most powerful computer is a MacBook Pro, I ran this building <em>waitron</em>:</p>
+
+<pre><code class="language-txt">$ go get github.com/jhaals/waitron.git
+# github.com/jhaals/waitron
+develop/gocode/src/github.com/jhaals/waitron/machine.go:84:40: multiple-value uuid.NewV4() in single-value context
 </code></pre>
 
 <blockquote>
-<p><strong>IMPORTANT</strong><br />
-I made changes in 2 Go-files. Only the first one is really needed!</p>
+<p><strong>FIX THIS ERROR</strong><br />
+I made changes in two Go-files. Only the first one is really needed!</p>
 </blockquote>
+
+<pre><code class="language-txt">cd $GOPATH/src/github.com/haals/waitron
+vi machine.go
+</code></pre>
 
 <p>In <code>machine.go</code> line 84 and in <code>main.go</code> line 254:</p>
 
