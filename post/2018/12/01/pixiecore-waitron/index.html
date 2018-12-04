@@ -113,7 +113,7 @@
     },
     "headline": Pixiecore &amp; waitron,
     "name": Pixiecore &amp; waitron,
-    "wordCount": 1310,
+    "wordCount": 1311,
     "timeRequired": "PT7M",
     "inLanguage": {
       "@type": "Language",
@@ -264,7 +264,7 @@ DC2? Yes, see <a href="https://www.kickstarter.com/projects/dickhardt/dc2-deskto
 
 <p>Testing was done on VMs running on a <a href="https://www.proxmox.com/en/proxmox-ve">Proxmox Virtual Environment</a> (version 5.2-12).</p>
 
-<p>I allready have a DHCP-server (<code>dnsmasq</code>) running on a QNAP-NAS and a FreeBSD-server acting as a TFTP/HTTP-server for a small set of distro&rsquo;s, their kernels and ramdisks, etc.</p>
+<p>I already have a DHCP-server (<code>dnsmasq</code>) running on a QNAP-NAS and a FreeBSD-server acting as a TFTP/HTTP-server for a small set of distro&rsquo;s, their kernels and ramdisks, etc.</p>
 
 <p>The Go-binary build on a MacBook Pro (Intel Core i7, 16GB RAM).</p>
 
@@ -354,7 +354,7 @@ default_image_url: http://archive.ubuntu.com/ubuntu/dists/trusty-updates/main/in
 default_initrd: initrd.gz
 </code></pre>
 
-<p>As you might see, I have added some undocumented variables here under &ldquo;params&rdquo;, like <code>apt_hostname</code> and <code>apt_path</code>.<br />
+<p>As you might have noticed, I have added some undocumented variables here under &ldquo;params&rdquo;, like <code>apt_hostname</code> and <code>apt_path</code>.<br />
 In the file <code>templates/preseed.j2</code> we can see (Jinja2) entries like <code>{{config.Params.apt_hostname}}</code> and <code>{{config.Params.apt_path}}</code>, but if these are not defined anywhere, you&rsquo;ll end up with a useless preseed-file!</p>
 
 <p>OK. So the above defaults are Ubuntu-focused, where I want a Debian Stretch system.<br />
@@ -401,7 +401,7 @@ In API-mode; pointing to the URL where <em>waitron</em> will be found; in debug-
 
 <h2 id="set-build-mode">Set build mode</h2>
 
-<p>First, a new system needs to be set in &ldquo;build mode&rdquo; before it is offered anything from pixiecore.<br />
+<p>First, a new system needs to be set in &ldquo;build mode&rdquo; before it is offered anything from <em>pixiecore</em>.<br />
 You&rsquo;ll have to send <em>waitron</em> some specific <a href="https://github.com/jhaals/waitron/blob/master/API.md">API-calls</a>.
 I prefer to use <a href="https://httpie.org/">HTTPie</a> for that (but <code>curl</code> might do as well):</p>
 
@@ -485,7 +485,7 @@ So the next stop will probably be trying out something like <a href="https://git
 
 <ul>
 <li><a href="https://jhaals.se/2015/11/14/replacing-foreman-with-waitron.html">Replacing Foreman with Waitron and pixiecore</a> - a basic introduction to <em>waitron</em> by its original author.</li>
-<li><a href="https://blog.thousandeyes.com/open-sourcing-shoelaces-tool-for-unmanned-server-bootstrapping/_">Open-Sourcing Shoelaces: A Tool for Unmanned Server Bootstrapping</a> - A tool for painless server bootstraping.</li>
+<li><a href="https://blog.thousandeyes.com/open-sourcing-shoelaces-tool-for-unmanned-server-bootstrapping/">Open-Sourcing Shoelaces: A Tool for Unmanned Server Bootstrapping</a> - A tool for painless server bootstraping.</li>
 </ul>
 
 <hr />
