@@ -113,7 +113,7 @@
     },
     "headline": Pixiecore &amp; waitron,
     "name": Pixiecore &amp; waitron,
-    "wordCount": 1311,
+    "wordCount": 1379,
     "timeRequired": "PT7M",
     "inLanguage": {
       "@type": "Language",
@@ -259,27 +259,26 @@ It turned out <em>waitron</em> shines in the lack of documentation and is also n
 
 <h2 id="hardware-in-use">Hardware in use</h2>
 
-<p>I installed both <em>pixiecore</em> &amp; <em>waitron</em> on a small box running Ubuntu 16.04 Xenial, named <code>dc2.internal</code>.<br />
-DC2? Yes, see <a href="https://www.kickstarter.com/projects/dickhardt/dc2-desktop-container-computer-for-docker-containe">DC2 - Desktop Container Computer for Docker Containers</a>.</p>
+<p>Both <em>pixiecore</em> &amp; <em>waitron</em> were installed on a small box running Ubuntu 16.04 Xenial, named <code>dc2.internal</code>. Ehr&hellip; <em>DC2</em>? Yes, see <a href="https://www.kickstarter.com/projects/dickhardt/dc2-desktop-container-computer-for-docker-containe">DC2 - Desktop Container Computer for Docker Containers</a>.</p>
 
-<p>Testing was done on VMs running on a <a href="https://www.proxmox.com/en/proxmox-ve">Proxmox Virtual Environment</a> (version 5.2-12).</p>
+<p>I already have a DHCP-server (<code>dnsmasq</code>) running on a NAS and a FreeBSD-server acting as a TFTP/HTTP-server for a small set of distro&rsquo;s, their kernels and ramdisks, etc.</p>
 
-<p>I already have a DHCP-server (<code>dnsmasq</code>) running on a QNAP-NAS and a FreeBSD-server acting as a TFTP/HTTP-server for a small set of distro&rsquo;s, their kernels and ramdisks, etc.</p>
+<p>On a MacBook Pro (Intel Core i7, 16GB RAM) I build the binary for <em>waitron</em>,  with <code>go version go1.11.2 darwin/amd64</code>.</p>
 
-<p>The Go-binary build on a MacBook Pro (Intel Core i7, 16GB RAM).</p>
+<p>Testing with VMs was done on a <a href="https://www.proxmox.com/en/proxmox-ve">Proxmox Virtual Environment</a> (version 5.2-12), installed on a HP ProLiant MicroServer Gen8.</p>
 
 <h2 id="install-pixiecore">Install pixiecore</h2>
 
-<p>Check instructions at <a href="https://github.com/google/netboot/tree/master/pixiecore">https://github.com/google/netboot/tree/master/pixiecore</a> on how it&rsquo;s done.</p>
+<p>Go through the instructions at <a href="https://github.com/google/netboot/tree/master/pixiecore#debianubuntu">https://github.com/google/netboot/tree/master/pixiecore#debianubuntu</a> on how to install <em>pixiecore</em> on Ubuntu / Debian.</p>
 
-<p>This box will both run <em>pixiecore</em> and <em>waitron</em> from the manually created directory <code>/opt/waitron/</code>.<br />
-<em>pixiecore</em> will run as an API-<strong>client</strong> and <em>waitron</em> an an API-<strong>server</strong>.</p>
+<p>The Ubuntu-box will run both <em>pixiecore</em> and <em>waitron</em> from the manually created directory <code>/opt/waitron/</code>.<br />
+<em>pixiecore</em> will run as an API-<strong>client</strong> and <em>waitron</em> as an API-<strong>server</strong>.</p>
 
 <h2 id="build-waitron">Build waitron</h2>
 
 <p>Make sure you have Go installed. I used to run <code>brew install go</code> on my Mac. You might check <a href="https://golang.org/doc/install">Getting Started</a>.</p>
 
-<p>Because I only want a Linux x86-64 executable file, and my most powerful computer is a MacBook Pro, I ran this building <em>waitron</em>:</p>
+<p>I only need a Linux x86-64 executable file, and since my most powerful computer is a MacBook Pro, I used that building <em>waitron</em>:</p>
 
 <pre><code class="language-txt">$ go get github.com/jhaals/waitron.git
 # github.com/jhaals/waitron
@@ -288,7 +287,7 @@ develop/gocode/src/github.com/jhaals/waitron/machine.go:84:40: multiple-value uu
 
 <blockquote>
 <p><strong>FIX THIS ERROR</strong><br />
-I made changes in two Go-files. Only the first one is really needed!</p>
+I made changes in two Go-files, but only the first one is really needed!</p>
 </blockquote>
 
 <pre><code class="language-txt">cd $GOPATH/src/github.com/haals/waitron
@@ -297,7 +296,7 @@ vi machine.go
 
 <p>In <code>machine.go</code> line 84 and in <code>main.go</code> line 254:</p>
 
-<pre><code class="language-patch">diff --git a/machine.go b/machine.go
+<pre><code class="language-diff">diff --git a/machine.go b/machine.go
 index 7d2eeff..ddfdd52 100644
 --- a/machine.go
 +++ b/machine.go
@@ -310,6 +309,7 @@ index 7d2eeff..ddfdd52 100644
         log.Println(fmt.Sprintf(&quot;%s installation token: %s&quot;, m.Hostname, config.Tokens[m.Hostname]))
         // Add token to machine struct
         m.Token = config.Tokens[m.Hostname]
+
 diff --git a/main.go b/main.go
 index 35a23df..8a53094 100644
 --- a/main.go
@@ -326,15 +326,14 @@ index 35a23df..8a53094 100644
 
 <ul>
 <li>The line reading &ldquo;uuid&rdquo; needs to be made compatible with the latest release of <code>github.com/satori/go.uuid</code>. If not you&rsquo;ll get the error <code>./machine.go:84:40: multiple-value uuid.NewV4() in single-value context</code>.</li>
-<li>The Ubuntu box also runs Prometheus, listening on port 9090, so I had to alter this (the port can not be overruled in the config&hellip;).</li>
+<li>The Ubuntu-box also runs Prometheus, listening on port 9090, so I had to alter this (the port can not be overruled in the config&hellip;).</li>
 </ul>
 
-<p>As stated I want a Linux-binary, so I ran the build like this:</p>
+<p>As stated I want a Linux binary, so I ran the build like this:</p>
 
 <p><code>env GOOS=linux GOARCH=amd64 go build .</code></p>
 
-<p>This left me with a 9.8M sized binary named <em>waitron</em>.<br />
-Next I scp-ed this binary to the Ubuntu-box: <code>scp waitron dc2:/opt/waitron/</code></p>
+<p>This left me with a 9.8M sized binary named <em>waitron</em>. I copied this binary to the Ubuntu-box: <code>scp waitron dc2:/opt/waitron/</code></p>
 
 <h3 id="configurations">Configurations</h3>
 
@@ -423,14 +422,15 @@ Unable to find host definition for linux001
 }
 </code></pre>
 
-<p>Now it is time to start a system to be provisioned. Like a VM or bare-metal.
-When it&rsquo;s finished you&rsquo;ll have to remove the server from build mode:</p>
+<p>Now it is time to start a system to be provisioned. Like a VM or bare-metal.</p>
+
+<p>When the system is finished you&rsquo;ll have to remove the server from build mode (even though I&rsquo;m not completely certain about why doing that manually):</p>
 
 <pre><code class="language-txt">$ http http://dc2.internal:8090/done/linux001.internal/73f267c2-1ea3-40c2-8c5e-2f134a5e8ee7
 OK
 </code></pre>
 
-<p>And check its status:</p>
+<p>And finally check the system&rsquo;s status:</p>
 
 <pre><code class="language-txt">$ http http://dc2.internal:8090/status
 {
@@ -438,14 +438,16 @@ OK
 }
 </code></pre>
 
-<p>And you&rsquo;re done!</p>
+<p>You&rsquo;re done!</p>
 
-<p>Rant: this setup doesn&rsquo;t work as quick and easy as using Cobbler and the <a href="https://www.terraform.io/docs/providers/cobbler/index.html">Cobbler provider</a> for Terraform&hellip;<br />
-So the next stop will probably be trying out something like <a href="https://github.com/thousandeyes/shoelaces">Shoelaces</a>. :-)</p>
+<p>&lt;<strong>Rant</strong>/&gt;: personally I think these parts don&rsquo;t work as complete, quick and easy as using <em>Cobbler</em> and the <a href="https://www.terraform.io/docs/providers/cobbler/index.html">Cobbler provider</a> for Terraform I have setup.<br />
+Especially <em>waitron</em> feels incomplete and (indeed) unmaintained.</p>
+
+<p>So the next stop will probably be trying out something like <a href="https://github.com/thousandeyes/shoelaces">Shoelaces</a>. :-)</p>
 
 <h3 id="output">Output</h3>
 
-<p>Some output that <em>pixiecore</em> could show:</p>
+<p>Some output that <em>pixiecore</em> could show. Notice the DHCP / TFTP / HTTP &ldquo;headers&rdquo;:</p>
 
 <pre><code class="language-txt">[Init] Starting Pixiecore goroutines
 [DHCP] Ignoring packet from 1c:ab:a7:90:7f:c4: packet is DHCPREQUEST, not DHCPDISCOVER
@@ -469,7 +471,7 @@ So the next stop will probably be trying out something like <a href="https://git
 [DHCP] Ignoring packet from 00:de:ad:90:74:60: packet is DHCPREQUEST, not DHCPDISCOVER
 </code></pre>
 
-<p>And the same for <em>waitron</em>:</p>
+<p>And the same for <em>waitron</em>. Notice the instalation token, being used in the manual API-calls:</p>
 
 <pre><code class="language-txt">2018/12/01 17:26:00 Starting Server
 2018/12/01 17:26:04 linux001.internal installation token: 73f267c2-1ea3-40c2-8c5e-2f134a5e8ee7
