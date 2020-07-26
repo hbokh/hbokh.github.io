@@ -72,7 +72,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.54.0" />
+    <meta name="generator" content="Hugo 0.74.3" />
 
     <link rel="canonical" href="https://hbokh.github.io/post/2015/05/23/hands-on-wordpress-en-mysql-op-docker/" />
 
@@ -85,21 +85,21 @@
     "@type": "Article",
     "publisher": {
         "@type": "Organization",
-        "name": ,
-        "logo": https://hbokh.github.io/images/bok.png
+        "name":  null ,
+        "logo": "https://hbokh.github.io/images/bok.png"
     },
     "author": {
         "@type": "Person",
-        "name": ,
+        "name":  null ,
         
         "image": {
             "@type": "ImageObject",
-            "url": https://hbokh.github.io/images/bok.png,
+            "url": "https://hbokh.github.io/images/bok.png",
             "width": 250,
             "height": 250
         }, 
         
-        "url": ,
+        "url":  null ,
         "sameAs": [
             
             
@@ -110,33 +110,33 @@
              
             
         ],
-        "description": Recovering sysadmin
+        "description": "Recovering sysadmin"
         
     },
-    "headline": Hands-on: WordPress en MySQL op Docker,
-    "name": Hands-on: WordPress en MySQL op Docker,
-    "wordCount": 1255,
+    "headline": "Hands-on: WordPress en MySQL op Docker",
+    "name": "Hands-on: WordPress en MySQL op Docker",
+    "wordCount":  1253 ,
     "timeRequired": "PT6M",
     "inLanguage": {
       "@type": "Language",
-      "alternateName": en
+      "alternateName": "en"
     },
-    "url": https://hbokh.github.io/post/2015/05/23/hands-on-wordpress-en-mysql-op-docker/,
-    "datePublished": 2015-05-23T09:12Z,
-    "dateModified": 2015-05-23T09:12Z,
+    "url": "https://hbokh.github.io/post/2015/05/23/hands-on-wordpress-en-mysql-op-docker/",
+    "datePublished": "2015-05-23T09:12Z",
+    "dateModified": "2015-05-23T09:12Z",
     
     "image": {
         "@type": "ImageObject",
-        "url": https://hbokh.github.io/images/containers1.jpg,
+        "url": "https://hbokh.github.io/images/containers1.jpg",
         "width": 3000,
         "height": 1445
     },
     
-    "keywords": docker, dutch, meetup,
-    "description": ,
+    "keywords": "docker, dutch, meetup",
+    "description": "",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": https://hbokh.github.io/post/2015/05/23/hands-on-wordpress-en-mysql-op-docker/
+        "@id": "https://hbokh.github.io/post/2015/05/23/hands-on-wordpress-en-mysql-op-docker/"
     }
 }
     </script>
@@ -245,104 +245,69 @@
 
     <section class="post-content">
       <p>A manual (in Dutch) written for the local <a href="http://www.meetup.com/DockerGrunn/">Docker Grunn Meetup</a>, to become familiar with Docker &amp; Compose by setting up a WordPress-blog.</p>
-
 <p>Image credits: Blake Thornberry - <a href="https://www.flickr.com/photos/91657289@N02/10218392744/">Flickr</a></p>
-
 <h2 id="vooraf-installeren">Vooraf installeren!</h2>
-
 <p>Zorg dat je op zijn minst de beschikking hebt over</p>
-
 <ul>
-<li>een <strong>werkende</strong> installatie van <em>Docker</em> (Linux) of <em>boot2docker</em> (OS X / Windows).<br /></li>
+<li>een <strong>werkende</strong> installatie van <em>Docker</em> (Linux) of <em>boot2docker</em> (OS X / Windows).</li>
 </ul>
-
-<p>De installatie staat <a href="http://docs.docker.com/compose/install/#install-docker">hier</a> beschreven.<br />
+<p>De installatie staat <a href="http://docs.docker.com/compose/install/#install-docker">hier</a> beschreven.<br>
 <em>boot2docker</em> is op zijn beurt weer afhankelijk van VirtualBox.</p>
-
 <p>Referentie: <a href="http://blog.tutum.co/2015/05/19/guide-to-docker-on-os-x/">Guide to Docker on OS X</a></p>
-
 <p>Of Docker juist werkt, kan je vervolgens testen met <code>docker run --rm hello-world</code>.</p>
-
 <ul>
-<li><strong>Docker Compose</strong> (<a href="http://docs.docker.com/compose/install/">link</a>):<br /></li>
+<li><strong>Docker Compose</strong> (<a href="http://docs.docker.com/compose/install/">link</a>):</li>
 </ul>
-
 <p>De installatie werkt zo:</p>
-
 <pre><code>$ curl -L https://github.com/docker/compose/releases/download/1.2.0/docker-compose-`uname -s`-`uname -m` &gt; /usr/local/bin/docker-compose
 $ chmod +x /usr/local/bin/docker-compose
-</code></pre>
-
-<h2 id="wordpress-mysql-dual-container-setup">WordPress &amp; MySQL dual container setup</h2>
-
+</code></pre><h2 id="wordpress--mysql-dual-container-setup">WordPress &amp; MySQL dual container setup</h2>
 <h3 id="docker-images-downloaden">Docker images downloaden</h3>
-
-<p>Twee methodes zijn voorhanden.<br />
+<p>Twee methodes zijn voorhanden.<br>
 Om bandbreedte te besparen heeft de eerste methode de voorkeur!</p>
-
 <p><strong>1. Tarball van saved images downloaden en inladen</strong></p>
-
 <p>Dit zijn images uit de officiele Docker Registry, <em>saved to a tar archive</em>, gzipped en op een host geplaatst, die relatief dichtbij is.</p>
-
 <ul>
-<li><code>$ wget https://example.com/mysql.tar.gz</code> (size: 142 MB)<br /></li>
+<li><code>$ wget https://example.com/mysql.tar.gz</code> (size: 142 MB)</li>
 <li><code>$ wget https://example.com/wordpress.tar.gz</code> (size: 163 MB)</li>
 </ul>
-
 <p>Importeer deze images:</p>
-
 <ul>
-<li><code>$ docker load &lt; mysql.tar.gz</code><br /></li>
+<li><code>$ docker load &lt; mysql.tar.gz</code></li>
 <li><code>$ docker load &lt; wordpress.tar.gz</code></li>
 </ul>
-
 <p><strong>2. Pull de images direct uit de officiele Docker Registry</strong></p>
-
 <ul>
 <li><code>$ docker pull mysql</code> (size: 282.9 MB)</li>
 <li><code>$ docker pull wordpress</code> (size: 460.3 MB)</li>
 </ul>
-
 <p>Controleer welke images er nu lokaal beschikbaar zijn:</p>
-
 <pre><code>$ docker images
 REPOSITORY     TAG        IMAGE ID        CREATED        VIRTUAL SIZE
 wordpress      latest     5ff368875b77    4 days ago     460.3 MB
 mysql          latest     56f320bd6adc    3 weeks ago    282.9 MB
-</code></pre>
-
-<h3 id="met-de-hand">&ldquo;Met de hand&rdquo;</h3>
-
-<p>Als eerste start je een MySQL-container op basis van het <em>mysql:latest</em>-image.<br />
+</code></pre><h3 id="met-de-hand">&ldquo;Met de hand&rdquo;</h3>
+<p>Als eerste start je een MySQL-container op basis van het <em>mysql:latest</em>-image.<br>
 We gebruiken &ldquo;p4ssw0rd&rdquo; als root password en geven dat met &ldquo;-e&rdquo; mee als omgevings-variabele aan de container:</p>
-
 <p><code>$ docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=p4ssw0rd -d mysql</code></p>
-
-<p>Vervolgens start je een WordPress-container.<br />
+<p>Vervolgens start je een WordPress-container.<br>
 Deze geef je een <strong>link</strong> naar de MySQL-container en laat je poort 80 in de container forwarden naar poort 8080 op je Docker-host:</p>
-
 <p><code>$ docker run --name some-wordpress --link some-mysql:mysql -p 8080:80 -d wordpress</code></p>
-
 <p><em>That was quick!</em></p>
-
-<p>Ga in een webbrowser naar<br />
-- <code>http://localhost:8080/</code> (Linux)<br />
-- <code>http://192.168.59.103:8080/</code> (boot2docker)<br />
-en configureer WordPress verder af.</p>
-
+<p>Ga in een webbrowser naar</p>
+<ul>
+<li><code>http://localhost:8080/</code> (Linux)</li>
+<li><code>http://192.168.59.103:8080/ </code> (boot2docker)<br>
+en configureer WordPress verder af.</li>
+</ul>
 <h3 id="onder-de-motorkap-1">Onder de motorkap [1]</h3>
-
 <p>Wat draait er nu?</p>
-
 <pre><code>$ docker ps
 
 CONTAINER ID        IMAGE               COMMAND                CREATED             STATUS              PORTS                  NAMES
 5c2537c15ba9        wordpress:latest    &quot;/entrypoint.sh apac   About an hour ago   Up About an hour    0.0.0.0:8080-&gt;80/tcp   some-wordpress
 11ddc1271814        mysql:latest        &quot;/entrypoint.sh mysq   About an hour ago   Up About an hour    3306/tcp               some-mysql
-</code></pre>
-
-<p>Om bijvoorbeeld IN je MySQL-container te checken wat er in de database staat, kan je met <code>docker exec -ti</code> een shell opstarten en in die container commandos uitvoeren:</p>
-
+</code></pre><p>Om bijvoorbeeld IN je MySQL-container te checken wat er in de database staat, kan je met <code>docker exec -ti</code> een shell opstarten en in die container commandos uitvoeren:</p>
 <pre><code>$ docker exec -ti some-mysql bash
 
 root@11ddc1271814:/# mysql -u root -p
@@ -396,12 +361,8 @@ mysql&gt; show tables;
 mysql&gt; exit
 Bye
 root@11ddc1271814:/# exit
-</code></pre>
-
-<h3 id="opruimen">Opruimen</h3>
-
+</code></pre><h3 id="opruimen">Opruimen</h3>
 <p>Het commando <code>docker kill</code> is minder netjes dan <code>docker stop</code>, maar sneller als je toch besloten hebt de containers te verwijderen.</p>
-
 <pre><code>$ docker kill 5c2537c15ba9 11ddc1271814
 5c2537c15ba9
 11ddc1271814
@@ -412,16 +373,10 @@ $ docker rm 5c2537c15ba9 11ddc1271814
 
 $ docker ps
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
-</code></pre>
-
-<h2 id="met-docker-compose">&ldquo;Met docker-compose&rdquo;</h2>
-
+</code></pre><h2 id="met-docker-compose">&ldquo;Met docker-compose&rdquo;</h2>
 <p>Nu doen we hetzelfde, maar met behulp van <em>docker-compose</em>.</p>
-
-<h3 id="bestand-docker-compose-yml">Bestand docker-compose.yml</h3>
-
+<h3 id="bestand-docker-composeyml">Bestand docker-compose.yml</h3>
 <p>De waardes die je hierboven op de command-line hebt gegeven, kan je in <code>docker-compose.yml</code> combineren. Een YAML-bestand, dat er dan als volgt uit komt te zien:</p>
-
 <pre><code>db:
   image: mysql:latest
   environment:
@@ -433,19 +388,12 @@ wordpress:
     - db:mysql
   ports:
     - &quot;8080:80&quot;
-</code></pre>
-
-<p>Start de stack in detached mode:</p>
-
+</code></pre><p>Start de stack in detached mode:</p>
 <pre><code>$ docker-compose up -d
 Creating wordpressmysql_db_1...
 Creating wordpressmysql_wordpress_1...
-</code></pre>
-
-<h3 id="onder-de-motorkap-2">Onder de motorkap [2]</h3>
-
+</code></pre><h3 id="onder-de-motorkap-2">Onder de motorkap [2]</h3>
 <p>Wat draait er nu?</p>
-
 <pre><code>$ docker ps
 CONTAINER ID        IMAGE               COMMAND                CREATED          STATUS              PORTS                  NAMES
 fe9eead88a32        wordpress:latest    &quot;/entrypoint.sh apac   3 minutes ago    Up 3 minutes        0.0.0.0:8080-&gt;80/tcp   wordpressmysql_wordpress_1
@@ -456,12 +404,8 @@ $ docker-compose ps
 ------------------------------------------------------------------------------------------
 wordpressmysql_db_1          /entrypoint.sh mysqld            Up      3306/tcp
 wordpressmysql_wordpress_1   /entrypoint.sh apache2-for ...   Up      0.0.0.0:8080-&gt;80/tcp
-</code></pre>
-
-<p>WordPress weer opzetten middels de hierboven genoemde link naar &ldquo;localhost&rdquo;.</p>
-
+</code></pre><p>WordPress weer opzetten middels de hierboven genoemde link naar &ldquo;localhost&rdquo;.</p>
 <p>En na ge- / misbruik weer alles netjes achterlaten:</p>
-
 <pre><code>$ docker-compose kill
 Killing wordpressmysql_wordpress_1...
 Killing wordpressmysql_db_1...
@@ -470,25 +414,16 @@ $ docker-compose rm --force
 Going to remove wordpressmysql_wordpress_1, wordpressmysql_db_1
 Removing wordpressmysql_db_1...
 Removing wordpressmysql_wordpress_1...
-</code></pre>
-
-<h2 id="data-volume-container">Data volume container</h2>
-
+</code></pre><h2 id="data-volume-container">Data volume container</h2>
 <p>De data die door WordPress wordt gegenereerd (accounts, posts, etc.) kan worden opgeslagen buiten de MySQL-container in een zgn. <em>data volume container</em>. Die kan je op de CLI zo aanmaken:</p>
-
 <p><code>$ docker run -v /var/lib/mysql --name=dbdata -d mysql /bin/true</code></p>
-
-<p>De container is op basis van het MySQL-image, want die hebben we immers al binnen.<br />
+<p>De container is op basis van het MySQL-image, want die hebben we immers al binnen.<br>
 Een data volume container hoeft niet &ldquo;up&rdquo; te zijn om gebruikt te kunnen worden. Je ziet &rsquo;m dan ook alleen met het <code>docker ps -a</code> command:</p>
-
 <pre><code>$ docker ps -a
 CONTAINER ID        IMAGE               COMMAND                CREATED             STATUS                     PORTS               NAMES
 c2aa204baf71        mysql:latest        &quot;/entrypoint.sh /bin   4 minutes ago       Exited (0) 4 minutes ago                       dbdata
-</code></pre>
-
-<p>Om dit met docker-compose te doen, voegen we deze container toe aan de YAML-configuratie.<br />
+</code></pre><p>Om dit met docker-compose te doen, voegen we deze container toe aan de YAML-configuratie.<br>
 Het bestand ziet er dan zo uit:</p>
-
 <pre><code>dbdata:
   image: mysql
   volumes:
@@ -509,29 +444,20 @@ wordpress:
     - db:mysql
   ports:
     - &quot;8080:80&quot;
-</code></pre>
-
-<p>Start weer een nieuwe stack met <code>docker-compose up -d</code> en controleer wat er draait:</p>
-
+</code></pre><p>Start weer een nieuwe stack met <code>docker-compose up -d</code> en controleer wat er draait:</p>
 <pre><code>$ docker-compose ps
            Name                         Command               State           Ports
 -------------------------------------------------------------------------------------------
 wordpressmysql_db_1          /entrypoint.sh mysqld            Up       3306/tcp
 wordpressmysql_dbdata_1      /entrypoint.sh /bin/true         Exit 0
 wordpressmysql_wordpress_1   /entrypoint.sh apache2-for ...   Up       0.0.0.0:8080-&gt;80/tcp
-</code></pre>
-
-<p>Het bewijs dat beide containers dezelfde &ldquo;layer&rdquo; gebruiken voor /var/lib/mysql kan geleverd worden middels <code>docker inspect</code>:</p>
-
+</code></pre><p>Het bewijs dat beide containers dezelfde &ldquo;layer&rdquo; gebruiken voor /var/lib/mysql kan geleverd worden middels <code>docker inspect</code>:</p>
 <pre><code>$ docker inspect dbdata | grep &quot;var/lib/mysql&quot; | grep vfs
         &quot;/mnt/sda1/var/lib/docker/vfs/dir/9acd80fd069e82a89ac04a9141cc518ce8ee176bd7e4cc92c972dd3df50dffcc&quot;
 
 $ docker inspect wordpressmysql_db_1 | grep &quot;var/lib/mysql&quot; | grep vfs
         &quot;/mnt/sda1/var/lib/docker/vfs/dir/9acd80fd069e82a89ac04a9141cc518ce8ee176bd7e4cc92c972dd3df50dffcc&quot;
-</code></pre>
-
-<p>In boot2docker zie je dat als volgt - in die directory staat de database-data:</p>
-
+</code></pre><p>In boot2docker zie je dat als volgt - in die directory staat de database-data:</p>
 <pre><code>docker@boot2docker:~$ sudo ls -altrF /mnt/sda1/var/lib/docker/vfs/dir/9acd80fd069e82a89ac04a9141cc518ce8ee176bd7e4cc92c972dd3df50dffcc/
 total 176164
 drwx------    2 999      999           4096 May 14 10:59 performance_schema/
@@ -543,19 +469,12 @@ drwx------  126 root     root         16384 May 14 11:07 ../
 drwxr-xr-x    5 999      999           4096 May 14 11:07 ./
 -rw-rw----    1 999      999       79691776 May 14 11:07 ibdata1
 -rw-rw----    1 999      999       50331648 May 14 11:07 ib_logfile0
-</code></pre>
-
-<h3 id="backup-en-restore">Backup en restore</h3>
-
+</code></pre><h3 id="backup-en-restore">Backup en restore</h3>
 <p>Eén manier van backuppen van de database is de volgende:</p>
-
 <pre><code>$ docker exec -ti wordpressmysql_db_1 bash -c \
  'mysqldump --user=root --password=&quot;$MYSQL_ROOT_PASSWORD&quot; --all-databases' \
   &gt; MySQL_full_backUp.sql
-</code></pre>
-
-<p>Restoren kan middels volume-sharing en een gelinkte container (&ldquo;db&rdquo; in het onderstaande geval):</p>
-
+</code></pre><p>Restoren kan middels volume-sharing en een gelinkte container (&ldquo;db&rdquo; in het onderstaande geval):</p>
 <pre><code>$ docker run -ti --rm -v $(pwd):/tmp --link wordpressmysql_db_1:db mysql bash
 
 root@b2252da7520e:/# cd /tmp/
@@ -572,10 +491,7 @@ Enter password:
 
 mysql&gt; source MySQL_full_backUp.sql
 
-</code></pre>
-
-<p>Referentie: YouTube - <a href="https://www.youtube.com/watch?v=2ZX3F-aFOxQ">Docker Tutorial: Backing Up and Restoring MySQL and WordPress in Docker</a></p>
-
+</code></pre><p>Referentie: YouTube - <a href="https://www.youtube.com/watch?v=2ZX3F-aFOxQ">Docker Tutorial: Backing Up and Restoring MySQL and WordPress in Docker</a></p>
 <p><em>That&rsquo;s all Folks!</em></p>
     </section>
 
