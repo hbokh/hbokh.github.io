@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+        <meta name="twitter:card" content="summary"/>
+    
+
+
+
+<meta name="twitter:title" content="macOS Weather widget reborn"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@BOK"/>
+
+
+
+  	<meta property="og:title" content="macOS Weather widget reborn &middot; BOK" />
+  	<meta property="og:site_name" content="BOK" />
+  	<meta property="og:url" content="https://hbokh.github.io/post/2020/05/17/macos-weather-widget-reborn/" />
+
+    
+        
+            <meta property="og:image" content="/images/background-cover.jpg"/>
+        
+    
+
+    
+    <meta property="og:description" content="" />
+  	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2020-05-17T11:38:36&#43;02:00" />
+
+    
+    <meta property="article:tag" content="apple" />
+    
+    
+
+    <title>macOS Weather widget reborn &middot; BOK</title>
+
+    
+    <meta name="description" content="Ever since using Mac OS X for the first time, I&amp;rsquo;ve been a sucker for the Dashboard: pressing F4on any Mac has become muscle memory over the last 14 years." />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="https://hbokh.github.io/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="https://hbokh.github.io/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="https://hbokh.github.io/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="https://hbokh.github.io/css/nav.css" />
+
+    
+
+    
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/monokai.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+        
+        <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+      
+          <link href="https://hbokh.github.io/index.xml" rel="alternate" type="application/rss+xml" title="BOK" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.74.3" />
+
+    <link rel="canonical" href="https://hbokh.github.io/post/2020/05/17/macos-weather-widget-reborn/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name":  null ,
+        "logo": "https://hbokh.github.io/images/bok.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name":  null ,
+        
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://hbokh.github.io/images/bok.png",
+            "width": 250,
+            "height": 250
+        }, 
+        
+        "url":  null ,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ],
+        "description": "Recovering sysadmin"
+        
+    },
+    "headline": "macOS Weather widget reborn",
+    "name": "macOS Weather widget reborn",
+    "wordCount":  185 ,
+    "timeRequired": "PT1M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": "en"
+    },
+    "url": "https://hbokh.github.io/post/2020/05/17/macos-weather-widget-reborn/",
+    "datePublished": "2020-05-17T11:38Z",
+    "dateModified": "2020-05-17T11:38Z",
+    
+    "keywords": "apple",
+    "description": "",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hbokh.github.io/post/2020/05/17/macos-weather-widget-reborn/"
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+        
+            <h3>Topics</h3>
+            <li class="nav-opened" role="presentation">
+            	<a href="https://hbokh.github.io/">Blog</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://hbokh.github.io/about">About me</a>
+            </li>
+        
+            <h3>Follow me</h3>
+            <li class="nav-opened" role="presentation">
+            	<a href="https://github.com/hbokh">GitHub repos</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://twitter.com/BOK">Twitter</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://keybase.io/hbokh">Keybase</a>
+            </li>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="https://hbokh.github.io/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
+
+
+  
+      <a class="blog-logo" href="https://hbokh.github.io/"><img src="https://hbokh.github.io/images/bok.png" alt="Home" /></a>
+  
+  
+      <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">macOS Weather widget reborn</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2020-05-17T11:38:36&#43;02:00">
+            May 17, 2020
+          </time>
+        
+         
+          <span class="post-tag small"><a href="https://hbokh.github.io//tags/apple/">#apple</a></span>
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      <p>Ever since using Mac OS X for the first time, I&rsquo;ve been a sucker for the <em>Dashboard</em>:
+pressing <!-- raw HTML omitted -->F4<!-- raw HTML omitted --> on any Mac has become muscle memory over the last 14 years.</p>
+<p>Somewhere in the recent past Mac OS X was renamed to macOS and the <!-- raw HTML omitted -->F4<!-- raw HTML omitted --> key was given a different function: <em>Launchpad</em>.<br>
+And instead of <em>Dashboard</em>, we&rsquo;re supposed to use <em>Notifications</em>&hellip;</p>
+<p>So Apple&rsquo;s love for the Dashboard and its widgets had faded. But not mine!<br>
+I&rsquo;ve always tried to reprogram the <!-- raw HTML omitted -->F4<!-- raw HTML omitted --> key to show the Dash anyhow.</p>
+<p>In the fall of 2019 the Weather widget stopped working: the main widget I was pressing <!-- raw HTML omitted -->F4<!-- raw HTML omitted --> for, for all those years.</p>
+<p>But recently (May 2020) a forum post on MacRumors made my day.<br>
+It&rsquo;s been there for a couple of weeks, but by the end of last April the member by the name of &ldquo;Wowfunhappy&rdquo; finally managed to create a working Weather widget.</p>
+<p>Read all about it here: <a href="https://forums.macrumors.com/threads/i-fixed-apples-broken-weather-dashboard-widget.2225715/">I fixed Apple&rsquo;s broken Weather Dashboard Widget</a>.
+<img src="https://hbokh.github.io/images/weather-wdgt.gif" alt="Weather.wdgt"></p>
+<p>After creating the accounts for Weatherbit and MapQuest and editing the file <code>weatherParser.js</code>, the <strong>Weather widget</strong> was there again, in all its glory! 🥳</p>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+
+
+
+
+
+
+
+
+<figure class="author-image">
+    <a class="img" href="https://hbokh.github.io/" style="background-image: url(/images/bok.png)"><span class="hidden">Henk's Picture</span></a>
+</figure>
+
+
+<section class="author">
+  <h4><a href="https://hbokh.github.io/">Henk</a></h4>
+  
+  <p>Recovering sysadmin</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Groningen, the Netherlands</span>
+    
+  </div>
+</section>
+
+
+
+
+    
+
+
+    
+
+<div id="disqus_thread"></div>
+<script>
+
+
+
+
+var disqus_config = function () {
+this.page.url = "https:\/\/hbokh.github.io\/post\/2020\/05\/17\/macos-weather-widget-reborn\/";  
+this.page.identifier = "https:\/\/hbokh.github.io\/post\/2020\/05\/17\/macos-weather-widget-reborn\/"; 
+};
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://hbokh.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+
+
+  </footer>
+</article>
+
+</main>
+
+
+  <aside class="read-next">
+  
+  
+      <a class="read-next-story prev" style="background-image: url(/images/waitress.jpg)" href="https://hbokh.github.io/post/2018/12/01/pixiecore-waitron/">
+          <section class="post">
+              <h2>Pixiecore &amp; waitron</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">BOK</a> All rights reserved</section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="https://hbokh.github.io/js/jquery.js"></script>
+    <script type="text/javascript" src="https://hbokh.github.io/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://hbokh.github.io/js/index.js"></script>
+    
+</body>
+</html>
+

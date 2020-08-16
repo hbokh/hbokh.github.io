@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved</copyright>
-    <lastBuildDate>Sat, 01 Dec 2018 20:45:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 17 May 2020 11:38:36 +0200</lastBuildDate>
     
 	<atom:link href="https://hbokh.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>apple</title>
+      <link>https://hbokh.github.io/tags/apple/</link>
+      <pubDate>Sun, 17 May 2020 11:38:36 +0200</pubDate>
+      
+      <guid>https://hbokh.github.io/tags/apple/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>PXE</title>
@@ -72,15 +81,6 @@
       <pubDate>Thu, 23 Jul 2009 00:00:00 +0000</pubDate>
       
       <guid>https://hbokh.github.io/tags/nonsense/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>apple</title>
-      <link>https://hbokh.github.io/tags/apple/</link>
-      <pubDate>Sun, 28 Jun 2009 13:50:36 +0200</pubDate>
-      
-      <guid>https://hbokh.github.io/tags/apple/</guid>
       <description></description>
     </item>
     
