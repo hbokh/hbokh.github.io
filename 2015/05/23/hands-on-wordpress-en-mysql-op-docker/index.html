@@ -258,7 +258,7 @@
 <ul>
 <li>een <strong>werkende</strong> installatie van <em>Docker</em> (Linux) of <em>boot2docker</em> (OS X / Windows).</li>
 </ul>
-<p>De installatie staat <a href="http://docs.docker.com/compose/install/#install-docker">hier</a> beschreven.<br>
+<p>De installatie staat <a href="http://docs.docker.com/compose/install/#install-docker">hier</a> beschreven.
 <em>boot2docker</em> is op zijn beurt weer afhankelijk van VirtualBox.</p>
 <p>Referentie: <a href="http://blog.tutum.co/2015/05/19/guide-to-docker-on-os-x/">Guide to Docker on OS X</a></p>
 <p>Of Docker juist werkt, kan je vervolgens testen met <code>docker run --rm hello-world</code>.</p>
@@ -270,7 +270,7 @@
 $ chmod +x /usr/local/bin/docker-compose
 </code></pre><h2 id="wordpress--mysql-dual-container-setup">WordPress &amp; MySQL dual container setup</h2>
 <h3 id="docker-images-downloaden">Docker images downloaden</h3>
-<p>Twee methodes zijn voorhanden.<br>
+<p>Twee methodes zijn voorhanden.
 Om bandbreedte te besparen heeft de eerste methode de voorkeur!</p>
 <p><strong>1. Tarball van saved images downloaden en inladen</strong></p>
 <p>Dit zijn images uit de officiele Docker Registry, <em>saved to a tar archive</em>, gzipped en op een host geplaatst, die relatief dichtbij is.</p>
@@ -294,17 +294,17 @@ REPOSITORY     TAG        IMAGE ID        CREATED        VIRTUAL SIZE
 wordpress      latest     5ff368875b77    4 days ago     460.3 MB
 mysql          latest     56f320bd6adc    3 weeks ago    282.9 MB
 </code></pre><h3 id="met-de-hand">&ldquo;Met de hand&rdquo;</h3>
-<p>Als eerste start je een MySQL-container op basis van het <em>mysql:latest</em>-image.<br>
+<p>Als eerste start je een MySQL-container op basis van het <em>mysql:latest</em>-image.
 We gebruiken &ldquo;p4ssw0rd&rdquo; als root password en geven dat met &ldquo;-e&rdquo; mee als omgevings-variabele aan de container:</p>
 <p><code>$ docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=p4ssw0rd -d mysql</code></p>
-<p>Vervolgens start je een WordPress-container.<br>
+<p>Vervolgens start je een WordPress-container.
 Deze geef je een <strong>link</strong> naar de MySQL-container en laat je poort 80 in de container forwarden naar poort 8080 op je Docker-host:</p>
 <p><code>$ docker run --name some-wordpress --link some-mysql:mysql -p 8080:80 -d wordpress</code></p>
 <p><em>That was quick!</em></p>
 <p>Ga in een webbrowser naar</p>
 <ul>
 <li><code>http://localhost:8080/</code> (Linux)</li>
-<li><code>http://192.168.59.103:8080/ </code> (boot2docker)<br>
+<li><code>http://192.168.59.103:8080/ </code> (boot2docker)
 en configureer WordPress verder af.</li>
 </ul>
 <h3 id="onder-de-motorkap-1">Onder de motorkap [1]</h3>
@@ -424,12 +424,12 @@ Removing wordpressmysql_wordpress_1...
 </code></pre><h2 id="data-volume-container">Data volume container</h2>
 <p>De data die door WordPress wordt gegenereerd (accounts, posts, etc.) kan worden opgeslagen buiten de MySQL-container in een zgn. <em>data volume container</em>. Die kan je op de CLI zo aanmaken:</p>
 <p><code>$ docker run -v /var/lib/mysql --name=dbdata -d mysql /bin/true</code></p>
-<p>De container is op basis van het MySQL-image, want die hebben we immers al binnen.<br>
+<p>De container is op basis van het MySQL-image, want die hebben we immers al binnen.
 Een data volume container hoeft niet &ldquo;up&rdquo; te zijn om gebruikt te kunnen worden. Je ziet &rsquo;m dan ook alleen met het <code>docker ps -a</code> command:</p>
 <pre tabindex="0"><code>$ docker ps -a
 CONTAINER ID        IMAGE               COMMAND                CREATED             STATUS                     PORTS               NAMES
 c2aa204baf71        mysql:latest        &#34;/entrypoint.sh /bin   4 minutes ago       Exited (0) 4 minutes ago                       dbdata
-</code></pre><p>Om dit met docker-compose te doen, voegen we deze container toe aan de YAML-configuratie.<br>
+</code></pre><p>Om dit met docker-compose te doen, voegen we deze container toe aan de YAML-configuratie.
 Het bestand ziet er dan zo uit:</p>
 <pre tabindex="0"><code>dbdata:
   image: mysql
@@ -534,26 +534,6 @@ mysql&gt; source MySQL_full_backUp.sql
 
 
     
-<section class="share">
-  <h4>Share this posts</h4>
-  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Hands-on%3a%20WordPress%20en%20MySQL%20op%20Docker&nbsp;-&nbsp;BOK&amp;url=https%3a%2f%2fhbokh.github.io%2f2015%2f05%2f23%2fhands-on-wordpress-en-mysql-op-docker%2f"
-      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-      <span class="hidden">Twitter</span>
-  </a>
-  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fhbokh.github.io%2f2015%2f05%2f23%2fhands-on-wordpress-en-mysql-op-docker%2f"
-      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-      <span class="hidden">Facebook</span>
-  </a>
-  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fhbokh.github.io%2f2015%2f05%2f23%2fhands-on-wordpress-en-mysql-op-docker%2f&amp;description=Hands-on%3a%20WordPress%20en%20MySQL%20op%20Docker"
-      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
-      <span class="hidden">Pinterest</span>
-  </a>
-  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2fhbokh.github.io%2f2015%2f05%2f23%2fhands-on-wordpress-en-mysql-op-docker%2f"
-     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-      <span class="hidden">Google+</span>
-  </a>
-</section>
-
 
 
     
