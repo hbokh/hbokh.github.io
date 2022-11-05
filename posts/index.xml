@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on BOK</title>
+    <link>https://hbokh.github.io/posts/</link>
+    <description>Recent content in Posts on BOK</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>All rights reserved</copyright>
+    <lastBuildDate>Sun, 17 May 2020 11:38:36 +0200</lastBuildDate><atom:link href="https://hbokh.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>macOS Weather widget reborn</title>
+      <link>https://hbokh.github.io/2020/05/17/macos-weather-widget-reborn/</link>
+      <pubDate>Sun, 17 May 2020 11:38:36 +0200</pubDate>
+      
+      <guid>https://hbokh.github.io/2020/05/17/macos-weather-widget-reborn/</guid>
+      <description>Ever since using Mac OS X for the first time, I&amp;rsquo;ve been a sucker for the Dashboard: pressing F4 on any Mac has become muscle memory over the last 14 years.
+Somewhere in the recent past Mac OS X was renamed to macOS and the F4 key was given a different function: Launchpad.
+And instead of Dashboard, we&amp;rsquo;re supposed to use Notifications&amp;hellip;
+So Apple&amp;rsquo;s love for the Dashboard and its widgets had faded.</description>
+    </item>
+    
+    <item>
+      <title>Pixiecore &amp; waitron</title>
+      <link>https://hbokh.github.io/2018/12/01/pixiecore-waitron/</link>
+      <pubDate>Sat, 01 Dec 2018 20:45:00 +0000</pubDate>
+      
+      <guid>https://hbokh.github.io/2018/12/01/pixiecore-waitron/</guid>
+      <description>&lt;p&gt;A &amp;ldquo;small journey&amp;rdquo; into getting Google&amp;rsquo;s &lt;em&gt;pixiecore&lt;/em&gt; to work with an API-server named &lt;em&gt;waitron&lt;/em&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Server provisioning at Spindle</title>
+      <link>https://hbokh.github.io/2017/08/26/server-provisioning-at-spindle/</link>
+      <pubDate>Sat, 26 Aug 2017 10:45:00 +0000</pubDate>
+      
+      <guid>https://hbokh.github.io/2017/08/26/server-provisioning-at-spindle/</guid>
+      <description>&lt;p&gt;Previously published on the &lt;a href=&#34;https://wearespindle.com/&#34;&gt;devhouse Spindle&lt;/a&gt; weblog, June 1st 2017.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Workshop: Python en Django in Docker</title>
+      <link>https://hbokh.github.io/2016/05/24/workshop-python-en-django-in-docker/</link>
+      <pubDate>Tue, 24 May 2016 23:44:15 +0000</pubDate>
+      
+      <guid>https://hbokh.github.io/2016/05/24/workshop-python-en-django-in-docker/</guid>
+      <description>&lt;p&gt;A manual (in Dutch) written for the local &lt;a href=&#34;http://www.meetup.com/DockerGrunn/&#34;&gt;Docker Grunn Meetup&lt;/a&gt;, to become familiar with Docker &amp;amp; docker-compose, by setting up a small Python / Django app.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Hands-on: WordPress en MySQL op Docker</title>
+      <link>https://hbokh.github.io/2015/05/23/hands-on-wordpress-en-mysql-op-docker/</link>
+      <pubDate>Sat, 23 May 2015 09:12:15 +0000</pubDate>
+      
+      <guid>https://hbokh.github.io/2015/05/23/hands-on-wordpress-en-mysql-op-docker/</guid>
+      <description>&lt;p&gt;A manual (in Dutch) written for the local &lt;a href=&#34;http://www.meetup.com/DockerGrunn/&#34;&gt;Docker Grunn Meetup&lt;/a&gt;, to become familiar with Docker &amp;amp; Compose by setting up a WordPress-blog.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Apple - Gramps Added to the Family</title>
+      <link>https://hbokh.github.io/2009/06/28/apple-gramps-added-to-the-family/</link>
+      <pubDate>Sun, 28 Jun 2009 13:50:36 +0200</pubDate>
+      
+      <guid>https://hbokh.github.io/2009/06/28/apple-gramps-added-to-the-family/</guid>
+      <description>&lt;p&gt;&amp;ldquo;Our&amp;rdquo; Apple-family welcomed a rather old guy this weekend, a &lt;a href=&#34;http://tinyurl.com/nobpy2&#34;&gt;Power Macintosh G4&lt;/a&gt;, the one with AGP and gigabit ethernet. Thanks to EveryMac for pointing me &lt;a href=&#34;https://everymac.com/systems/apple/powermac_g4/faq/differences-between-gigabit-ethernet-power-mac-g4-models.html&#34;&gt;how to differentiate between models&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>IPv6 working. Now what..?</title>
+      <link>https://hbokh.github.io/2009/04/21/ipv6-working.-now-what../</link>
+      <pubDate>Tue, 21 Apr 2009 11:03:46 +0200</pubDate>
+      
+      <guid>https://hbokh.github.io/2009/04/21/ipv6-working.-now-what../</guid>
+      <description>&lt;p&gt;Over the last couple of weeks this blog hasn’t had a proper post. Instead it was filled by automagically created Twitter updates. In the meantime lots of things happened: too much to write down here. Instead I’ll focus on my (re-)achievements with IPv6.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Review - Tomato Firmware for WRT54G</title>
+      <link>https://hbokh.github.io/2006/09/15/review-tomato-firmware-for-wrt54g/</link>
+      <pubDate>Fri, 15 Sep 2006 13:58:17 +0200</pubDate>
+      
+      <guid>https://hbokh.github.io/2006/09/15/review-tomato-firmware-for-wrt54g/</guid>
+      <description>&lt;p&gt;I could not resist my curiousity, so that is why I decided to install third-party firmware named &lt;a href=&#34;http://www.polarcloud.com/tomato&#34;&gt;Tomato&lt;/a&gt; (version 0.03.0747 to be specific) on my brand new Linksys WRT54GL v1.1 wireless LAN-router.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
