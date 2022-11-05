@@ -20,7 +20,7 @@
 
 
 
-  	<meta property="og:title" content="Workshop: Python en Django in Docker &middot; BOK" />
+	<meta property="og:title" content="Workshop: Python en Django in Docker &middot; BOK" />
   	<meta property="og:site_name" content="BOK" />
   	<meta property="og:url" content="https://hbokh.github.io/post/2016/05/24/workshop-python-en-django-in-docker/" />
 
@@ -72,7 +72,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.74.3" />
+    <meta name="generator" content="Hugo 0.105.0">
 
     <link rel="canonical" href="https://hbokh.github.io/post/2016/05/24/workshop-python-en-django-in-docker/" />
 
@@ -148,6 +148,22 @@
     
 
     
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+			   integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+			   crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+	    integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+	    crossorigin=""></script>
+
+    <style>
+       
+      #blog-map {
+        height: 500px;
+	width: 100%;
+      }
+    </style>
 </head>
 <body class="nav-closed">
 
@@ -256,7 +272,7 @@
 <ul>
 <li>Maak met Git een clone van de <strong><a href="https://github.com/k3oni/pydash">pyDash</a></strong>-repository (ga niet voor de Django App!) en ga de directory in:</li>
 </ul>
-<pre><code>$ git clone git@github.com:k3oni/pydash.git
+<pre tabindex="0"><code>$ git clone git@github.com:k3oni/pydash.git
 $ cd pydash
 </code></pre><ul>
 <li>We kauwen niet alles helemaal voor, dus dit mag je zelf uitzoeken. Maar we houden je bij de hand.<br>
@@ -264,14 +280,14 @@ Ga naar <strong><a href="https://docs.docker.com/compose/django/">Quickstart: Do
 <strong>[BELANGRIJK!]</strong> Skip het gebruik van genoemde &ldquo;db&rdquo; / &ldquo;postgres&rdquo;!<br>
 Verwijder de regels die ze noemen - het is niet nodig, want de gebruikte DB straks is een sqlite3-bestand.</li>
 </ul>
-<pre><code>$ vi Dockerfile
+<pre tabindex="0"><code>$ vi Dockerfile
 $ vi docker-compose.yml
 </code></pre><ul>
 <li>Start de container.
 Als het goed is wordt deze door de build-instructie automatisch aangemaakt op basis van een python:2.7-image:</li>
 </ul>
 <p><code>$ docker-compose up -d</code></p>
-<pre><code>Building web
+<pre tabindex="0"><code>Building web
 Step 1 : FROM python:2.7
 2.7: Pulling from library/python
 8b87079b7a06: Pull complete
@@ -318,7 +334,7 @@ Creating pydash_web_1
 <li>Voeg <em>login credentials</em> toe aan de database:</li>
 </ul>
 <p><code>$ docker-compose run web python manage.py syncdb</code></p>
-<pre><code>Creating tables ...
+<pre tabindex="0"><code>Creating tables ...
 Creating table auth_permission
 Creating table auth_group_permissions
 Creating table auth_group
@@ -328,9 +344,9 @@ Creating table auth_user
 Creating table django_content_type
 Creating table django_session
 
-You just installed Django's auth system, which means you don't have any superusers defined.
+You just installed Django&#39;s auth system, which means you don&#39;t have any superusers defined.
 Would you like to create one now? (yes/no): yes
-Username (leave blank to use 'root'):
+Username (leave blank to use &#39;root&#39;):
 Email address: root@localhost
 Password:
 Password (again):
@@ -349,7 +365,7 @@ Installed 0 object(s) from 0 fixture(s)
 Er is iets met interface namen de laatste tijd&hellip;  laten we een kijkje nemen!</p>
 <p><code>$ docker exec -ti pydash_web_1 bash</code></p>
 <p>In de container zien we:</p>
-<pre><code># ip a
+<pre tabindex="0"><code># ip a
 1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
     inet 127.0.0.1/8 scope host lo
@@ -367,9 +383,9 @@ Er is iets met interface namen de laatste tijd&hellip;  laten we een kijkje neme
 <p><strong>Et voila!</strong></p>
 <p><img src="https://hbokh.github.io/images/pydash_20160524_small.png" alt="PyDash"></p>
 <h3 id="stoppen-en-verwijderen">Stoppen en verwijderen</h3>
-<pre><code>$ docker-compose stop
+<pre tabindex="0"><code>$ docker-compose stop
 Stopping pydash_web_1 ... done
-</code></pre><pre><code>$ docker-compose rm -f
+</code></pre><pre tabindex="0"><code>$ docker-compose rm -f
 WARNING: Not including one-off containers created by `docker-compose run`.
 To include them, use `docker-compose rm --all`.
 This will be the default behavior in the next version of Compose.
@@ -385,7 +401,7 @@ Removing pydash_web_run_1 ... done
 <h2 id="appendix">Appendix</h2>
 <p>Dit is zijn de werkende <code>Dockerfile</code> en <code>docker-compose.yml</code>:</p>
 <p><code>Dockerfile</code>:</p>
-<pre><code>FROM python:2.7
+<pre tabindex="0"><code>FROM python:2.7
 ENV PYTHONUNBUFFERED 1
 RUN mkdir /code
 WORKDIR /code
@@ -393,7 +409,7 @@ ADD requirements.txt /code/
 RUN pip install -r requirements.txt
 ADD . /code/
 </code></pre><p><code>docker-compose.yml</code>:</p>
-<pre><code>version: '2'
+<pre tabindex="0"><code>version: &#39;2&#39;
 services:
   web:
     build: .
@@ -401,7 +417,7 @@ services:
     volumes:
       - .:/code
     ports:
-      - &quot;8000:8000&quot;
+      - &#34;8000:8000&#34;
 </code></pre>
     </section>
 
@@ -495,7 +511,8 @@ services:
     <footer class="site-footer clearfix">
         <section class="copyright"><a href="">BOK</a> All rights reserved</section>
         
-        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        <section class="poweredby">Powered by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>
+	</section>
         
     </footer>
     </div>

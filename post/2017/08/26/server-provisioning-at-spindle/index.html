@@ -20,7 +20,7 @@
 
 
 
-  	<meta property="og:title" content="Server provisioning at Spindle &middot; BOK" />
+	<meta property="og:title" content="Server provisioning at Spindle &middot; BOK" />
   	<meta property="og:site_name" content="BOK" />
   	<meta property="og:url" content="https://hbokh.github.io/post/2017/08/26/server-provisioning-at-spindle/" />
 
@@ -70,7 +70,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.74.3" />
+    <meta name="generator" content="Hugo 0.105.0">
 
     <link rel="canonical" href="https://hbokh.github.io/post/2017/08/26/server-provisioning-at-spindle/" />
 
@@ -146,6 +146,22 @@
     
 
     
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+			   integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+			   crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+	    integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+	    crossorigin=""></script>
+
+    <style>
+       
+      #blog-map {
+        height: 500px;
+	width: 100%;
+      }
+    </style>
 </head>
 <body class="nav-closed">
 
@@ -276,20 +292,20 @@
 <p>While setting up Cobbler at Spindle, I settled for “dnsmasq” for combined DHCP and DNS, instead of both ISC’s BIND and DHCPd. So “one daemon to rule them both”. This will simplify things in the long run for (new) engineers not familiar with the later two. For HTTPS I dropped the default Apache webserver in front of Cobbler and configured nginx with uWSGI instead.</p>
 <h2 id="salt-n-pepas-here">Salt-n-Pepa’s here</h2>
 <p>Spindle is moving away from Puppet for configuration management: since last year we are using <a href="https://saltstack.com/community/">SaltStack</a> instead. At provisioning time the Salt repository and a so-called “salt-minion” are being installed from a snippet in Cobbler:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">#set breed = $getVar(&#39;breed&#39;,&#39;&#39;)
-#set os_version = $getVar(&#39;os_version&#39;,&#39;&#39;)
-#set release = $getVar(&#39;release&#39;,&#39;&#39;)
-
---- 8&lt; --- cut ---
-
-### Install salt-minion from official SaltStack-repo:
-apt-key adv --fetch-keys http://repo.saltstack.com/apt/$breed/$release/amd64/latest/SALTSTACK-GPG-KEY.pub
-echo &#34;deb http://repo.saltstack.com/apt/$breed/$release/amd64/latest $os_version main&#34; &gt; /etc/apt/sources.list.d/saltstack.list
-
-### Finishing up
-apt-get update
-apt-get -y install salt-minion
-</code></pre></div><p>Once a newly provisioned server has rebooted for the first time, an infra engineer can apply a so called Salt server role (e.g. be an Asterisk server) to the new system and run a “highstate”. Our new server will be automagically configured with the role it had appointed.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>#set breed = $getVar(&#39;breed&#39;,&#39;&#39;)
+</span></span><span style="display:flex;"><span>#set os_version = $getVar(&#39;os_version&#39;,&#39;&#39;)
+</span></span><span style="display:flex;"><span>#set release = $getVar(&#39;release&#39;,&#39;&#39;)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>--- 8&lt; --- cut ---
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>### Install salt-minion from official SaltStack-repo:
+</span></span><span style="display:flex;"><span>apt-key adv --fetch-keys http://repo.saltstack.com/apt/$breed/$release/amd64/latest/SALTSTACK-GPG-KEY.pub
+</span></span><span style="display:flex;"><span>echo &#34;deb http://repo.saltstack.com/apt/$breed/$release/amd64/latest $os_version main&#34; &gt; /etc/apt/sources.list.d/saltstack.list
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>### Finishing up
+</span></span><span style="display:flex;"><span>apt-get update
+</span></span><span style="display:flex;"><span>apt-get -y install salt-minion
+</span></span></code></pre></div><p>Once a newly provisioned server has rebooted for the first time, an infra engineer can apply a so called Salt server role (e.g. be an Asterisk server) to the new system and run a “highstate”. Our new server will be automagically configured with the role it had appointed.</p>
 <p>In the end, new servers are re-installed with both a Spindle-flavored Debian Linux AND a fully functional application, all within 10 minutes!</p>
 <p>This is where Borat would say: “Great success!”</p>
 <h2 id="paint-it-black-or-blue">Paint it black (or blue)</h2>
@@ -372,7 +388,8 @@ apt-get -y install salt-minion
     <footer class="site-footer clearfix">
         <section class="copyright"><a href="">BOK</a> All rights reserved</section>
         
-        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        <section class="poweredby">Powered by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>
+	</section>
         
     </footer>
     </div>

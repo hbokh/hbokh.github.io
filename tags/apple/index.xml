@@ -7,19 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved</copyright>
-    <lastBuildDate>Sun, 17 May 2020 11:38:36 +0200</lastBuildDate>
-    
-	<atom:link href="https://hbokh.github.io/tags/apple/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 17 May 2020 11:38:36 +0200</lastBuildDate><atom:link href="https://hbokh.github.io/tags/apple/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>macOS Weather widget reborn</title>
       <link>https://hbokh.github.io/post/2020/05/17/macos-weather-widget-reborn/</link>
       <pubDate>Sun, 17 May 2020 11:38:36 +0200</pubDate>
       
       <guid>https://hbokh.github.io/post/2020/05/17/macos-weather-widget-reborn/</guid>
-      <description>Ever since using Mac OS X for the first time, I&amp;rsquo;ve been a sucker for the Dashboard: pressing F4on any Mac has become muscle memory over the last 14 years.
-Somewhere in the recent past Mac OS X was renamed to macOS and the F4key was given a different function: Launchpad.
+      <description>Ever since using Mac OS X for the first time, I&amp;rsquo;ve been a sucker for the Dashboard: pressing F4 on any Mac has become muscle memory over the last 14 years.
+Somewhere in the recent past Mac OS X was renamed to macOS and the F4 key was given a different function: Launchpad.
 And instead of Dashboard, we&amp;rsquo;re supposed to use Notifications&amp;hellip;
 So Apple&amp;rsquo;s love for the Dashboard and its widgets had faded.</description>
     </item>
