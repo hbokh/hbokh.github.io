@@ -59,11 +59,13 @@
 </noscript><meta property="og:title" content="Review - Tomato Firmware for WRT54G" />
 <meta property="og:description" content="I could not resist my curiousity, so that is why I decided to install third-party firmware named Tomato (version 0.03.0747 to be specific) on my brand new Linksys WRT54GL v1.1 wireless LAN-router." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://hbokh.github.io/posts/review-tomato/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://hbokh.github.io/posts/review-tomato/" />
+<meta property="og:image" content="https://hbokh.github.io/images/WRT54G.jpg" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2006-09-15T13:58:17+02:00" />
 <meta property="article:modified_time" content="2006-09-15T13:58:17+02:00" />
 
-<meta name="twitter:card" content="summary"/>
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://hbokh.github.io/images/WRT54G.jpg" />
 <meta name="twitter:title" content="Review - Tomato Firmware for WRT54G"/>
 <meta name="twitter:description" content="I could not resist my curiousity, so that is why I decided to install third-party firmware named Tomato (version 0.03.0747 to be specific) on my brand new Linksys WRT54GL v1.1 wireless LAN-router."/>
 
@@ -101,7 +103,7 @@
   "articleBody": "I could not resist my curiousity, so that is why I decided to install third-party firmware named Tomato (version 0.03.0747 to be specific) on my brand new Linksys WRT54GL v1.1 wireless LAN-router.\nThis specific router has not been flashed before: no DD-WRT or HyperWRT or whatsoever. The actual flashing was a breeze: after resetting the device and it’s NVRAM by pressing the resetbutton on the back for about 20 seconds I uploaded the file “G\\code.bin” from within IE7 under Windows XP. Why IE? In the online forums it is noted that some other browsers are having some problems during the upgrade-process. Indeed, I’ve done this before on a previous Linksys WRT54! :)\nA powercycle afterward just to be sure and when I connected to IP-address 192.168.1.1 there is was: the first Ajax-enabled Linksys web-GUI!!\nAfter (re-)configuring all the network-settings and getting my WLAN on the net again I was ready to dive a little deeper into this new kid on the block.\nTomato is based on the latest Linksys firmware v4.30.7 and it’s main advantages (besides the ones you’ll find in most of the other third party firmwares) in my opinion are the CIFS-client and the web-GUI. With the first one you can mount a Windows- or Samba-share to store bandwidth-logfiles. The second has some SVG under the hood to generate bandwidth-charts and QoS-pies, which look really nice in my default browser Firefox (here IE7 lacks the SVG-support which is now built-in in Firefox).\nSo far I am very much impressed with this firmware-release! I hope I feel the same in about a week or so, if no updates are released in the meantime. And compared to the DD-WRT-firmware, it turned out Tomato will not have to reboot itself for every minor tweak that has been made: just an ordinary sighup of the process like any good Unix does will do.\nThe only (minor) issue I had was enabling the Frame Burst in the Advanced -\u003e Wireless-settings. It stays disabled after saving the settings. This same option worked on previous installed firmwares on my 1st router though maybe I should sent Tomato’s developer Jonathan an email about this. NOTE - this issue was resolved in a later version!\nBut even if this release is still in an experimental or beta state I think it’s very stable and well equipped for usage on a daily basis. Go and give it a try if you got a WRT54 yourself!\n",
   "wordCount" : "407",
   "inLanguage": "en",
-  "datePublished": "2006-09-15T13:58:17+02:00",
+  "image":"https://hbokh.github.io/images/WRT54G.jpg","datePublished": "2006-09-15T13:58:17+02:00",
   "dateModified": "2006-09-15T13:58:17+02:00",
   "mainEntityOfPage": {
     "@type": "WebPage",
@@ -174,12 +176,15 @@
 
 </div>
   </header> 
+<figure class="entry-cover"><img loading="lazy" src="https://hbokh.github.io/images/WRT54G.jpg" alt="">
+        
+</figure>
   <div class="post-content"><p>I could not resist my curiousity, so that is why I decided to install third-party firmware named <a href="http://www.polarcloud.com/tomato">Tomato</a> (version 0.03.0747 to be specific) on my brand new Linksys WRT54GL v1.1 wireless LAN-router.</p>
 <p>This specific router has not been flashed before: no DD-WRT or HyperWRT or whatsoever. The actual flashing was a breeze: after resetting the device and it’s NVRAM by pressing the resetbutton on the back for about 20 seconds I uploaded the file “G\code.bin” from within IE7 under Windows XP. Why IE? In the online forums it is noted that some other browsers are having some problems during the upgrade-process. Indeed, I’ve done this before on a previous Linksys WRT54! :)</p>
 <p>A powercycle afterward just to be sure and when I connected to IP-address 192.168.1.1 there is was: the first Ajax-enabled Linksys web-GUI!!</p>
 <p>After (re-)configuring all the network-settings and getting my WLAN on the net again I was ready to dive a little deeper into this new kid on the block.</p>
 <p>Tomato is based on the latest Linksys firmware v4.30.7 and it’s main advantages (besides the ones you’ll find in most of the other third party firmwares) in my opinion are the CIFS-client and the web-GUI. With the first one you can mount a Windows- or Samba-share to store bandwidth-logfiles. The second has some SVG under the hood to generate bandwidth-charts and QoS-pies, which look really nice in my default browser Firefox (here IE7 lacks the SVG-support which is now built-in in Firefox).</p>
-<p><img loading="lazy" src="/images/bw-chrt-S.jpg" alt="Tomato webGUI"  />
+<p><img loading="lazy" src="/images/bw-chrt-S.png" alt="Tomato webGUI"  />
 </p>
 <p>So far I am very much impressed with this firmware-release! I hope I feel the same in about a week or so, if no updates are released in the meantime.
 And compared to the DD-WRT-firmware, it turned out Tomato will not have to reboot itself for every minor tweak that has been made: just an ordinary sighup of the process like any good Unix does will do.</p>
