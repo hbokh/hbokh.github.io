@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on BOK</title>
     <link>https://hbokh.github.io/tags/</link>
@@ -14,15 +14,6 @@
       <pubDate>Sun, 17 May 2020 11:38:36 +0200</pubDate>
       
       <guid>https://hbokh.github.io/tags/apple/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>PXE</title>
-      <link>https://hbokh.github.io/tags/pxe/</link>
-      <pubDate>Sat, 01 Dec 2018 20:45:00 +0000</pubDate>
-      
-      <guid>https://hbokh.github.io/tags/pxe/</guid>
       <description></description>
     </item>
     

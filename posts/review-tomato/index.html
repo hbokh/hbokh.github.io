@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Review - Tomato Firmware for WRT54G | BOK</title>
+<meta name="keywords" content="tech">
+<meta name="description" content="I could not resist my curiousity, so that is why I decided to install third-party firmware named Tomato (version 0.03.0747 to be specific) on my brand new Linksys WRT54GL v1.1 wireless LAN-router.">
+<meta name="author" content="">
+<link rel="canonical" href="https://hbokh.github.io/posts/review-tomato/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.bc1149f4a72aa4858d3a9f71462f75e5884ffe8073ea9d6d5761d5663d651e20.css" integrity="sha256-vBFJ9KcqpIWNOp9xRi915YhP/oBz6p1tV2HVZj1lHiA=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://hbokh.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://hbokh.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://hbokh.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://hbokh.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://hbokh.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Review - Tomato Firmware for WRT54G" />
+<meta property="og:description" content="I could not resist my curiousity, so that is why I decided to install third-party firmware named Tomato (version 0.03.0747 to be specific) on my brand new Linksys WRT54GL v1.1 wireless LAN-router." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hbokh.github.io/posts/review-tomato/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2006-09-15T13:58:17+02:00" />
+<meta property="article:modified_time" content="2006-09-15T13:58:17+02:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Review - Tomato Firmware for WRT54G"/>
+<meta name="twitter:description" content="I could not resist my curiousity, so that is why I decided to install third-party firmware named Tomato (version 0.03.0747 to be specific) on my brand new Linksys WRT54GL v1.1 wireless LAN-router."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "https://hbokh.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "Review - Tomato Firmware for WRT54G",
+      "item": "https://hbokh.github.io/posts/review-tomato/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Review - Tomato Firmware for WRT54G",
+  "name": "Review - Tomato Firmware for WRT54G",
+  "description": "I could not resist my curiousity, so that is why I decided to install third-party firmware named Tomato (version 0.03.0747 to be specific) on my brand new Linksys WRT54GL v1.1 wireless LAN-router.\n",
+  "keywords": [
+    "tech"
+  ],
+  "articleBody": "I could not resist my curiousity, so that is why I decided to install third-party firmware named Tomato (version 0.03.0747 to be specific) on my brand new Linksys WRT54GL v1.1 wireless LAN-router.\nThis specific router has not been flashed before: no DD-WRT or HyperWRT or whatsoever. The actual flashing was a breeze: after resetting the device and it’s NVRAM by pressing the resetbutton on the back for about 20 seconds I uploaded the file “G\\code.bin” from within IE7 under Windows XP. Why IE? In the online forums it is noted that some other browsers are having some problems during the upgrade-process. Indeed, I’ve done this before on a previous Linksys WRT54! :)\nA powercycle afterward just to be sure and when I connected to IP-address 192.168.1.1 there is was: the first Ajax-enabled Linksys web-GUI!!\nAfter (re-)configuring all the network-settings and getting my WLAN on the net again I was ready to dive a little deeper into this new kid on the block.\nTomato is based on the latest Linksys firmware v4.30.7 and it’s main advantages (besides the ones you’ll find in most of the other third party firmwares) in my opinion are the CIFS-client and the web-GUI. With the first one you can mount a Windows- or Samba-share to store bandwidth-logfiles. The second has some SVG under the hood to generate bandwidth-charts and QoS-pies, which look really nice in my default browser Firefox (here IE7 lacks the SVG-support which is now built-in in Firefox).\nSo far I am very much impressed with this firmware-release! I hope I feel the same in about a week or so, if no updates are released in the meantime. And compared to the DD-WRT-firmware, it turned out Tomato will not have to reboot itself for every minor tweak that has been made: just an ordinary sighup of the process like any good Unix does will do.\nThe only (minor) issue I had was enabling the Frame Burst in the Advanced -\u003e Wireless-settings. It stays disabled after saving the settings. This same option worked on previous installed firmwares on my 1st router though maybe I should sent Tomato’s developer Jonathan an email about this. NOTE - this issue was resolved in a later version!\nBut even if this release is still in an experimental or beta state I think it’s very stable and well equipped for usage on a daily basis. Go and give it a try if you got a WRT54 yourself!\n",
+  "wordCount" : "407",
+  "inLanguage": "en",
+  "datePublished": "2006-09-15T13:58:17+02:00",
+  "dateModified": "2006-09-15T13:58:17+02:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://hbokh.github.io/posts/review-tomato/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "BOK",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://hbokh.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://hbokh.github.io" accesskey="h" title="BOK (Alt + H)">BOK</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Review - Tomato Firmware for WRT54G
+    </h1>
+    <div class="post-meta"><span title='2006-09-15 13:58:17 +0200 CEST'>September 15, 2006</span>&nbsp;|&nbsp;<a href="https://github.com/hbokh/hbokh.github.io/blob/main/content/posts/tomato.md" rel="noopener noreferrer" target="_blank">Suggest Changes</a>
+
+</div>
+  </header> 
+  <div class="post-content"><p>I could not resist my curiousity, so that is why I decided to install third-party firmware named <a href="http://www.polarcloud.com/tomato">Tomato</a> (version 0.03.0747 to be specific) on my brand new Linksys WRT54GL v1.1 wireless LAN-router.</p>
+<p>This specific router has not been flashed before: no DD-WRT or HyperWRT or whatsoever. The actual flashing was a breeze: after resetting the device and it’s NVRAM by pressing the resetbutton on the back for about 20 seconds I uploaded the file “G\code.bin” from within IE7 under Windows XP. Why IE? In the online forums it is noted that some other browsers are having some problems during the upgrade-process. Indeed, I’ve done this before on a previous Linksys WRT54! :)</p>
+<p>A powercycle afterward just to be sure and when I connected to IP-address 192.168.1.1 there is was: the first Ajax-enabled Linksys web-GUI!!</p>
+<p>After (re-)configuring all the network-settings and getting my WLAN on the net again I was ready to dive a little deeper into this new kid on the block.</p>
+<p>Tomato is based on the latest Linksys firmware v4.30.7 and it’s main advantages (besides the ones you’ll find in most of the other third party firmwares) in my opinion are the CIFS-client and the web-GUI. With the first one you can mount a Windows- or Samba-share to store bandwidth-logfiles. The second has some SVG under the hood to generate bandwidth-charts and QoS-pies, which look really nice in my default browser Firefox (here IE7 lacks the SVG-support which is now built-in in Firefox).</p>
+<p><img loading="lazy" src="/images/bw-chrt-S.jpg" alt="Tomato webGUI"  />
+</p>
+<p>So far I am very much impressed with this firmware-release! I hope I feel the same in about a week or so, if no updates are released in the meantime.
+And compared to the DD-WRT-firmware, it turned out Tomato will not have to reboot itself for every minor tweak that has been made: just an ordinary sighup of the process like any good Unix does will do.</p>
+<p>The only (minor) issue I had was enabling the <em>Frame Burst</em> in the Advanced -&gt; Wireless-settings. It stays disabled after saving the settings. This same option worked on previous installed firmwares on my 1st router though maybe I should sent Tomato’s developer Jonathan an email about this.
+<strong>NOTE</strong> - this issue was resolved in a later version!</p>
+<p>But even if this release is still in an experimental or beta state I think it’s very stable and well equipped for usage on a daily basis. Go and give it a try if you got a WRT54 yourself!</p>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://hbokh.github.io/tags/tech/">tech</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>All rights reserved</span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

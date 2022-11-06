@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>webdev on BOK</title>
     <link>https://hbokh.github.io/tags/webdev/</link>
@@ -10,10 +10,10 @@
     <lastBuildDate>Tue, 21 Apr 2009 11:03:46 +0200</lastBuildDate><atom:link href="https://hbokh.github.io/tags/webdev/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>IPv6 working. Now what..?</title>
-      <link>https://hbokh.github.io/2009/04/21/ipv6-working.-now-what../</link>
+      <link>https://hbokh.github.io/posts/ipv6/</link>
       <pubDate>Tue, 21 Apr 2009 11:03:46 +0200</pubDate>
       
-      <guid>https://hbokh.github.io/2009/04/21/ipv6-working.-now-what../</guid>
+      <guid>https://hbokh.github.io/posts/ipv6/</guid>
       <description>&lt;p&gt;Over the last couple of weeks this blog hasn’t had a proper post. Instead it was filled by automagically created Twitter updates. In the meantime lots of things happened: too much to write down here. Instead I’ll focus on my (re-)achievements with IPv6.&lt;/p&gt;</description>
     </item>
     

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>IPv6 working. Now what..? | BOK</title>
+<meta name="keywords" content="webdev">
+<meta name="description" content="Over the last couple of weeks this blog hasn’t had a proper post. Instead it was filled by automagically created Twitter updates. In the meantime lots of things happened: too much to write down here. Instead I’ll focus on my (re-)achievements with IPv6.">
+<meta name="author" content="">
+<link rel="canonical" href="https://hbokh.github.io/posts/ipv6/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.bc1149f4a72aa4858d3a9f71462f75e5884ffe8073ea9d6d5761d5663d651e20.css" integrity="sha256-vBFJ9KcqpIWNOp9xRi915YhP/oBz6p1tV2HVZj1lHiA=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://hbokh.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://hbokh.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://hbokh.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://hbokh.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://hbokh.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="IPv6 working. Now what..?" />
+<meta property="og:description" content="Over the last couple of weeks this blog hasn’t had a proper post. Instead it was filled by automagically created Twitter updates. In the meantime lots of things happened: too much to write down here. Instead I’ll focus on my (re-)achievements with IPv6." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hbokh.github.io/posts/ipv6/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2009-04-21T11:03:46+02:00" />
+<meta property="article:modified_time" content="2009-04-21T11:03:46+02:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="IPv6 working. Now what..?"/>
+<meta name="twitter:description" content="Over the last couple of weeks this blog hasn’t had a proper post. Instead it was filled by automagically created Twitter updates. In the meantime lots of things happened: too much to write down here. Instead I’ll focus on my (re-)achievements with IPv6."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "https://hbokh.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "IPv6 working. Now what..?",
+      "item": "https://hbokh.github.io/posts/ipv6/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "IPv6 working. Now what..?",
+  "name": "IPv6 working. Now what..?",
+  "description": "Over the last couple of weeks this blog hasn’t had a proper post. Instead it was filled by automagically created Twitter updates. In the meantime lots of things happened: too much to write down here. Instead I’ll focus on my (re-)achievements with IPv6.\n",
+  "keywords": [
+    "webdev"
+  ],
+  "articleBody": "Over the last couple of weeks this blog hasn’t had a proper post. Instead it was filled by automagically created Twitter updates. In the meantime lots of things happened: too much to write down here. Instead I’ll focus on my (re-)achievements with IPv6.\nI had IPv6 enabled a couple of years ago, using a 6to4 tunnel, offered as an experimental service by my ISP XS4ALL, but neglected it after installing a new hard drive. This time around, I choose SixXS for the tunnel broker portion and installed their AICCU-tool on my aging FreeBSD-host. FYI: experimenting with OpenWRT on my Linksys WRT54GL wireless access point failed kind of (since Tomato-firmware is not supporting IPv6 yet) and left me with this single-host option.\nIt turned out the so called router advertisement daemon (man 8 rtadvd), needed to propagate IPv6 addresses to our MacBooks and my Linux- / WinXP-host, was able to route between the interfaces /dev/tun0 and /dev/net/fxp0. Not the most cosmetically sweet option, but nevertheless: it’s working like it should - with a local IPv6-subnet in my LAN.\nAnd now what?! What’s the use in running IPv6 when no one else does? Create demand. Think pr0n! In fact, have a look at this presentation below to illustrate that statement:\n(Video no longer available…)\nFck, the fcking Thing is fcked* - Props go to b10m for pointing me to this one!\nJust as in the days of VHS, Betamax and V2000 it’s pr0n that matters. And where do you find pr0n these days? Right: on USENET and Torrent-sites! Regarding USENET, this blogpost will get you started once you have IPv6 up-and-running: Easily Get free newsgroup access over ipv6 in Ubuntu. Of course it’s not about Ubuntu but on the USENET-providers (with high retention!) that will give you free access to their newsgroups containing a huge amount of (semi) illegal content, not only pr0n, but also warez, ebooks, DivX-movies and the whole lot, as long as you connect over… IPv6! And since “The Pirate Bay” is having an IPv6-tracker but is in stormy waters, more and more people will turn to USENET for their “specific needs”.\nSo? It’s only a matter of time until the RIAA will find out about IPv6 and call for appropriate actions… In the meantime do whatever you think is right (or not). :-P\n",
+  "wordCount" : "385",
+  "inLanguage": "en",
+  "datePublished": "2009-04-21T11:03:46+02:00",
+  "dateModified": "2009-04-21T11:03:46+02:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://hbokh.github.io/posts/ipv6/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "BOK",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://hbokh.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://hbokh.github.io" accesskey="h" title="BOK (Alt + H)">BOK</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      IPv6 working. Now what..?
+    </h1>
+    <div class="post-meta"><span title='2009-04-21 11:03:46 +0200 CEST'>April 21, 2009</span>&nbsp;|&nbsp;<a href="https://github.com/hbokh/hbokh.github.io/blob/main/content/posts/ipv6.md" rel="noopener noreferrer" target="_blank">Suggest Changes</a>
+
+</div>
+  </header> 
+  <div class="post-content"><p>Over the last couple of weeks this blog hasn’t had a proper post. Instead it was filled by automagically created Twitter updates. In the meantime lots of things happened: too much to write down here. Instead I’ll focus on my (re-)achievements with IPv6.</p>
+<p>I had IPv6 enabled a couple of years ago, using a 6to4 tunnel, offered as an experimental service by my ISP XS4ALL, but neglected it after installing a new hard drive. This time around, I choose SixXS for the tunnel broker portion and installed their AICCU-tool on my aging FreeBSD-host.
+FYI: experimenting with OpenWRT on my Linksys WRT54GL wireless access point failed kind of (since Tomato-firmware is not supporting IPv6 yet) and left me with this single-host option.</p>
+<p>It turned out the so called <em>router advertisement daemon</em> (man 8 rtadvd), needed to propagate IPv6 addresses to our MacBooks and my Linux- / WinXP-host, was able to route between the interfaces /dev/tun0 and /dev/net/fxp0. Not the most cosmetically sweet option, but nevertheless: it’s working like it should - with a local IPv6-subnet in my LAN.</p>
+<p>And now what?! What’s the use in running IPv6 when no one else does? Create demand. <strong>Think pr0n!</strong> In fact, have a look at this presentation below to illustrate that statement:</p>
+<p>(Video no longer available&hellip;)</p>
+<p><em>Fck, the fcking Thing is f</em>cked* - Props go to b10m for pointing me to this one!</p>
+<p>Just as in the days of VHS, Betamax and V2000 it’s <em>pr0n</em> that matters. And where do you find <em>pr0n</em> these days? Right: on USENET and Torrent-sites! Regarding USENET, this blogpost will get you started once you have IPv6 up-and-running: Easily Get free newsgroup access over ipv6 in Ubuntu. Of course it’s not about Ubuntu but on the USENET-providers (with high retention!) that will give you <strong>free access</strong> to their newsgroups containing a huge amount of (semi) illegal content, not only <em>pr0n</em>, but also warez, ebooks, DivX-movies and the whole lot, as long as you connect over… IPv6! And since “The Pirate Bay” is having an IPv6-tracker but is in stormy waters, more and more people will turn to USENET for their “specific needs”.</p>
+<p>So? It’s only a matter of time until the RIAA will find out about IPv6 and call for appropriate actions… In the meantime do whatever you think is right (or not). :-P</p>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://hbokh.github.io/tags/webdev/">webdev</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>All rights reserved</span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
