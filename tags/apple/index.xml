@@ -1,33 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>apple on BOK</title>
+    <title>Apple on BOK</title>
     <link>https://hbokh.github.io/tags/apple/</link>
-    <description>Recent content in apple on BOK</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Apple on BOK</description>
+    <generator>Hugo -- 0.147.3</generator>
     <language>en-us</language>
     <copyright>All rights reserved.</copyright>
-    <lastBuildDate>Sun, 17 May 2020 11:38:36 +0200</lastBuildDate><atom:link href="https://hbokh.github.io/tags/apple/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 May 2020 11:38:36 +0200</lastBuildDate>
+    <atom:link href="https://hbokh.github.io/tags/apple/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>macOS Weather widget reborn</title>
       <link>https://hbokh.github.io/posts/macos-weather-widget-reborn/</link>
       <pubDate>Sun, 17 May 2020 11:38:36 +0200</pubDate>
-      
       <guid>https://hbokh.github.io/posts/macos-weather-widget-reborn/</guid>
-      <description>Ever since using Mac OS X for the first time, I&amp;rsquo;ve been a sucker for the Dashboard: pressing F4 on any Mac has become muscle memory over the last 14 years.
-Somewhere in the recent past Mac OS X was renamed to macOS and the F4 key was given a different function: Launchpad.
-And instead of Dashboard, we&amp;rsquo;re supposed to use Notifications&amp;hellip;
-So Apple&amp;rsquo;s love for the Dashboard and its widgets had faded.</description>
+      <description>&lt;p&gt;Ever since using Mac OS X for the first time, I&amp;rsquo;ve been a sucker for the &lt;em&gt;Dashboard&lt;/em&gt;:
+pressing &lt;code&gt;F4&lt;/code&gt; on any Mac has become muscle memory over the last 14 years.&lt;/p&gt;
+&lt;p&gt;Somewhere in the recent past Mac OS X was renamed to macOS and the &lt;code&gt;F4&lt;/code&gt; key was given a different function: &lt;em&gt;Launchpad&lt;/em&gt;.&lt;br&gt;
+And instead of &lt;em&gt;Dashboard&lt;/em&gt;, we&amp;rsquo;re supposed to use &lt;em&gt;Notifications&lt;/em&gt;&amp;hellip;&lt;/p&gt;
+&lt;p&gt;So Apple&amp;rsquo;s love for the Dashboard and its widgets had faded. But not mine!&lt;br&gt;
+I&amp;rsquo;ve always tried to reprogram the &lt;code&gt;F4&lt;/code&gt; key to show the Dash anyhow.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Apple - Gramps Added to the Family</title>
       <link>https://hbokh.github.io/posts/apple-gramps/</link>
       <pubDate>Sun, 28 Jun 2009 13:50:36 +0200</pubDate>
-      
       <guid>https://hbokh.github.io/posts/apple-gramps/</guid>
       <description>&lt;p&gt;&amp;ldquo;Our&amp;rdquo; Apple-family welcomed a rather old guy this weekend, a &lt;a href=&#34;http://tinyurl.com/nobpy2&#34;&gt;Power Macintosh G4&lt;/a&gt;, the one with AGP and gigabit ethernet. Thanks to EveryMac for pointing me &lt;a href=&#34;https://everymac.com/systems/apple/powermac_g4/faq/differences-between-gigabit-ethernet-power-mac-g4-models.html&#34;&gt;how to differentiate between models&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

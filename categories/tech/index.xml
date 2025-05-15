@@ -1,30 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>tech on BOK</title>
+    <title>Tech on BOK</title>
     <link>https://hbokh.github.io/categories/tech/</link>
-    <description>Recent content in tech on BOK</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Tech on BOK</description>
+    <generator>Hugo -- 0.147.3</generator>
     <language>en-us</language>
     <copyright>All rights reserved.</copyright>
-    <lastBuildDate>Sat, 01 Dec 2018 20:45:00 +0000</lastBuildDate><atom:link href="https://hbokh.github.io/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 Dec 2018 20:45:00 +0000</lastBuildDate>
+    <atom:link href="https://hbokh.github.io/categories/tech/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Pixiecore &amp; waitron</title>
       <link>https://hbokh.github.io/posts/pixiecore-waitron/</link>
       <pubDate>Sat, 01 Dec 2018 20:45:00 +0000</pubDate>
-      
       <guid>https://hbokh.github.io/posts/pixiecore-waitron/</guid>
       <description>&lt;p&gt;A &amp;ldquo;small journey&amp;rdquo; into getting Google&amp;rsquo;s &lt;em&gt;pixiecore&lt;/em&gt; to work with an API-server named &lt;em&gt;waitron&lt;/em&gt;.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Server provisioning at Spindle</title>
       <link>https://hbokh.github.io/posts/spindle_provisioning/</link>
       <pubDate>Sat, 26 Aug 2017 10:45:00 +0000</pubDate>
-      
       <guid>https://hbokh.github.io/posts/spindle_provisioning/</guid>
       <description>&lt;p&gt;Previously published on the &lt;a href=&#34;https://wearespindle.com/articles/server-provisioning-at-spindle/&#34;&gt;devhouse Spindle&lt;/a&gt; weblog, June 1st 2017.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

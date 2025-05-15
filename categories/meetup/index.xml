@@ -1,30 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>meetup on BOK</title>
+    <title>Meetup on BOK</title>
     <link>https://hbokh.github.io/categories/meetup/</link>
-    <description>Recent content in meetup on BOK</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Meetup on BOK</description>
+    <generator>Hugo -- 0.147.3</generator>
     <language>en-us</language>
     <copyright>All rights reserved.</copyright>
-    <lastBuildDate>Tue, 24 May 2016 23:44:15 +0000</lastBuildDate><atom:link href="https://hbokh.github.io/categories/meetup/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 24 May 2016 23:44:15 +0000</lastBuildDate>
+    <atom:link href="https://hbokh.github.io/categories/meetup/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Workshop: Python en Django in Docker</title>
       <link>https://hbokh.github.io/posts/meetup2016/</link>
       <pubDate>Tue, 24 May 2016 23:44:15 +0000</pubDate>
-      
       <guid>https://hbokh.github.io/posts/meetup2016/</guid>
       <description>&lt;p&gt;A manual (in Dutch) written for the local &lt;a href=&#34;http://www.meetup.com/DockerGrunn/&#34;&gt;Docker Grunn Meetup&lt;/a&gt;, to become familiar with Docker &amp;amp; docker-compose, by setting up a small Python / Django app.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Hands-on: WordPress en MySQL op Docker</title>
       <link>https://hbokh.github.io/posts/meetup2015/</link>
       <pubDate>Sat, 23 May 2015 09:12:15 +0000</pubDate>
-      
       <guid>https://hbokh.github.io/posts/meetup2015/</guid>
       <description>&lt;p&gt;A manual (in Dutch) written for the local &lt;a href=&#34;http://www.meetup.com/DockerGrunn/&#34;&gt;Docker Grunn Meetup&lt;/a&gt;, to become familiar with Docker &amp;amp; Compose by setting up a WordPress-blog.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

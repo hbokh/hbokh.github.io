@@ -4,72 +4,59 @@
     <title>Tags on BOK</title>
     <link>https://hbokh.github.io/tags/</link>
     <description>Recent content in Tags on BOK</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.147.3</generator>
     <language>en-us</language>
     <copyright>All rights reserved.</copyright>
-    <lastBuildDate>Sun, 17 May 2020 11:38:36 +0200</lastBuildDate><atom:link href="https://hbokh.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 May 2020 11:38:36 +0200</lastBuildDate>
+    <atom:link href="https://hbokh.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>apple</title>
+      <title>Apple</title>
       <link>https://hbokh.github.io/tags/apple/</link>
       <pubDate>Sun, 17 May 2020 11:38:36 +0200</pubDate>
-      
       <guid>https://hbokh.github.io/tags/apple/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>tech</title>
+      <title>Tech</title>
       <link>https://hbokh.github.io/tags/tech/</link>
       <pubDate>Sat, 01 Dec 2018 20:45:00 +0000</pubDate>
-      
       <guid>https://hbokh.github.io/tags/tech/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>cobbler</title>
+      <title>Cobbler</title>
       <link>https://hbokh.github.io/tags/cobbler/</link>
       <pubDate>Sat, 26 Aug 2017 10:45:00 +0000</pubDate>
-      
       <guid>https://hbokh.github.io/tags/cobbler/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>docker</title>
+      <title>Docker</title>
       <link>https://hbokh.github.io/tags/docker/</link>
       <pubDate>Tue, 24 May 2016 23:44:15 +0000</pubDate>
-      
       <guid>https://hbokh.github.io/tags/docker/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>dutch</title>
+      <title>Dutch</title>
       <link>https://hbokh.github.io/tags/dutch/</link>
       <pubDate>Tue, 24 May 2016 23:44:15 +0000</pubDate>
-      
       <guid>https://hbokh.github.io/tags/dutch/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>meetup</title>
+      <title>Meetup</title>
       <link>https://hbokh.github.io/tags/meetup/</link>
       <pubDate>Tue, 24 May 2016 23:44:15 +0000</pubDate>
-      
       <guid>https://hbokh.github.io/tags/meetup/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>webdev</title>
+      <title>Webdev</title>
       <link>https://hbokh.github.io/tags/webdev/</link>
       <pubDate>Tue, 21 Apr 2009 11:03:46 +0200</pubDate>
-      
       <guid>https://hbokh.github.io/tags/webdev/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

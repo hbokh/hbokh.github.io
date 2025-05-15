@@ -4,45 +4,38 @@
     <title>Categories on BOK</title>
     <link>https://hbokh.github.io/categories/</link>
     <description>Recent content in Categories on BOK</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.147.3</generator>
     <language>en-us</language>
     <copyright>All rights reserved.</copyright>
-    <lastBuildDate>Sat, 01 Dec 2018 20:45:00 +0000</lastBuildDate><atom:link href="https://hbokh.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 Dec 2018 20:45:00 +0000</lastBuildDate>
+    <atom:link href="https://hbokh.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>tech</title>
+      <title>Tech</title>
       <link>https://hbokh.github.io/categories/tech/</link>
       <pubDate>Sat, 01 Dec 2018 20:45:00 +0000</pubDate>
-      
       <guid>https://hbokh.github.io/categories/tech/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>docker</title>
+      <title>Docker</title>
       <link>https://hbokh.github.io/categories/docker/</link>
       <pubDate>Tue, 24 May 2016 23:44:15 +0000</pubDate>
-      
       <guid>https://hbokh.github.io/categories/docker/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>meetup</title>
+      <title>Meetup</title>
       <link>https://hbokh.github.io/categories/meetup/</link>
       <pubDate>Tue, 24 May 2016 23:44:15 +0000</pubDate>
-      
       <guid>https://hbokh.github.io/categories/meetup/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>webdev</title>
+      <title>Webdev</title>
       <link>https://hbokh.github.io/categories/webdev/</link>
       <pubDate>Tue, 21 Apr 2009 11:03:46 +0200</pubDate>
-      
       <guid>https://hbokh.github.io/categories/webdev/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

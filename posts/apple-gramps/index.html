@@ -10,9 +10,7 @@
 <meta name="description" content="&ldquo;Our&rdquo; Apple-family welcomed a rather old guy this weekend, a Power Macintosh G4, the one with AGP and gigabit ethernet. Thanks to EveryMac for pointing me how to differentiate between models.">
 <meta name="author" content="">
 <link rel="canonical" href="https://hbokh.github.io/posts/apple-gramps/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.bc1149f4a72aa4858d3a9f71462f75e5884ffe8073ea9d6d5761d5663d651e20.css" integrity="sha256-vBFJ9KcqpIWNOp9xRi915YhP/oBz6p1tV2HVZj1lHiA=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
-    onload="hljs.initHighlightingOnLoad();"></script>
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://hbokh.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://hbokh.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://hbokh.github.io/favicon-32x32.png">
@@ -20,6 +18,7 @@
 <link rel="mask-icon" href="https://hbokh.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://hbokh.github.io/posts/apple-gramps/">
 <noscript>
     <style>
         #theme-toggle,
@@ -37,7 +36,7 @@
                 --secondary: rgb(155, 156, 157);
                 --tertiary: rgb(65, 66, 68);
                 --content: rgb(196, 196, 197);
-                --hljs-bg: rgb(46, 46, 51);
+                --code-block-bg: rgb(46, 46, 51);
                 --code-bg: rgb(55, 56, 62);
                 --border: rgb(51, 51, 51);
             }
@@ -56,32 +55,35 @@
         }
 
     </style>
-</noscript><meta property="og:title" content="Apple - Gramps Added to the Family" />
-<meta property="og:description" content="&ldquo;Our&rdquo; Apple-family welcomed a rather old guy this weekend, a Power Macintosh G4, the one with AGP and gigabit ethernet. Thanks to EveryMac for pointing me how to differentiate between models." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://hbokh.github.io/posts/apple-gramps/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2009-06-28T13:50:36+02:00" />
-<meta property="article:modified_time" content="2009-06-28T13:50:36+02:00" />
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Apple - Gramps Added to the Family"/>
-<meta name="twitter:description" content="&ldquo;Our&rdquo; Apple-family welcomed a rather old guy this weekend, a Power Macintosh G4, the one with AGP and gigabit ethernet. Thanks to EveryMac for pointing me how to differentiate between models."/>
+</noscript><meta property="og:url" content="https://hbokh.github.io/posts/apple-gramps/">
+  <meta property="og:site_name" content="BOK">
+  <meta property="og:title" content="Apple - Gramps Added to the Family">
+  <meta property="og:description" content="“Our” Apple-family welcomed a rather old guy this weekend, a Power Macintosh G4, the one with AGP and gigabit ethernet. Thanks to EveryMac for pointing me how to differentiate between models.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2009-06-28T13:50:36+02:00">
+    <meta property="article:modified_time" content="2009-06-28T13:50:36+02:00">
+    <meta property="article:tag" content="Apple">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Apple - Gramps Added to the Family">
+<meta name="twitter:description" content="&ldquo;Our&rdquo; Apple-family welcomed a rather old guy this weekend, a Power Macintosh G4, the one with AGP and gigabit ethernet. Thanks to EveryMac for pointing me how to differentiate between models.">
 
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
-  "itemListElement": [, 
+  "itemListElement": [
     {
       "@type": "ListItem",
-      "position":  2 ,
+      "position":  1 ,
       "name": "Posts",
       "item": "https://hbokh.github.io/posts/"
     }, 
     {
       "@type": "ListItem",
-      "position":  3 ,
+      "position":  2 ,
       "name": "Apple - Gramps Added to the Family",
       "item": "https://hbokh.github.io/posts/apple-gramps/"
     }
@@ -134,9 +136,9 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://hbokh.github.io" accesskey="h" title="BOK (Alt + H)">BOK</a>
+            <a href="https://hbokh.github.io/" accesskey="h" title="BOK (Alt + H)">BOK</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -166,8 +168,8 @@
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://hbokh.github.io">Home</a>&nbsp;»&nbsp;<a href="https://hbokh.github.io/posts/">Posts</a></div>
-    <h1 class="post-title">
+    <div class="breadcrumbs"><a href="https://hbokh.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://hbokh.github.io/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
       Apple - Gramps Added to the Family
     </h1>
     <div class="post-meta"><span title='2009-06-28 13:50:36 +0200 CEST'>June 28, 2009</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;123 words
@@ -176,15 +178,14 @@
   </header> 
   <div class="post-content"><p>&ldquo;Our&rdquo; Apple-family welcomed a rather old guy this weekend, a <a href="http://tinyurl.com/nobpy2">Power Macintosh G4</a>, the one with AGP and gigabit ethernet. Thanks to EveryMac for pointing me <a href="https://everymac.com/systems/apple/powermac_g4/faq/differences-between-gigabit-ethernet-power-mac-g4-models.html">how to differentiate between models</a>.</p>
 <p>I just love the design of these machines: the graphite color; the big Apple-logo on the sides; the handles on the top and last but not least: the easy way to <a href="http://ht.wikipedia.org/wiki/Fichye:PowerMac_G4_MDD_open.jpg">open the hood</a>.</p>
-<p><img loading="lazy" src="/images/Apple_PowerMac_G4.webp" alt="PowerMac G4"  />
-</p>
+<p><img alt="PowerMac G4" loading="lazy" src="/images/Apple_PowerMac_G4.webp"></p>
 <p>FYI: this particular PowerPC is app. 10 years old, has dual G4-processors at 450MHz, 896MB RAM and two hard disks: 30GB for <a href="http://en.wikipedia.org/wiki/Mac_OS_X_Server#Mac_OS_X_Server_10.4_.28Tiger_Server.29">Mac OS X 10.4 Tiger Server</a> and 80GB for data-storage. Maybe it ‘ll end up replacing the old PC-hardware that is powering this site, giving it a fresh install of FreeBSD during the summer holiday. ;-)</p>
 
   </div>
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://hbokh.github.io/tags/apple/">apple</a></li>
+      <li><a href="https://hbokh.github.io/tags/apple/">Apple</a></li>
     </ul>
 <nav class="paginav">
   <a class="prev" href="https://hbokh.github.io/posts/meetup2015/">
@@ -204,7 +205,8 @@
     </main>
     
 <footer class="footer">
-    <span>All rights reserved.</span>
+        <span>All rights reserved.</span> · 
+
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
