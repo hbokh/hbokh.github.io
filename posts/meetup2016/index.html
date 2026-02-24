@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto">
+<html lang="en" dir="auto" data-theme="auto">
 
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +8,9 @@
 <title>Workshop: Python en Django in Docker | BOK</title>
 <meta name="keywords" content="docker, dutch, meetup">
 <meta name="description" content="A manual (in Dutch) written for the local Docker Grunn Meetup, to become familiar with Docker &amp; docker-compose, by setting up a small Python / Django app.">
-<meta name="author" content="">
+<meta name="author" content="Henk">
 <link rel="canonical" href="https://hbokh.github.io/posts/meetup2016/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://hbokh.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://hbokh.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://hbokh.github.io/favicon-32x32.png">
@@ -39,23 +39,38 @@
                 --code-block-bg: rgb(46, 46, 51);
                 --code-bg: rgb(55, 56, 62);
                 --border: rgb(51, 51, 51);
+                color-scheme: dark;
             }
 
             .list {
                 background: var(--theme);
             }
 
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
+            .toc {
+                background: var(--entry);
             }
+        }
 
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
             }
         }
 
     </style>
-</noscript><meta property="og:url" content="https://hbokh.github.io/posts/meetup2016/">
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><meta property="og:url" content="https://hbokh.github.io/posts/meetup2016/">
   <meta property="og:site_name" content="BOK">
   <meta property="og:title" content="Workshop: Python en Django in Docker">
   <meta property="og:description" content="A manual (in Dutch) written for the local Docker Grunn Meetup, to become familiar with Docker &amp; docker-compose, by setting up a small Python / Django app.">
@@ -109,6 +124,10 @@
   "inLanguage": "en",
   "image":"https://hbokh.github.io/images/dashboard.jpg","datePublished": "2016-05-24T23:44:15Z",
   "dateModified": "2016-05-24T23:44:15Z",
+  "author":{
+    "@type": "Person",
+    "name": "Henk"
+  },
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://hbokh.github.io/posts/meetup2016/"
@@ -124,20 +143,8 @@
 }
 </script>
 </head>
-
-<body class="" id="top">
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
-
-</script>
-
-<header class="header">
+<body id="top">
+    <header class="header">
     <nav class="nav">
         <div class="logo">
             <a href="https://hbokh.github.io/" accesskey="h" title="BOK (Alt + H)">BOK</a>
@@ -176,7 +183,7 @@
     <h1 class="post-title entry-hint-parent">
       Workshop: Python en Django in Docker
     </h1>
-    <div class="post-meta"><span title='2016-05-24 23:44:15 +0000 UTC'>May 24, 2016</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;781 words
+    <div class="post-meta"><span title='2016-05-24 23:44:15 +0000 UTC'>May 24, 2016</span>&nbsp;·&nbsp;<span>4 min</span>&nbsp;·&nbsp;<span>781 words</span>&nbsp;·&nbsp;<span>Henk</span>
 
 </div>
   </header> 
@@ -390,9 +397,14 @@ Er is iets met interface namen de laatste tijd&hellip;  laten we een kijkje neme
 </a>
 
 <script>
-    let menu = document.getElementById('menu')
+    let menu = document.getElementById('menu');
     if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
         menu.onscroll = function () {
             localStorage.setItem("menu-scroll-position", menu.scrollLeft);
         }
@@ -433,11 +445,12 @@ Er is iets met interface namen de laatste tijd&hellip;  laten we een kijkje neme
 </script>
 <script>
     document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
             localStorage.setItem("pref-theme", 'light');
         } else {
-            document.body.classList.add('dark');
+            html.dataset.theme = 'dark';
             localStorage.setItem("pref-theme", 'dark');
         }
     })
