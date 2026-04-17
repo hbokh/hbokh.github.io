@@ -4,7 +4,7 @@
     <title>Posts on BOK</title>
     <link>https://hbokh.github.io/posts/</link>
     <description>Recent content in Posts on BOK</description>
-    <generator>Hugo -- 0.156.0</generator>
+    <generator>Hugo -- 0.160.1</generator>
     <language>en-us</language>
     <copyright>All rights reserved.</copyright>
     <lastBuildDate>Sun, 17 May 2020 11:38:36 +0200</lastBuildDate>
@@ -14,11 +14,11 @@
       <link>https://hbokh.github.io/posts/macos-weather-widget-reborn/</link>
       <pubDate>Sun, 17 May 2020 11:38:36 +0200</pubDate>
       <guid>https://hbokh.github.io/posts/macos-weather-widget-reborn/</guid>
-      <description>&lt;p&gt;Ever since using Mac OS X for the first time, I&amp;rsquo;ve been a sucker for the &lt;em&gt;Dashboard&lt;/em&gt;:
+      <description>&lt;p&gt;Since I used Mac OS X for the first time, I&amp;rsquo;ve been a sucker for the &lt;em&gt;Dashboard&lt;/em&gt;:
 pressing &lt;code&gt;F4&lt;/code&gt; on any Mac has become muscle memory over the last 14 years.&lt;/p&gt;
 &lt;p&gt;Somewhere in the recent past Mac OS X was renamed to macOS and the &lt;code&gt;F4&lt;/code&gt; key was given a different function: &lt;em&gt;Launchpad&lt;/em&gt;.&lt;br&gt;
 And instead of &lt;em&gt;Dashboard&lt;/em&gt;, we&amp;rsquo;re supposed to use &lt;em&gt;Notifications&lt;/em&gt;&amp;hellip;&lt;/p&gt;
-&lt;p&gt;So Apple&amp;rsquo;s love for the Dashboard and its widgets had faded. But not mine!&lt;br&gt;
+&lt;p&gt;Apple&amp;rsquo;s love for the Dashboard and its widgets had faded&amp;hellip; But not mine!&lt;br&gt;
 I&amp;rsquo;ve always tried to reprogram the &lt;code&gt;F4&lt;/code&gt; key to show the Dash anyhow.&lt;/p&gt;</description>
     </item>
     <item>
